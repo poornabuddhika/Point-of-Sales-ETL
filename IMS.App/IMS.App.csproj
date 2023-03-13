@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49EF5A75-1009-4303-8347-E4F854985459}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IMS.App</RootNamespace>
+    <AssemblyName>IMS.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMS\Entity\InventoryProducts\BarCodes\BarCodes.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\Brands.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\MainCategories.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\SecondCategories.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\ThirdCategories.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\Vendors.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Expense\Expenses.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Orders\OrdersProductsMap.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Products\Products.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Users\Users.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\BrandsRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\MainCategoriesRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\MasterCategoriesRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\SecondCategoriesReop.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\ThirdCategoriesRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\VendorsRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Orders\OrdersRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Products\ProductsRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Users\UsersRepo.cs" />
+    <Compile Include="IMS\DataAccess\InventoryProducts\InventoryDBDataAccess.cs" />
+    <Compile Include="POS_ETLDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInterface\Category\MainCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Category\MainCategory.Designer.cs">
+      <DependentUpon>MainCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\Products\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Products\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\Products\frmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Products\frmItems.designer.cs">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserInterface\Category\MainCategory.resx">
+      <DependentUpon>MainCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Products\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Products\frmItems.resx">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="POS_ETLDataSet.xsc">
+      <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POS_ETLDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POS_ETLDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POS_ETLDataSet.xss">
+      <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\PowerPoint.lnk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\25.gif" />
+    <Content Include="Resources\25396004_524937024529466_4105891004819227245_n.jpg" />
+    <Content Include="Resources\animated_loading__by__amiri.gif" />
+    <Content Include="Resources\customer.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\emp.png" />
+    <Content Include="Resources\icons8_account_120px_2.png" />
+    <Content Include="Resources\icons8_add_database_20px.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_20px.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_30px_1.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_40px_1.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_50px.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_60px.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_60px_2.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_60px_3.png" />
+    <Content Include="Resources\icons8_add_to_cloud_32px.png" />
+    <Content Include="Resources\icons8_add_to_database_30px.png" />
+    <Content Include="Resources\icons8_add_to_database_30px_1.png" />
+    <Content Include="Resources\icons8_add_to_database_40px.png" />
+    <Content Include="Resources\icons8_add_user_male_100px.png" />
+    <Content Include="Resources\icons8_amazon_pay_20px.png" />
+    <Content Include="Resources\icons8_apple_logo_100px.png" />
+    <Content Include="Resources\icons8_apple_logo_20px.png" />
+    <Content Include="Resources\icons8_apple_logo_20px_1.png" />
+    <Content Include="Resources\icons8_apple_logo_60px.png" />
+    <Content Include="Resources\icons8_apple_logo_80px.png" />
+    <Content Include="Resources\icons8_apple_pay_25px_1.png" />
+    <Content Include="Resources\icons8_apple_pay_30px.png" />
+    <Content Include="Resources\icons8_apple_pay_35px.png" />
+    <Content Include="Resources\icons8_apple_pay_40px.png" />
+    <Content Include="Resources\icons8_bell_20px.png" />
+    <Content Include="Resources\icons8_biohazard_50px.png" />
+    <Content Include="Resources\icons8_broom_30px.png" />
+    <Content Include="Resources\icons8_broom_30px_1.png" />
+    <Content Include="Resources\icons8_calendar_17_20px_1.png" />
+    <Content Include="Resources\icons8_calendar_25_20px.png" />
+    <Content Include="Resources\icons8_calendar_25_25px.png" />
+    <Content Include="Resources\icons8_calendar_8_15px.png" />
+    <Content Include="Resources\icons8_calendar_8_20px.png" />
+    <Content Include="Resources\icons8_cancel_20px.png" />
+    <Content Include="Resources\icons8_cancel_20px_2.png" />
+    <Content Include="Resources\icons8_cancel_20px_4.png" />
+    <Content Include="Resources\icons8_cancel_20px_5.png" />
+    <Content Include="Resources\icons8_cancel_24px.png" />
+    <Content Include="Resources\icons8_cancel_25px.png" />
+    <Content Include="Resources\icons8_cancel_25px_1.png" />
+    <Content Include="Resources\icons8_cancel_30px_2.png" />
+    <Content Include="Resources\icons8_cancel_30px_3.png" />
+    <Content Include="Resources\icons8_cancel_50px.png" />
+    <Content Include="Resources\icons8_cancel_50px_1.png" />
+    <Content Include="Resources\icons8_chart_50px.png" />
+    <Content Include="Resources\icons8_cheap_2_20px_1.png" />
+    <Content Include="Resources\icons8_checked_20px.png" />
+    <Content Include="Resources\icons8_checked_20px_1.png" />
+    <Content Include="Resources\icons8_checkout_20px.png" />
+    <Content Include="Resources\icons8_checkout_50px.png" />
+    <Content Include="Resources\icons8_click_&amp;_collect_30px.png" />
+    <Content Include="Resources\icons8_clock_20px.png" />
+    <Content Include="Resources\icons8_clock_20px_2.png" />
+    <Content Include="Resources\icons8_clock_20px_3.png" />
+    <Content Include="Resources\icons8_cost_30px.png" />
+    <Content Include="Resources\icons8_cost_30px_1.png" />
+    <Content Include="Resources\icons8_create_100px_5.png" />
+    <Content Include="Resources\icons8_create_24px.png" />
+    <Content Include="Resources\icons8_database_backup_25px.png" />
+    <Content Include="Resources\icons8_database_import_30px.png" />
+    <Content Include="Resources\icons8_database_import_30px_1.png" />
+    <Content Include="Resources\icons8_database_import_40px_1.png" />
+    <Content Include="Resources\icons8_database_import_60px.png" />
+    <Content Include="Resources\icons8_data_backup_25px.png" />
+    <Content Include="Resources\icons8_debian_50px.png" />
+    <Content Include="Resources\icons8_delete_bin_20px.png" />
+    <Content Include="Resources\icons8_delete_bin_50px.png" />
+    <Content Include="Resources\icons8_delete_file_100px.png" />
+    <Content Include="Resources\icons8_delete_file_100px_2.png" />
+    <Content Include="Resources\icons8_delete_file_20px.png" />
+    <Content Include="Resources\icons8_delete_file_24px_1.png" />
+    <Content Include="Resources\icons8_delete_file_30px_1.png" />
+    <Content Include="Resources\icons8_delete_file_30px_2.png" />
+    <Content Include="Resources\icons8_delete_file_30px_3.png" />
+    <Content Include="Resources\icons8_delivered_50px.png" />
+    <Content Include="Resources\icons8_delivered_50px_1.png" />
+    <Content Include="Resources\icons8_dog_tag_20px.png" />
+    <Content Include="Resources\icons8_empty_box_96px_1.png" />
+    <Content Include="Resources\icons8_event_accepted_tentatively_64px.png" />
+    <Content Include="Resources\icons8_facebook_40px.png" />
+    <Content Include="Resources\icons8_female_meeting_50px.png" />
+    <Content Include="Resources\icons8_file_delete_30px.png" />
+    <Content Include="Resources\icons8_file_delete_30px_2.png" />
+    <Content Include="Resources\icons8_graph_20px.png" />
+    <Content Include="Resources\icons8_guardian_50px.png" />
+    <Content Include="Resources\icons8_handcart_15px.png" />
+    <Content Include="Resources\icons8_hashtag_20px.png" />
+    <Content Include="Resources\icons8_home_25px.png" />
+    <Content Include="Resources\icons8_home_30px.png" />
+    <Content Include="Resources\icons8_home_50px_1.png" />
+    <Content Include="Resources\icons8_home_50px_2.png" />
+    <Content Include="Resources\icons8_ingredients_50px.png" />
+    <Content Include="Resources\icons8_investment_portfolio_20px.png" />
+    <Content Include="Resources\icons8_investment_portfolio_30px.png" />
+    <Content Include="Resources\icons8_invoice_20px.png" />
+    <Content Include="Resources\icons8_invoice_25px.png" />
+    <Content Include="Resources\icons8_invoice_30px_1.png" />
+    <Content Include="Resources\icons8_invoice_30px_2.png" />
+    <Content Include="Resources\icons8_invoice_50px.png" />
+    <Content Include="Resources\icons8_irrigation_40px.png" />
+    <Content Include="Resources\icons8_irrigation_40px_1.png" />
+    <Content Include="Resources\icons8_irrigation_80px.png" />
+    <Content Include="Resources\icons8_key_20px_1.png" />
+    <Content Include="Resources\icons8_loading_24px.png" />
+    <Content Include="Resources\icons8_logout_rounded_left_20px_2.png" />
+    <Content Include="Resources\icons8_logo_15px_1.png" />
+    <Content Include="Resources\icons8_logo_30px.png" />
+    <Content Include="Resources\icons8_man_police_officer_96px.png" />
+    <Content Include="Resources\icons8_microsoft_admin_100px.png" />
+    <Content Include="Resources\icons8_multiply_20px.png" />
+    <Content Include="Resources\icons8_no_20px_1.png" />
+    <Content Include="Resources\icons8_no_20px_2.png" />
+    <Content Include="Resources\icons8_online_shop_64px.png" />
+    <Content Include="Resources\icons8_open_box_20px.png" />
+    <Content Include="Resources\icons8_open_box_20px_1.png" />
+    <Content Include="Resources\icons8_open_box_25px.png" />
+    <Content Include="Resources\icons8_open_box_30px.png" />
+    <Content Include="Resources\icons8_open_box_64px.png" />
+    <Content Include="Resources\icons8_out_of_stock_20px.png" />
+    <Content Include="Resources\icons8_out_of_stock_20px_2.png" />
+    <Content Include="Resources\icons8_out_of_stock_20px_3.png" />
+    <Content Include="Resources\icons8_out_of_stock_50px.png" />
+    <Content Include="Resources\icons8_paper_plane_30px.png" />
+    <Content Include="Resources\icons8_paper_plane_30px_1.png" />
+    <Content Include="Resources\icons8_paper_plane_30px_2.png" />
+    <Content Include="Resources\icons8_paper_plane_30px_3.png" />
+    <Content Include="Resources\icons8_paper_plane_30px_4.png" />
+    <Content Include="Resources\icons8_parenting_20px.png" />
+    <Content Include="Resources\icons8_parenting_30px.png" />
+    <Content Include="Resources\icons8_parenting_30px_1.png" />
+    <Content Include="Resources\icons8_parenting_50px_1.png" />
+    <Content Include="Resources\icons8_parenting_50px_2.png" />
+    <Content Include="Resources\icons8_payment_history_20px.png" />
+    <Content Include="Resources\icons8_person_100px.png" />
+    <Content Include="Resources\icons8_phone_20px_1.png" />
+    <Content Include="Resources\icons8_pie_chart_30px.png" />
+    <Content Include="Resources\icons8_pie_chart_report_30px.png" />
+    <Content Include="Resources\icons8_pin_30px.png" />
+    <Content Include="Resources\icons8_pin_30px_1.png" />
+    <Content Include="Resources\icons8_pouch_30px.png" />
+    <Content Include="Resources\icons8_product_30px.png" />
+    <Content Include="Resources\icons8_product_30px_1.png" />
+    <Content Include="Resources\icons8_product_30px_2.png" />
+    <Content Include="Resources\icons8_product_50px.png" />
+    <Content Include="Resources\icons8_refresh_20px.png" />
+    <Content Include="Resources\icons8_refresh_30px.png" />
+    <Content Include="Resources\icons8_refresh_30px_1.png" />
+    <Content Include="Resources\icons8_remove_20px.png" />
+    <Content Include="Resources\icons8_remove_30px.png" />
+    <Content Include="Resources\icons8_sales_performance_20px.png" />
+    <Content Include="Resources\icons8_sales_performance_20px_1.png" />
+    <Content Include="Resources\icons8_sales_performance_50px.png" />
+    <Content Include="Resources\icons8_sale_price_tag_30px.png" />
+    <Content Include="Resources\icons8_search_20px.png" />
+    <Content Include="Resources\icons8_search_20px_1.png" />
+    <Content Include="Resources\icons8_search_20px_2.png" />
+    <Content Include="Resources\icons8_search_20px_3.png" />
+    <Content Include="Resources\icons8_search_25px.png" />
+    <Content Include="Resources\icons8_search_25px_1.png" />
+    <Content Include="Resources\icons8_search_30px_1.png" />
+    <Content Include="Resources\icons8_search_32px.png" />
+    <Content Include="Resources\icons8_search_database_20px.png" />
+    <Content Include="Resources\icons8_search_more_20px.png" />
+    <Content Include="Resources\icons8_security_shield_green_20px.png" />
+    <Content Include="Resources\icons8_security_shield_green_25px.png" />
+    <Content Include="Resources\icons8_security_user_male_20px.png" />
+    <Content Include="Resources\icons8_security_user_male_30px.png" />
+    <Content Include="Resources\icons8_sell_stock_20px.png" />
+    <Content Include="Resources\icons8_sell_stock_20px_1.png" />
+    <Content Include="Resources\icons8_sell_stock_30px.png" />
+    <Content Include="Resources\icons8_sell_stock_30px_1.png" />
+    <Content Include="Resources\icons8_sell_stock_40px.png" />
+    <Content Include="Resources\icons8_sell_stock_40px_1.png" />
+    <Content Include="Resources\icons8_settings_20px_1.png" />
+    <Content Include="Resources\icons8_settings_50px.png" />
+    <Content Include="Resources\icons8_shipped_20px.png" />
+    <Content Include="Resources\icons8_shipped_20px_1.png" />
+    <Content Include="Resources\icons8_shipped_30px.png" />
+    <Content Include="Resources\icons8_shopping_bag_50px.png" />
+    <Content Include="Resources\icons8_shopping_cart_20px.png" />
+    <Content Include="Resources\icons8_sync_20px.png" />
+    <Content Include="Resources\icons8_tick_box_20px.png" />
+    <Content Include="Resources\icons8_tick_box_20px_1.png" />
+    <Content Include="Resources\icons8_tick_box_20px_2.png" />
+    <Content Include="Resources\icons8_tick_box_20px_3.png" />
+    <Content Include="Resources\icons8_tick_box_30px_1.png" />
+    <Content Include="Resources\icons8_time_machine_20px.png" />
+    <Content Include="Resources\icons8_time_machine_30px.png" />
+    <Content Include="Resources\icons8_total_sales_20px_1.png" />
+    <Content Include="Resources\icons8_transaction_declined_20px.png" />
+    <Content Include="Resources\icons8_update_file_100px.png" />
+    <Content Include="Resources\icons8_update_file_20px.png" />
+    <Content Include="Resources\icons8_update_file_24px.png" />
+    <Content Include="Resources\icons8_update_file_30px.png" />
+    <Content Include="Resources\icons8_update_file_30px_1.png" />
+    <Content Include="Resources\icons8_upward_arrow_20px_1.png" />
+    <Content Include="Resources\icons8_user_shield_50px.png" />
+    <Content Include="Resources\icons8_user_shield_70px.png" />
+    <Content Include="Resources\icons8_vegetarian_food_50px.png" />
+    <Content Include="Resources\images %283%29.jpeg" />
+    <Content Include="Resources\images.jpeg" />
+    <Content Include="Resources\invo.png" />
+    <Content Include="Resources\jelly-fluid-loader-attachment.gif" />
+    <Content Include="Resources\loader %281%29.gif" />
+    <Content Include="Resources\lock_open.png" />
+    <Content Include="Resources\product.png" />
+    <Content Include="Resources\received_1802486206514075.jpeg" />
+    <Content Include="Resources\remove.png" />
+    <Content Include="Resources\reports.png" />
+    <Content Include="Resources\sales_menu.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\search x30.png" />
+    <Content Include="Resources\supplier.png" />
+    <Content Include="Resources\unnamed %281%29.gif" />
+    <Content Include="Resources\unnamed %282%29.gif" />
+    <Content Include="Resources\unnamed.gif" />
+    <Content Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserInterface\Contacts\" />
+    <Folder Include="UserInterface\Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
