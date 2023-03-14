@@ -129,6 +129,7 @@ namespace IMS.App.UserInterface.Category
         {
             labelCodeError.Hide();
             labelNameError.Hide();
+            
         }
 
 
@@ -172,8 +173,10 @@ namespace IMS.App.UserInterface.Category
 
         private void PopulateGridView(string searchKey = null)
         {
-            this.dgvMainCate.AutoGenerateColumns = false;
+           
+            this.dgvMainCate.AutoGenerateColumns = true;
             this.dgvMainCate.DataSource = this.mainCateRepo.GetAll(searchKey).ToList();
+            gridViewLoading();
             this.dgvMainCate.ClearSelection();
             this.Refresh();
             this.RefreshContent();
@@ -188,6 +191,57 @@ namespace IMS.App.UserInterface.Category
             checkBoxActive_Category_main.Checked = true;
         }
 
-        
+        private void gridViewLoading()
+        {
+            //dataGridView1.DataSource = mj.drawDespatchData(selectedDrow, (int)MahajanaDespatchClass.Lottery.Mahajana);
+
+            dgvMainCate.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dgvMainCate.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            dgvMainCate.CellBorderStyle = DataGridViewCellBorderStyle.None;
+
+            dgvMainCate.DefaultCellStyle.SelectionBackColor = Color.Red;
+            dgvMainCate.DefaultCellStyle.SelectionForeColor = Color.Yellow;
+
+            dgvMainCate.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgvMainCate.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgvMainCate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMainCate.AllowUserToResizeColumns = false;
+            dgvMainCate.Columns[0].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dgvMainCate.Columns[1].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dgvMainCate.Columns[2].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dgvMainCate.Columns[3].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dgvMainCate.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dgvMainCate.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+
+            dgvMainCate.Columns[0].Width = 100;
+            dgvMainCate.Columns[1].Width = 100;
+            dgvMainCate.Columns[2].Width = 120;
+            dgvMainCate.Columns[3].Width = 1;
+            dgvMainCate.Columns[4].Width = 50;
+            dgvMainCate.Columns[5].Width = 5;
+
+            dgvMainCate.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
+
+            dgvMainCate.Columns[0].HeaderCell.Value = "Code";
+            dgvMainCate.Columns[1].HeaderCell.Value = "Name";
+            dgvMainCate.Columns[2].HeaderCell.Value = "Description";
+           
+            dgvMainCate.Columns[4].HeaderCell.Value = "IsActivate";
+            dgvMainCate.Columns[5].HeaderCell.Value = "";
+            dgvMainCate.Columns[3].HeaderCell.Value = "";
+
+
+
+
+
+
+        }
+
+
+
+
+
     }
 }

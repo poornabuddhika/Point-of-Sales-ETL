@@ -43,7 +43,6 @@
             this.btn_save_Category = new System.Windows.Forms.Button();
             this.text_category = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dgvMainCate = new System.Windows.Forms.DataGridView();
             this.texStockCover = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.texDescrip = new System.Windows.Forms.TextBox();
@@ -95,9 +94,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
+            this.dgvMainCate = new System.Windows.Forms.DataGridView();
             this.Category.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -106,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).BeginInit();
             this.SuspendLayout();
             // 
             // Category
@@ -119,11 +119,12 @@
             this.Category.Location = new System.Drawing.Point(3, 12);
             this.Category.Name = "Category";
             this.Category.SelectedIndex = 0;
-            this.Category.Size = new System.Drawing.Size(1343, 633);
+            this.Category.Size = new System.Drawing.Size(1440, 633);
             this.Category.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dgvMainCate);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.checkBoxActive_Category_main);
             this.tabPage1.Controls.Add(this.labelNameError);
@@ -137,7 +138,6 @@
             this.tabPage1.Controls.Add(this.btn_save_Category);
             this.tabPage1.Controls.Add(this.text_category);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.dgvMainCate);
             this.tabPage1.Controls.Add(this.texStockCover);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.texDescrip);
@@ -148,7 +148,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1335, 591);
+            this.tabPage1.Size = new System.Drawing.Size(1432, 591);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Category";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(730, 351);
+            this.label21.Location = new System.Drawing.Point(835, 345);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(85, 24);
             this.label21.TabIndex = 70;
@@ -168,7 +168,7 @@
             this.checkBoxActive_Category_main.AutoSize = true;
             this.checkBoxActive_Category_main.Checked = true;
             this.checkBoxActive_Category_main.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxActive_Category_main.Location = new System.Drawing.Point(834, 358);
+            this.checkBoxActive_Category_main.Location = new System.Drawing.Point(939, 352);
             this.checkBoxActive_Category_main.Name = "checkBoxActive_Category_main";
             this.checkBoxActive_Category_main.Size = new System.Drawing.Size(18, 17);
             this.checkBoxActive_Category_main.TabIndex = 69;
@@ -179,7 +179,7 @@
             this.labelNameError.AutoSize = true;
             this.labelNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNameError.ForeColor = System.Drawing.Color.Crimson;
-            this.labelNameError.Location = new System.Drawing.Point(1177, 170);
+            this.labelNameError.Location = new System.Drawing.Point(1282, 164);
             this.labelNameError.Name = "labelNameError";
             this.labelNameError.Size = new System.Drawing.Size(118, 18);
             this.labelNameError.TabIndex = 68;
@@ -190,7 +190,7 @@
             this.labelCodeError.AutoSize = true;
             this.labelCodeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodeError.ForeColor = System.Drawing.Color.Crimson;
-            this.labelCodeError.Location = new System.Drawing.Point(1174, 103);
+            this.labelCodeError.Location = new System.Drawing.Point(1279, 97);
             this.labelCodeError.Name = "labelCodeError";
             this.labelCodeError.Size = new System.Drawing.Size(118, 18);
             this.labelCodeError.TabIndex = 67;
@@ -201,7 +201,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Crimson;
-            this.label20.Location = new System.Drawing.Point(812, 163);
+            this.label20.Location = new System.Drawing.Point(917, 157);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(21, 25);
             this.label20.TabIndex = 66;
@@ -212,7 +212,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Crimson;
-            this.label19.Location = new System.Drawing.Point(811, 106);
+            this.label19.Location = new System.Drawing.Point(916, 100);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(21, 25);
             this.label19.TabIndex = 65;
@@ -221,7 +221,7 @@
             // texName
             // 
             this.texName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texName.Location = new System.Drawing.Point(834, 162);
+            this.texName.Location = new System.Drawing.Point(939, 156);
             this.texName.Margin = new System.Windows.Forms.Padding(4);
             this.texName.Name = "texName";
             this.texName.Size = new System.Drawing.Size(333, 26);
@@ -231,7 +231,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(730, 165);
+            this.label17.Location = new System.Drawing.Point(835, 159);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 20);
@@ -243,7 +243,7 @@
             this.btnupdate_Category.BackColor = System.Drawing.Color.Transparent;
             this.btnupdate_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdate_Category.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate_Category.Location = new System.Drawing.Point(959, 403);
+            this.btnupdate_Category.Location = new System.Drawing.Point(1064, 397);
             this.btnupdate_Category.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdate_Category.Name = "btnupdate_Category";
             this.btnupdate_Category.Size = new System.Drawing.Size(112, 37);
@@ -257,7 +257,7 @@
             this.btnClear_main.BackColor = System.Drawing.Color.Transparent;
             this.btnClear_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear_main.ForeColor = System.Drawing.Color.Black;
-            this.btnClear_main.Location = new System.Drawing.Point(1111, 403);
+            this.btnClear_main.Location = new System.Drawing.Point(1216, 397);
             this.btnClear_main.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear_main.Name = "btnClear_main";
             this.btnClear_main.Size = new System.Drawing.Size(108, 37);
@@ -271,7 +271,7 @@
             this.btn_save_Category.BackColor = System.Drawing.Color.Transparent;
             this.btn_save_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_Category.ForeColor = System.Drawing.Color.Black;
-            this.btn_save_Category.Location = new System.Drawing.Point(790, 403);
+            this.btn_save_Category.Location = new System.Drawing.Point(895, 397);
             this.btn_save_Category.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save_Category.Name = "btn_save_Category";
             this.btn_save_Category.Size = new System.Drawing.Size(115, 37);
@@ -301,19 +301,10 @@
             this.label12.TabIndex = 52;
             this.label12.Text = "Search ::";
             // 
-            // dgvMainCate
-            // 
-            this.dgvMainCate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMainCate.Location = new System.Drawing.Point(6, 80);
-            this.dgvMainCate.Name = "dgvMainCate";
-            this.dgvMainCate.RowTemplate.Height = 24;
-            this.dgvMainCate.Size = new System.Drawing.Size(643, 387);
-            this.dgvMainCate.TabIndex = 50;
-            // 
             // texStockCover
             // 
             this.texStockCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texStockCover.Location = new System.Drawing.Point(834, 302);
+            this.texStockCover.Location = new System.Drawing.Point(939, 296);
             this.texStockCover.Margin = new System.Windows.Forms.Padding(4);
             this.texStockCover.Name = "texStockCover";
             this.texStockCover.Size = new System.Drawing.Size(333, 26);
@@ -323,7 +314,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(681, 308);
+            this.label2.Location = new System.Drawing.Point(786, 302);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
@@ -333,7 +324,7 @@
             // texDescrip
             // 
             this.texDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texDescrip.Location = new System.Drawing.Point(834, 220);
+            this.texDescrip.Location = new System.Drawing.Point(939, 214);
             this.texDescrip.Margin = new System.Windows.Forms.Padding(4);
             this.texDescrip.Multiline = true;
             this.texDescrip.Name = "texDescrip";
@@ -344,7 +335,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(681, 223);
+            this.label1.Location = new System.Drawing.Point(786, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
@@ -354,7 +345,7 @@
             // txtCode
             // 
             this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(834, 99);
+            this.txtCode.Location = new System.Drawing.Point(939, 93);
             this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(333, 26);
@@ -364,7 +355,7 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(735, 105);
+            this.Label8.Location = new System.Drawing.Point(840, 99);
             this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(70, 20);
@@ -800,7 +791,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 38);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1335, 591);
+            this.tabPage5.Size = new System.Drawing.Size(1432, 591);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Rack Number";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -892,11 +883,23 @@
             this.label18.TabIndex = 69;
             this.label18.Text = "Rack Number ::";
             // 
+            // dgvMainCate
+            // 
+            this.dgvMainCate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMainCate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMainCate.Location = new System.Drawing.Point(6, 67);
+            this.dgvMainCate.Name = "dgvMainCate";
+            this.dgvMainCate.RowTemplate.Height = 24;
+            this.dgvMainCate.Size = new System.Drawing.Size(765, 452);
+            this.dgvMainCate.TabIndex = 71;
+            // 
             // MainCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 645);
+            this.ClientSize = new System.Drawing.Size(1455, 645);
             this.Controls.Add(this.Category);
             this.Name = "MainCategory";
             this.Text = "MainCategory";
@@ -904,7 +907,6 @@
             this.Category.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -917,6 +919,7 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -951,7 +954,6 @@
         internal System.Windows.Forms.Button btn_save_Category;
         internal System.Windows.Forms.TextBox text_category;
         internal System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dgvMainCate;
         internal System.Windows.Forms.TextBox textBox8;
         internal System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -990,5 +992,6 @@
         internal System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckBox checkBoxActive_Category_main;
+        private System.Windows.Forms.DataGridView dgvMainCate;
     }
 }

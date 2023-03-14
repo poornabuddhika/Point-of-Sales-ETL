@@ -31,14 +31,19 @@ namespace IMS.Repository
             try
             {
                 if (key == null)
-                    sql =
-                        @"SELECT MainCategories.MainCategoryId AS MainCategoryId, MainCategories.MainCategoryName AS MainCategoryName
-                          FROM MainCategories";
+                    sql = @"SELECT item_category.cat_code AS CategoryCode, item_category.cat_name AS CategoryName , 
+                            item_category.cat_description  AS Description , item_category.cat_is_active  AS active ,
+                            item_category.cat_code as code,item_category.cat_stock_cover as stock_cover
+                            FROM item_category";
                 else
-                    sql = @"SELECT MainCategories.MainCategoryId AS MainCategoryId, MainCategories.MainCategoryName AS MainCategoryName
-                          FROM MainCategories
+                    sql = sql = @"SELECT item_category.cat_code AS CategoryCode, item_category.cat_name AS CategoryName , 
+                            item_category.cat_description  AS Description , item_category.cat_is_active  AS active ,
+                            item_category.cat_code as code,item_category.cat_stock_cover as stock_cover
+                            FROM item_category
 
-                          where MainCategories.MainCategoryId like '%" + key + "%' or MainCategories.MainCategoryName like '%" + key + "%' ; ";
+                            where item_category.cat_code like '%" + key + "%' or item_category.cat_name like '%" + key + "%' ; ";
+
+                iDB.conOpen();
 
                 var dt = this.iDB.ExecuteQueryTable(sql);
 
@@ -66,8 +71,15 @@ namespace IMS.Repository
             }
 
             var mainCate = new MainCategories();
-            mainCate.MainCategoryCode = (row["MainCategoryId"].ToString());
-            mainCate.MainCategoryName = row["MainCategoryName"].ToString();
+           
+            try {  mainCate.MainCategoryCode = (row["CategoryCode"].ToString()); } catch (Exception e) { mainCate.MainCategoryCode = ""; }
+            try {  mainCate.MainCategoryName = row["CategoryName"].ToString();} catch (Exception e) { mainCate.MainCategoryName = ""; }
+             try { mainCate.MainCategoryDescription = row["Description"].ToString();} catch (Exception e) { mainCate.MainCategoryDescription = ""; }
+             try { mainCate.MainCategoryIsActivate =Convert.ToBoolean( row["active"].ToString());} catch (Exception e) { mainCate.MainCategoryIsActivate = false; }
+            try { mainCate.MainCategoryCode = row["code"].ToString(); } catch (Exception e) { mainCate.MainCategoryIsActivate = false; }
+            try { mainCate.MainCategoryStockCover =row["stock_cover"].ToString(); } catch (Exception e) { mainCate.MainCategoryIsActivate = false; }
+
+
             return mainCate;
         }
 
