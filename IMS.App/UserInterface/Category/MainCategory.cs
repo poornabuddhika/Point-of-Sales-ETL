@@ -215,11 +215,11 @@ namespace IMS.App.UserInterface.Category
             dgvMainCate.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
             dgvMainCate.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
 
-            dgvMainCate.Columns[0].Width = 100;
-            dgvMainCate.Columns[1].Width = 100;
-            dgvMainCate.Columns[2].Width = 120;
+            dgvMainCate.Columns[0].Width = 120;
+            dgvMainCate.Columns[1].Width = 140;
+            dgvMainCate.Columns[2].Width = 160;
             dgvMainCate.Columns[3].Width = 1;
-            dgvMainCate.Columns[4].Width = 50;
+            dgvMainCate.Columns[4].Width = 80;
             dgvMainCate.Columns[5].Width = 5;
 
             dgvMainCate.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
@@ -233,15 +233,20 @@ namespace IMS.App.UserInterface.Category
             dgvMainCate.Columns[3].HeaderCell.Value = "";
 
 
-
-
-
-
         }
 
 
 
+        private void dgvMainCate_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;// get the Row Index
+            DataGridViewRow selectedRow = dgvMainCate.Rows[index];
+            txtCode.Text = selectedRow.Cells[0].Value.ToString();
+            texName.Text = selectedRow.Cells[1].Value.ToString();
+            texDescrip.Text = selectedRow.Cells[2].Value.ToString();
+            texStockCover.Text = selectedRow.Cells[3].Value.ToString();
+            checkBoxActive_Category_main.Checked =Convert.ToBoolean(selectedRow.Cells[4].Value.ToString());
 
-
+        }
     }
 }

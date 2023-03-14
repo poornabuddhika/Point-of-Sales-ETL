@@ -30,6 +30,7 @@
         {
             this.Category = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvMainCate = new System.Windows.Forms.DataGridView();
             this.label21 = new System.Windows.Forms.Label();
             this.checkBoxActive_Category_main = new System.Windows.Forms.CheckBox();
             this.labelNameError = new System.Windows.Forms.Label();
@@ -94,9 +95,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
-            this.dgvMainCate = new System.Windows.Forms.DataGridView();
             this.Category.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -105,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).BeginInit();
             this.SuspendLayout();
             // 
             // Category
@@ -152,6 +152,20 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Category";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgvMainCate
+            // 
+            this.dgvMainCate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMainCate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMainCate.Location = new System.Drawing.Point(6, 67);
+            this.dgvMainCate.Name = "dgvMainCate";
+            this.dgvMainCate.RowTemplate.Height = 24;
+            this.dgvMainCate.Size = new System.Drawing.Size(765, 452);
+            this.dgvMainCate.TabIndex = 71;
+            this.dgvMainCate.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMainCate_CellClick);
+           
             // 
             // label21
             // 
@@ -378,7 +392,7 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Location = new System.Drawing.Point(4, 38);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1335, 591);
+            this.tabPage2.Size = new System.Drawing.Size(1432, 591);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sub Category";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -527,7 +541,7 @@
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Location = new System.Drawing.Point(4, 38);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1335, 591);
+            this.tabPage3.Size = new System.Drawing.Size(1432, 591);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Brand";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -665,7 +679,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 38);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1335, 591);
+            this.tabPage4.Size = new System.Drawing.Size(1432, 591);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "UNIT Master";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -883,18 +897,6 @@
             this.label18.TabIndex = 69;
             this.label18.Text = "Rack Number ::";
             // 
-            // dgvMainCate
-            // 
-            this.dgvMainCate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMainCate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMainCate.Location = new System.Drawing.Point(6, 67);
-            this.dgvMainCate.Name = "dgvMainCate";
-            this.dgvMainCate.RowTemplate.Height = 24;
-            this.dgvMainCate.Size = new System.Drawing.Size(765, 452);
-            this.dgvMainCate.TabIndex = 71;
-            // 
             // MainCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -907,6 +909,7 @@
             this.Category.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -919,7 +922,6 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainCate)).EndInit();
             this.ResumeLayout(false);
 
         }
