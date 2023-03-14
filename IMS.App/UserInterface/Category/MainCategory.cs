@@ -114,12 +114,12 @@ namespace IMS.App.UserInterface.Category
         }
 
         //Clear Button
-        private void btnClear_main_Click(object sender, EventArgs e)
+        private void btnClear_Category_Click(object sender, EventArgs e)
         {
-            txtCode.Text = "";
-            texName.Text = "";
-            texDescrip.Text = "";
-            texStockCover.Text = "";
+            textCategoryCode.Text = "";
+            textCategoryName.Text = "";
+            textCategoryDescrip.Text = "";
+            textCategoryStockCover.Text = "";
             checkBoxActive_Category_main.Checked = true;
         }
 
@@ -127,43 +127,53 @@ namespace IMS.App.UserInterface.Category
 
         private void MainCategory_Load(object sender, EventArgs e)
         {
-            labelCodeError.Hide();
-            labelNameError.Hide();
+            labelCategoryCodeError.Hide();
+            labelCategoryNameError.Hide();
             
         }
 
+        private void dgvMainCate_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;// get the Row Index
+            DataGridViewRow selectedRow = gridMainCategory.Rows[index];
+            textCategoryCode.Text = selectedRow.Cells[0].Value.ToString();
+            textCategoryName.Text = selectedRow.Cells[1].Value.ToString();
+            textCategoryDescrip.Text = selectedRow.Cells[2].Value.ToString();
+            textCategoryStockCover.Text = selectedRow.Cells[3].Value.ToString();
+            checkBoxActive_Category_main.Checked = Convert.ToBoolean(selectedRow.Cells[4].Value.ToString());
 
+        }
 
         private MainCategories FillEntity()
         {
 
             var mc = new MainCategories();
-            if (txtCode.Text == "" || texName.Text == "")
+            if (textCategoryCode.Text == "" || textCategoryName.Text == "")
             {
 
-                if (txtCode.Text == "")
+                if (textCategoryCode.Text == "")
                 {
 
-                    labelCodeError.Show();
+                    labelCategoryCodeError.Show();
 
                 }
-                if (texName.Text == "")
+                if (textCategoryName.Text == "")
                 {
 
-                    labelNameError.Show();
+                    labelCategoryNameError.Show();
 
                 }
                 MessageBox.Show("Please Fill Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mc = null;
             }
-            else if(txtCode.Text != "" & texName.Text != "")
+            else if(textCategoryCode.Text != "" & textCategoryName.Text != "")
             {
-                labelCodeError.Hide();
-                labelNameError.Hide();
-                mc.MainCategoryCode = txtCode.Text;
-                mc.MainCategoryName = texName.Text;
-                mc.MainCategoryDescription = texDescrip.Text;
-                mc.MainCategoryStockCover = texStockCover.Text;
+                labelCategoryCodeError.Hide();
+                labelCategoryNameError.Hide();
+                mc.MainCategoryCode = textCategoryCode.Text;
+                mc.MainCategoryName = textCategoryName.Text;
+                mc.MainCategoryDescription = textCategoryDescrip.Text;
+                mc.MainCategoryStockCover = textCategoryStockCover.Text;
                 mc.MainCategoryIsActivate = checkBoxActive_Category_main.Checked;
             }
 
@@ -174,20 +184,20 @@ namespace IMS.App.UserInterface.Category
         private void PopulateGridView(string searchKey = null)
         {
            
-            this.dgvMainCate.AutoGenerateColumns = true;
-            this.dgvMainCate.DataSource = this.mainCateRepo.GetAll(searchKey).ToList();
+            this.gridMainCategory.AutoGenerateColumns = true;
+            this.gridMainCategory.DataSource = this.mainCateRepo.GetAll(searchKey).ToList();
             gridViewLoading();
-            this.dgvMainCate.ClearSelection();
+            this.gridMainCategory.ClearSelection();
             this.Refresh();
             this.RefreshContent();
         }
 
         public void RefreshContent()
         {
-            txtCode.Clear();
-            texName.Clear();
-            texDescrip.Clear();
-            texStockCover.Clear();
+            textCategoryCode.Clear();
+            textCategoryName.Clear();
+            textCategoryDescrip.Clear();
+            textCategoryStockCover.Clear();
             checkBoxActive_Category_main.Checked = true;
         }
 
@@ -195,58 +205,48 @@ namespace IMS.App.UserInterface.Category
         {
             //dataGridView1.DataSource = mj.drawDespatchData(selectedDrow, (int)MahajanaDespatchClass.Lottery.Mahajana);
 
-            dgvMainCate.RowsDefaultCellStyle.BackColor = Color.Bisque;
-            dgvMainCate.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
-            dgvMainCate.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            gridMainCategory.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            gridMainCategory.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            gridMainCategory.CellBorderStyle = DataGridViewCellBorderStyle.None;
 
-            dgvMainCate.DefaultCellStyle.SelectionBackColor = Color.Red;
-            dgvMainCate.DefaultCellStyle.SelectionForeColor = Color.Yellow;
+            gridMainCategory.DefaultCellStyle.SelectionBackColor = Color.Red;
+            gridMainCategory.DefaultCellStyle.SelectionForeColor = Color.Yellow;
 
-            dgvMainCate.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            gridMainCategory.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgvMainCate.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
-            dgvMainCate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMainCate.AllowUserToResizeColumns = false;
-            dgvMainCate.Columns[0].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            dgvMainCate.Columns[1].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            dgvMainCate.Columns[2].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            dgvMainCate.Columns[3].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            dgvMainCate.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            dgvMainCate.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridMainCategory.AllowUserToResizeColumns = false;
+            gridMainCategory.Columns[0].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.Columns[1].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.Columns[2].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.Columns[3].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            gridMainCategory.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
 
-            dgvMainCate.Columns[0].Width = 120;
-            dgvMainCate.Columns[1].Width = 140;
-            dgvMainCate.Columns[2].Width = 160;
-            dgvMainCate.Columns[3].Width = 1;
-            dgvMainCate.Columns[4].Width = 80;
-            dgvMainCate.Columns[5].Width = 5;
+            gridMainCategory.Columns[0].Width = 120;
+            gridMainCategory.Columns[1].Width = 140;
+            gridMainCategory.Columns[2].Width = 160;
+            gridMainCategory.Columns[3].Width = 1;
+            gridMainCategory.Columns[4].Width = 80;
+            gridMainCategory.Columns[5].Width = 5;
 
-            dgvMainCate.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
+            gridMainCategory.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
 
-            dgvMainCate.Columns[0].HeaderCell.Value = "Code";
-            dgvMainCate.Columns[1].HeaderCell.Value = "Name";
-            dgvMainCate.Columns[2].HeaderCell.Value = "Description";
+            gridMainCategory.Columns[0].HeaderCell.Value = "Code";
+            gridMainCategory.Columns[1].HeaderCell.Value = "Name";
+            gridMainCategory.Columns[2].HeaderCell.Value = "Description";
            
-            dgvMainCate.Columns[4].HeaderCell.Value = "IsActivate";
-            dgvMainCate.Columns[5].HeaderCell.Value = "";
-            dgvMainCate.Columns[3].HeaderCell.Value = "";
+            gridMainCategory.Columns[4].HeaderCell.Value = "IsActivate";
+            gridMainCategory.Columns[5].HeaderCell.Value = "";
+            gridMainCategory.Columns[3].HeaderCell.Value = "";
 
 
         }
 
 
 
-        private void dgvMainCate_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;// get the Row Index
-            DataGridViewRow selectedRow = dgvMainCate.Rows[index];
-            txtCode.Text = selectedRow.Cells[0].Value.ToString();
-            texName.Text = selectedRow.Cells[1].Value.ToString();
-            texDescrip.Text = selectedRow.Cells[2].Value.ToString();
-            texStockCover.Text = selectedRow.Cells[3].Value.ToString();
-            checkBoxActive_Category_main.Checked =Convert.ToBoolean(selectedRow.Cells[4].Value.ToString());
-
-        }
+        
     }
 }
