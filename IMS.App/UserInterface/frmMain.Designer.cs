@@ -81,7 +81,7 @@
             // 
             this.itemMasterToolStripMenuItem.Name = "itemMasterToolStripMenuItem";
             this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.itemMasterToolStripMenuItem.Text = "Item Master";
+            this.itemMasterToolStripMenuItem.Text = "Main Category";
             this.itemMasterToolStripMenuItem.Click += new System.EventHandler(this.itemMasterToolStripMenuItem_Click);
             // 
             // frmMain

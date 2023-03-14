@@ -295,13 +295,13 @@
             // 
             // textCategorySearch
             // 
-            this.textCategorySearch.Enabled = false;
             this.textCategorySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCategorySearch.Location = new System.Drawing.Point(163, 24);
             this.textCategorySearch.Margin = new System.Windows.Forms.Padding(4);
             this.textCategorySearch.Name = "textCategorySearch";
             this.textCategorySearch.Size = new System.Drawing.Size(298, 26);
             this.textCategorySearch.TabIndex = 51;
+            this.textCategorySearch.TextChanged += new System.EventHandler(this.textCategorySearch_TextChanged);
             // 
             // label12
             // 

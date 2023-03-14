@@ -12,6 +12,7 @@ using IMS.Entity.InventoryProducts;
 
 namespace IMS.App.UserInterface.Category
 {
+
     public partial class MainCategory : Form
     {
 
@@ -189,7 +190,7 @@ namespace IMS.App.UserInterface.Category
             gridViewLoading();
             this.gridMainCategory.ClearSelection();
             this.Refresh();
-            this.RefreshContent();
+            //this.RefreshContent();
         }
 
         public void RefreshContent()
@@ -199,6 +200,7 @@ namespace IMS.App.UserInterface.Category
             textCategoryDescrip.Clear();
             textCategoryStockCover.Clear();
             checkBoxActive_Category_main.Checked = true;
+            textCategorySearch.Clear();
         }
 
         private void gridViewLoading()
@@ -245,8 +247,11 @@ namespace IMS.App.UserInterface.Category
 
         }
 
-
-
-        
+        private void textCategorySearch_TextChanged(object sender, EventArgs e)
+        {
+            this.PopulateGridView(this.textCategorySearch.Text);
+        }
     }
+
+
 }

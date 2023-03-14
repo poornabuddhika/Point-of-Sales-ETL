@@ -143,7 +143,7 @@ namespace IMS.Repository
         {
             try
             {
-                DataSet ds = iDB.ExecuteQuery("select cat_code from item_category where cat_code=" + id);
+                DataSet ds = iDB.ExecuteQuery("select cat_code from item_category where cat_code='" + id+"'");
 
                 Debug.WriteLine(ds.Tables[0].Rows.Count);
 
