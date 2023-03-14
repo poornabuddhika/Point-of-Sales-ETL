@@ -12,9 +12,8 @@ C:\Users\poorn\source\repos\POS_ETL\IMS.App\obj\Debug\IMS.App.csproj.GenerateRes
 C:\Users\poorn\source\repos\POS_ETL\IMS.App\obj\Debug\IMS.App.csproj.CoreCompileInputs.cache
 C:\Users\poorn\source\repos\POS_ETL\IMS.App\obj\Debug\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\IMS.App\obj\Debug\IMS.App.pdb
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.exe.config
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.exe
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.exe.config
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.csprojAssemblyReference.cache
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.Properties.Resources.resources
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.Category.MainCategory.resources
