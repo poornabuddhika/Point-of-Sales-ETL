@@ -18,6 +18,7 @@ namespace IMS.App.UserInterface.Category
 
         private MainCategoriesRepo mainCateRepo = new MainCategoriesRepo();
 
+        #region MainCategory
         //constructor
         public MainCategory()
         {
@@ -58,7 +59,7 @@ namespace IMS.App.UserInterface.Category
                     }
                 }
                 Refresh();
-                this.PopulateGridView();
+                this.PopulateGridViewMainCategory();
 
             }
 
@@ -104,7 +105,7 @@ namespace IMS.App.UserInterface.Category
                     MessageBox.Show("This Recode not Exist in the Database");
                 }
                 Refresh();
-                this.PopulateGridView();
+                this.PopulateGridViewMainCategory();
 
             }
 
@@ -130,7 +131,10 @@ namespace IMS.App.UserInterface.Category
         {
             labelCategoryCodeError.Hide();
             labelCategoryNameError.Hide();
-            
+            selectedTab();
+
+
+
         }
 
         private void dgvMainCate_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -182,7 +186,7 @@ namespace IMS.App.UserInterface.Category
             return mc;
         }
 
-        private void PopulateGridView(string searchKey = null)
+        private void PopulateGridViewMainCategory(string searchKey = null)
         {
            
             this.gridMainCategory.AutoGenerateColumns = true;
@@ -249,8 +253,37 @@ namespace IMS.App.UserInterface.Category
 
         private void textCategorySearch_TextChanged(object sender, EventArgs e)
         {
-            this.PopulateGridView(this.textCategorySearch.Text);
+            this.PopulateGridViewMainCategory(this.textCategorySearch.Text);
         }
+
+
+        #endregion 
+
+        private void Category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedTab();
+        }
+
+
+
+        private void selectedTab()
+        {
+            if (TabCategory.SelectedTab.Text == "Main Category")
+            {
+                PopulateGridViewMainCategory();
+            }
+            else
+            {
+
+            }
+        }
+
+
+
+
+
+
+
     }
 
 

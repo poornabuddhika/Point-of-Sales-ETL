@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Category = new System.Windows.Forms.TabControl();
+            this.TabCategory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gridMainCategory = new System.Windows.Forms.DataGridView();
             this.label21 = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
-            this.Category.SuspendLayout();
+            this.TabCategory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -108,19 +108,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
-            // Category
+            // TabCategory
             // 
-            this.Category.Controls.Add(this.tabPage1);
-            this.Category.Controls.Add(this.tabPage2);
-            this.Category.Controls.Add(this.tabPage3);
-            this.Category.Controls.Add(this.tabPage4);
-            this.Category.Controls.Add(this.tabPage5);
-            this.Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Category.Location = new System.Drawing.Point(3, 12);
-            this.Category.Name = "Category";
-            this.Category.SelectedIndex = 0;
-            this.Category.Size = new System.Drawing.Size(1440, 633);
-            this.Category.TabIndex = 0;
+            this.TabCategory.Controls.Add(this.tabPage1);
+            this.TabCategory.Controls.Add(this.tabPage2);
+            this.TabCategory.Controls.Add(this.tabPage3);
+            this.TabCategory.Controls.Add(this.tabPage4);
+            this.TabCategory.Controls.Add(this.tabPage5);
+            this.TabCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabCategory.Location = new System.Drawing.Point(3, 12);
+            this.TabCategory.Name = "TabCategory";
+            this.TabCategory.SelectedIndex = 0;
+            this.TabCategory.Size = new System.Drawing.Size(1440, 633);
+            this.TabCategory.TabIndex = 0;
+            this.TabCategory.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -901,11 +902,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 645);
-            this.Controls.Add(this.Category);
+            this.Controls.Add(this.TabCategory);
             this.Name = "MainCategory";
             this.Text = "MainCategory";
             this.Load += new System.EventHandler(this.MainCategory_Load);
-            this.Category.ResumeLayout(false);
+            this.TabCategory.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).EndInit();
@@ -927,7 +928,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl Category;
+        private System.Windows.Forms.TabControl TabCategory;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
