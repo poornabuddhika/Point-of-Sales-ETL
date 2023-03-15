@@ -1,0 +1,15 @@
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.exe.config
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.exe
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\bin\Debug\IMS.App.pdb
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.csprojResolveAssemblyReference.cache
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.Properties.Resources.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.Category.MainCategory.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmCustomer_ditails.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmLogin.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmMain.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.Products.Form1.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.Products.frmItems.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.csproj.GenerateResource.Cache
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.csproj.CoreCompileInputs.cache
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.exe
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.pdb

@@ -54,5 +54,10 @@ namespace IMS.App.UserInterface
                 MessageBox.Show("Role Returned : " + role);
             }
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
