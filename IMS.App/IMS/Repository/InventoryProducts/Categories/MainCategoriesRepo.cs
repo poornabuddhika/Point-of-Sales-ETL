@@ -89,7 +89,7 @@ namespace IMS.Repository
             string sql;
             try
             {
-                sql = @"SELECT MainCategoryId, MainCategoryName FROM MainCategories";
+                sql = @"SELECT cat_code, cat_name FROM item_category";
                 return this.iDB.ExecuteQueryTable(sql);
             }
             catch (Exception e)

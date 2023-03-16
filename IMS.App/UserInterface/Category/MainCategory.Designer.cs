@@ -51,16 +51,16 @@
             this.textCategoryCode = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboSubCategory = new System.Windows.Forms.ComboBox();
+            this.texSUBCategoryCodeSearch = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnSUBCategoryClear = new System.Windows.Forms.Button();
+            this.btnSUBCategoryUpdate = new System.Windows.Forms.Button();
+            this.btnSUBCategorySave = new System.Windows.Forms.Button();
+            this.texSUBCategoryDes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.texSUBCategoryCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -378,16 +378,16 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox8);
+            this.tabPage2.Controls.Add(this.comboSubCategory);
+            this.tabPage2.Controls.Add(this.texSUBCategoryCodeSearch);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.btnSUBCategoryClear);
+            this.tabPage2.Controls.Add(this.btnSUBCategoryUpdate);
+            this.tabPage2.Controls.Add(this.btnSUBCategorySave);
+            this.tabPage2.Controls.Add(this.texSUBCategoryDes);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.texSUBCategoryCode);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Location = new System.Drawing.Point(4, 38);
@@ -397,15 +397,25 @@
             this.tabPage2.Text = "Sub Category";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // comboSubCategory
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(152, 20);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(298, 26);
-            this.textBox8.TabIndex = 60;
+            this.comboSubCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboSubCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboSubCategory.FormattingEnabled = true;
+            this.comboSubCategory.Location = new System.Drawing.Point(747, 107);
+            this.comboSubCategory.Name = "comboSubCategory";
+            this.comboSubCategory.Size = new System.Drawing.Size(333, 37);
+            this.comboSubCategory.TabIndex = 62;
+            this.comboSubCategory.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboSubCategory_KeyPress);
+            // 
+            // texSUBCategoryCodeSearch
+            // 
+            this.texSUBCategoryCodeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texSUBCategoryCodeSearch.Location = new System.Drawing.Point(152, 20);
+            this.texSUBCategoryCodeSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.texSUBCategoryCodeSearch.Name = "texSUBCategoryCodeSearch";
+            this.texSUBCategoryCodeSearch.Size = new System.Drawing.Size(298, 26);
+            this.texSUBCategoryCodeSearch.TabIndex = 60;
             // 
             // label11
             // 
@@ -427,61 +437,50 @@
             this.dataGridView2.Size = new System.Drawing.Size(559, 338);
             this.dataGridView2.TabIndex = 59;
             // 
-            // button3
+            // btnSUBCategoryClear
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(996, 292);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 37);
-            this.button3.TabIndex = 58;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSUBCategoryClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnSUBCategoryClear.ForeColor = System.Drawing.Color.Black;
+            this.btnSUBCategoryClear.Location = new System.Drawing.Point(996, 292);
+            this.btnSUBCategoryClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSUBCategoryClear.Name = "btnSUBCategoryClear";
+            this.btnSUBCategoryClear.Size = new System.Drawing.Size(141, 37);
+            this.btnSUBCategoryClear.TabIndex = 58;
+            this.btnSUBCategoryClear.Text = "Clear";
+            this.btnSUBCategoryClear.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnSUBCategoryUpdate
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(831, 292);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 37);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSUBCategoryUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnSUBCategoryUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnSUBCategoryUpdate.Location = new System.Drawing.Point(831, 292);
+            this.btnSUBCategoryUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSUBCategoryUpdate.Name = "btnSUBCategoryUpdate";
+            this.btnSUBCategoryUpdate.Size = new System.Drawing.Size(141, 37);
+            this.btnSUBCategoryUpdate.TabIndex = 57;
+            this.btnSUBCategoryUpdate.Text = "Update";
+            this.btnSUBCategoryUpdate.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnSUBCategorySave
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(668, 292);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 37);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSUBCategorySave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSUBCategorySave.ForeColor = System.Drawing.Color.Black;
+            this.btnSUBCategorySave.Location = new System.Drawing.Point(668, 292);
+            this.btnSUBCategorySave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSUBCategorySave.Name = "btnSUBCategorySave";
+            this.btnSUBCategorySave.Size = new System.Drawing.Size(141, 37);
+            this.btnSUBCategorySave.TabIndex = 56;
+            this.btnSUBCategorySave.Text = "Save";
+            this.btnSUBCategorySave.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // texSUBCategoryDes
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(747, 109);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(333, 28);
-            this.comboBox2.TabIndex = 40;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(747, 223);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(333, 26);
-            this.textBox3.TabIndex = 19;
+            this.texSUBCategoryDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texSUBCategoryDes.Location = new System.Drawing.Point(747, 223);
+            this.texSUBCategoryDes.Margin = new System.Windows.Forms.Padding(4);
+            this.texSUBCategoryDes.Name = "texSUBCategoryDes";
+            this.texSUBCategoryDes.Size = new System.Drawing.Size(333, 26);
+            this.texSUBCategoryDes.TabIndex = 19;
             // 
             // label3
             // 
@@ -494,15 +493,14 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Description ::";
             // 
-            // textBox4
+            // texSUBCategoryCode
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(747, 167);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(333, 26);
-            this.textBox4.TabIndex = 17;
+            this.texSUBCategoryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texSUBCategoryCode.Location = new System.Drawing.Point(747, 167);
+            this.texSUBCategoryCode.Margin = new System.Windows.Forms.Padding(4);
+            this.texSUBCategoryCode.Name = "texSUBCategoryCode";
+            this.texSUBCategoryCode.Size = new System.Drawing.Size(333, 26);
+            this.texSUBCategoryCode.TabIndex = 17;
             // 
             // label4
             // 
@@ -938,12 +936,11 @@
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox textCategoryStockCover;
         internal System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.TextBox textBox3;
+        internal System.Windows.Forms.TextBox texSUBCategoryDes;
         internal System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.TextBox textBox4;
+        internal System.Windows.Forms.TextBox texSUBCategoryCode;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         internal System.Windows.Forms.TextBox textBox5;
         internal System.Windows.Forms.Label label6;
@@ -956,12 +953,12 @@
         internal System.Windows.Forms.Button btn_save_Category;
         internal System.Windows.Forms.TextBox textCategorySearch;
         internal System.Windows.Forms.Label label12;
-        internal System.Windows.Forms.TextBox textBox8;
+        internal System.Windows.Forms.TextBox texSUBCategoryCodeSearch;
         internal System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView2;
-        internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button4;
-        internal System.Windows.Forms.Button button5;
+        internal System.Windows.Forms.Button btnSUBCategoryClear;
+        internal System.Windows.Forms.Button btnSUBCategoryUpdate;
+        internal System.Windows.Forms.Button btnSUBCategorySave;
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button button1;
         internal System.Windows.Forms.Button btnsave;
@@ -995,5 +992,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckBox checkBoxActive_Category_main;
         private System.Windows.Forms.DataGridView gridMainCategory;
+        private System.Windows.Forms.ComboBox comboSubCategory;
     }
 }

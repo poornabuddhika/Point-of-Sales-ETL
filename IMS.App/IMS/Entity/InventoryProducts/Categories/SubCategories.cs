@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMS.Entity.InventoryProducts
 {
-    public class SecondCategories
+    public class SubCategories
     {
         public int        SecondCategoryId         { get; set; }
         public string     SecondCategoryName       { get; set; }

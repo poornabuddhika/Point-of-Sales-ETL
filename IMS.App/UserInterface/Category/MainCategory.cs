@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using IMS.Repository;
 using IMS.Entity.InventoryProducts;
+using System.Text.RegularExpressions;
 
 namespace IMS.App.UserInterface.Category
 {
@@ -132,8 +133,7 @@ namespace IMS.App.UserInterface.Category
             labelCategoryCodeError.Hide();
             labelCategoryNameError.Hide();
             selectedTab();
-
-
+            
 
         }
 
@@ -272,16 +272,39 @@ namespace IMS.App.UserInterface.Category
             {
                 PopulateGridViewMainCategory();
             }
-            else
+            else if(TabCategory.SelectedTab.Text == "Sub Category")
             {
-
+                
+                MainCategoryIdToName();
             }
         }
 
 
 
+        public void MainCategoryIdToName()
+        {
+            this.comboSubCategory.Items.Clear();
+            this.comboSubCategory.Items.Add("--Not Selected--");
+            this.comboSubCategory.SelectedIndex = comboSubCategory.FindStringExact("--Not Selected--");
+            foreach (DataRow row in this.mainCateRepo.LoadComboMainCategoryName().Rows)
+            {
+                 this.comboSubCategory.Items.Add(  row["cat_code"].ToString()+"   "+ row["cat_name"].ToString());
+                
+
+            }
 
 
+
+        }
+
+ 
+
+        private void comboSubCategory_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            comboSubCategory.DroppedDown = false;
+           
+        }
 
 
     }
