@@ -11,19 +11,19 @@ using IMS.Entity.InventoryProducts;
 
 namespace IMS.Repository
 {
-    public class SecondCategoriesReop
+    public class SubCategoriesReop
     {
         private InventoryDBDataAccess iDB{get; set;}
 
-        public SecondCategoriesReop()
+        public SubCategoriesReop()
         {
             this.iDB = new InventoryDBDataAccess();
         }
 
         // view & search
-        public List<SecondCategories> GetAll(string key)
+        public List<SubCategories> GetAll(string key)
         {
-            List<SecondCategories> secondCategoriesList = new List<SecondCategories>();
+            List<SubCategories> secondCategoriesList = new List<SubCategories>();
 
             string sql;
             try
@@ -50,7 +50,7 @@ namespace IMS.Repository
                 int x = 0;
                 while (x < dt.Rows.Count)
                 {
-                    SecondCategories sc = this.ConvertToEntity(dt.Rows[x]);
+                    SubCategories sc = this.ConvertToEntity(dt.Rows[x]);
                     secondCategoriesList.Add(sc);
                     x++;
                 }
@@ -63,14 +63,14 @@ namespace IMS.Repository
             }
         }
 
-        private SecondCategories ConvertToEntity(DataRow row)
+        private SubCategories ConvertToEntity(DataRow row)
         {
             if (row == null)
             {
                 return null;
             }
 
-            var secCate = new SecondCategories();
+            var secCate = new SubCategories();
             secCate.SecondCategoryId = Convert.ToInt32(row["SecondCategoryId"].ToString());
             secCate.SecondCategoryName = row["SecondCategoryName"].ToString();
             secCate.MainCategoryId = Convert.ToInt32(row["MainCategoryId"].ToString());
@@ -93,11 +93,11 @@ namespace IMS.Repository
             }
         }
 
-        public List<SecondCategories> GetSecondCategoriesList()
+        public List<SubCategories> GetSecondCategoriesList()
         {
             DataTable dt = LoadComboMainCategoryName();
 
-            List<SecondCategories> list = new List<SecondCategories>();
+            List<SubCategories> list = new List<SubCategories>();
 
             foreach (DataRow row in dt.Rows)
             {
@@ -108,9 +108,9 @@ namespace IMS.Repository
 
         public int GetSecondCategoryId(string mainCateName)
         {
-            List<SecondCategories> list = GetSecondCategoriesList();
+            List<SubCategories> list = GetSecondCategoriesList();
 
-            foreach (SecondCategories sc in list)
+            foreach (SubCategories sc in list)
             {
                 if (sc.SecondCategoryName == mainCateName)
                 {
@@ -120,14 +120,14 @@ namespace IMS.Repository
             return 0;
         }
 
-        private SecondCategories ConvertToSecondCateList(DataRow row)
+        private SubCategories ConvertToSecondCateList(DataRow row)
         {
             if (row == null)
             {
                 return null;
             }
 
-            var s = new SecondCategories();
+            var s = new SubCategories();
             s.SecondCategoryName = row["SecondCategoryName"].ToString();
             s.SecondCategoryId = Convert.ToInt32(row["SecondCategoryId"].ToString());
             return s;
@@ -162,7 +162,7 @@ namespace IMS.Repository
         }
 
         //save - SecondCategory
-        public bool Save(SecondCategories sc)
+        public bool Save(SubCategories sc)
         {
             try
             {
@@ -184,7 +184,7 @@ namespace IMS.Repository
         }
 
         //update - SecondCategory
-        public bool UpdateProduct(SecondCategories thc)
+        public bool UpdateProduct(SubCategories thc)
         {
             try
             {

@@ -48,7 +48,7 @@
     <Compile Include="IMS\Entity\InventoryProducts\BarCodes\BarCodes.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Brands.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\MainCategories.cs" />
-    <Compile Include="IMS\Entity\InventoryProducts\Categories\SecondCategories.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\SubCategories.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\ThirdCategories.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Vendors.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Expense\Expenses.cs" />
@@ -59,7 +59,7 @@
     <Compile Include="IMS\Repository\InventoryProducts\Categories\BrandsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MainCategoriesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MasterCategoriesRepo.cs" />
-    <Compile Include="IMS\Repository\InventoryProducts\Categories\SecondCategoriesReop.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\SubCategoriesReop.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\ThirdCategoriesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\VendorsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
