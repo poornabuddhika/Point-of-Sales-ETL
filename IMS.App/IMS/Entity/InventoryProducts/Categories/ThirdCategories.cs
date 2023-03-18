@@ -17,7 +17,7 @@ namespace IMS.Entity.InventoryProducts
         //OutSide
         public string SecondCategoryName{get; set;}
 
-        public virtual SecondCategories SecondCategory{ get;                                set; }
+        public virtual SubCategories SecondCategory{ get;                                set; }
         public virtual ICollection<Vendors> Vendors{ get; set; }
     }
 }

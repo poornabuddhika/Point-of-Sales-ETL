@@ -14,10 +14,11 @@ using System.Text.RegularExpressions;
 namespace IMS.App.UserInterface.Category
 {
 
-    public partial class MainCategory : Form
+    public partial class MainCategory : Form  
     {
 
         private MainCategoriesRepo mainCateRepo = new MainCategoriesRepo();
+        private SubCategoriesReop subCateRepo = new SubCategoriesReop();
 
         #region MainCategory
         //constructor
@@ -27,7 +28,7 @@ namespace IMS.App.UserInterface.Category
         }
 
 
-        
+
         //Save Button
         private void btnsave_Category_Main_Click(object sender, EventArgs e)
         {
@@ -37,7 +38,7 @@ namespace IMS.App.UserInterface.Category
                 if (mcObj == null)
                 {
                     mcObj = new MainCategories();
-                    
+
                     return;
                 }
 
@@ -126,14 +127,13 @@ namespace IMS.App.UserInterface.Category
             checkBoxActive_Category_main.Checked = true;
         }
 
-       
+
 
         private void MainCategory_Load(object sender, EventArgs e)
         {
-            labelCategoryCodeError.Hide();
-            labelCategoryNameError.Hide();
-            selectedTab();
             
+            selectedTab();
+
 
         }
 
@@ -171,7 +171,7 @@ namespace IMS.App.UserInterface.Category
                 MessageBox.Show("Please Fill Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mc = null;
             }
-            else if(textCategoryCode.Text != "" & textCategoryName.Text != "")
+            else if (textCategoryCode.Text != "" & textCategoryName.Text != "")
             {
                 labelCategoryCodeError.Hide();
                 labelCategoryNameError.Hide();
@@ -182,16 +182,16 @@ namespace IMS.App.UserInterface.Category
                 mc.MainCategoryIsActivate = checkBoxActive_Category_main.Checked;
             }
 
-            
+
             return mc;
         }
 
         private void PopulateGridViewMainCategory(string searchKey = null)
         {
-           
+
             this.gridMainCategory.AutoGenerateColumns = true;
             this.gridMainCategory.DataSource = this.mainCateRepo.GetAll(searchKey).ToList();
-            gridViewLoading();
+            MainCategoryGridViewLoading();
             this.gridMainCategory.ClearSelection();
             this.Refresh();
             //this.RefreshContent();
@@ -207,7 +207,7 @@ namespace IMS.App.UserInterface.Category
             textCategorySearch.Clear();
         }
 
-        private void gridViewLoading()
+        private void MainCategoryGridViewLoading()
         {
             //dataGridView1.DataSource = mj.drawDespatchData(selectedDrow, (int)MahajanaDespatchClass.Lottery.Mahajana);
 
@@ -234,8 +234,8 @@ namespace IMS.App.UserInterface.Category
             gridMainCategory.Columns[0].Width = 120;
             gridMainCategory.Columns[1].Width = 140;
             gridMainCategory.Columns[2].Width = 160;
-            gridMainCategory.Columns[3].Width = 1;
-            gridMainCategory.Columns[4].Width = 80;
+            gridMainCategory.Columns[3].Width = 160;
+            gridMainCategory.Columns[4].Width = 160;
             gridMainCategory.Columns[5].Width = 5;
 
             gridMainCategory.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
@@ -243,7 +243,7 @@ namespace IMS.App.UserInterface.Category
             gridMainCategory.Columns[0].HeaderCell.Value = "Code";
             gridMainCategory.Columns[1].HeaderCell.Value = "Name";
             gridMainCategory.Columns[2].HeaderCell.Value = "Description";
-           
+
             gridMainCategory.Columns[4].HeaderCell.Value = "IsActivate";
             gridMainCategory.Columns[5].HeaderCell.Value = "";
             gridMainCategory.Columns[3].HeaderCell.Value = "";
@@ -270,16 +270,23 @@ namespace IMS.App.UserInterface.Category
         {
             if (TabCategory.SelectedTab.Text == "Main Category")
             {
+                labelCategoryCodeError.Hide();
+                labelCategoryNameError.Hide();
                 PopulateGridViewMainCategory();
             }
-            else if(TabCategory.SelectedTab.Text == "Sub Category")
+            else if (TabCategory.SelectedTab.Text == "Sub Category")
             {
-                
+                ErrorLabelSubCategoryCombo.Hide();
+                ErrorLabelSubCategoryName.Hide();
                 MainCategoryIdToName();
+                this.PopulateGridViewSubCategory();
             }
         }
 
+        #region Sub Caregory
 
+
+        private SubCategoriesReop subCateReop = new SubCategoriesReop();
 
         public void MainCategoryIdToName()
         {
@@ -288,26 +295,203 @@ namespace IMS.App.UserInterface.Category
             this.comboSubCategory.SelectedIndex = comboSubCategory.FindStringExact("--Not Selected--");
             foreach (DataRow row in this.mainCateRepo.LoadComboMainCategoryName().Rows)
             {
-                 this.comboSubCategory.Items.Add(  row["cat_code"].ToString()+"   "+ row["cat_name"].ToString());
-                
 
+
+                this.comboSubCategory.Items.Add(row["cat_name"].ToString());
+
+                
             }
 
 
 
         }
 
- 
+
 
         private void comboSubCategory_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             comboSubCategory.DroppedDown = false;
+
+        }
+
+        private void btnSUBCategorySave_Click(object sender, EventArgs e)
+        {
            
+            try
+            {
+                
+                SubCategories scObj = FillEntitySubCategory();
+                if (scObj == null)
+                {
+                    scObj = new SubCategories();
+
+                    return;
+                }
+
+                var decision = this.subCateReop.DataExists(scObj.SubCategoryName);
+
+                if (decision)
+                {
+                    MessageBox.Show("Please Press Update Button");
+                }
+                else
+                {
+                    //Save
+                    if (this.subCateRepo.Save(scObj))
+                    {
+                        MessageBox.Show("Save Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Failed");
+                    }
+                }
+                Refresh();
+                this.PopulateGridViewSubCategory();
+
+            
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
 
+        private SubCategories FillEntitySubCategory()
+        {
+
+            var mc = new SubCategories();
+            if (comboSubCategory.SelectedIndex == 0 || texSUBCategoryCode.Text == "")
+            {
+
+                if (comboSubCategory.SelectedIndex == 0)
+                {
+
+                    ErrorLabelSubCategoryCombo.Show();
+
+                }
+                if (texSUBCategoryCode.Text == "")
+                {
+
+                    ErrorLabelSubCategoryName.Show();
+
+                }
+                MessageBox.Show("Please Fill Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mc = null;
+            }
+            else if (comboSubCategory.SelectedIndex != 0 & texSUBCategoryCode.Text != "")
+            {
+                ErrorLabelSubCategoryCombo.Hide();
+                ErrorLabelSubCategoryName.Hide();
+                mc.SubCategoryName = texSUBCategoryCode.Text;
+                mc.MainCategoryName = comboSubCategory.Text;
+                mc.SubCategoryDescription = texSUBCategoryDes.Text;
+                mc.SubCategoryIsActivate = checkBoxSubCategoryActive.Checked;
+
+            }
+
+
+            return mc;
+        }
+
+
+
+        private void PopulateGridViewSubCategory(string searchKey = null)
+        {
+
+            this.dataGridViewSubCategory.AutoGenerateColumns = true;
+            this.dataGridViewSubCategory.DataSource = this.subCateRepo.GetAll(searchKey).ToList();
+            subCategoryGridViewLoading();
+            this.dataGridViewSubCategory.ClearSelection();
+            this.Refresh();
+            //this.RefreshContent();
+        }
+
+
+        private void subCategoryGridViewLoading()
+        {
+            //dataGridView1.DataSource = mj.drawDespatchData(selectedDrow, (int)MahajanaDespatchClass.Lottery.Mahajana);
+
+            dataGridViewSubCategory.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dataGridViewSubCategory.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            dataGridViewSubCategory.CellBorderStyle = DataGridViewCellBorderStyle.None;
+
+            dataGridViewSubCategory.DefaultCellStyle.SelectionBackColor = Color.Red;
+            dataGridViewSubCategory.DefaultCellStyle.SelectionForeColor = Color.Yellow;
+
+            dataGridViewSubCategory.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgvMainCate.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dataGridViewSubCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewSubCategory.AllowUserToResizeColumns = false;
+            dataGridViewSubCategory.Columns[0].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dataGridViewSubCategory.Columns[1].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dataGridViewSubCategory.Columns[2].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dataGridViewSubCategory.Columns[3].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dataGridViewSubCategory.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+            dataGridViewSubCategory.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+
+            dataGridViewSubCategory.Columns[0].Width = 120;
+            dataGridViewSubCategory.Columns[1].Width = 140;
+            dataGridViewSubCategory.Columns[2].Width = 160;
+            dataGridViewSubCategory.Columns[3].Width = 160;
+            dataGridViewSubCategory.Columns[4].Width = 0;
+            dataGridViewSubCategory.Columns[5].Width = 0;
+            dataGridViewSubCategory.Columns[6].Width = 0;
+            dataGridViewSubCategory.Columns[7].Width = 0;
+            dataGridViewSubCategory.Columns[7].Width = 0;
+
+            dataGridViewSubCategory.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
+
+            dataGridViewSubCategory.Columns[0].HeaderCell.Value = "Sub CategoryName";
+            dataGridViewSubCategory.Columns[1].HeaderCell.Value = "Main CategoryName";
+            dataGridViewSubCategory.Columns[2].HeaderCell.Value = "Description";
+
+            dataGridViewSubCategory.Columns[3].HeaderCell.Value = "Is Activate";
+            dataGridViewSubCategory.Columns[4].HeaderCell.Value = "";
+            dataGridViewSubCategory.Columns[5].HeaderCell.Value = "";
+
+
+        }
+
+
+
+
+
+
+
+        #endregion
+
+        private void texSUBCategoryCodeSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.PopulateGridViewSubCategory(this.texSUBCategoryCodeSearch.Text);
+        }
+
+
+
+
+        private void dataGridViewSubCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;// get the Row Index
+            DataGridViewRow selectedRow = dataGridViewSubCategory.Rows[index];
+            texSUBCategoryCode.Text = selectedRow.Cells[0].Value.ToString();
+            comboSubCategory.Text = selectedRow.Cells[1].Value.ToString();
+            texSUBCategoryDes.Text = selectedRow.Cells[2].Value.ToString();
+            checkBoxSubCategoryActive.Checked =Convert.ToBoolean( selectedRow.Cells[3].Value.ToString());
+            
+        }
     }
+
+
+
+
+
 
 
 }

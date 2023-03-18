@@ -30,20 +30,18 @@ namespace IMS.Repository
             {
                 if (key == null)
                     sql =
-                        @"SELECT SecondCategories.SecondCategoryId AS SecondCategoryId, SecondCategories.SecondCategoryName AS SecondCategoryName,
-                          MainCategories.MainCategoryId AS MainCategoryId,
-                          MainCategories.MainCategoryName AS MainCategoryName
-                          FROM SecondCategories
-				          LEFT JOIN MainCategories
-                          ON SecondCategories.MainCategoryId = MainCategories.MainCategoryId";
+                        @"SELECT item_sub_category.sub_name AS SubCategoryName,
+                            item_sub_category.sub_Description AS Description,
+                            item_category.cat_name AS CategoryName  , item_category.cat_is_active AS Active
+                            FROM item_sub_category
+                           LEFT JOIN item_category ON item_sub_category.Maincategory_Name = item_category.cat_name";
                 else
-                    sql = @"SELECT SecondCategories.SecondCategoryId AS SecondCategoryId, SecondCategories.SecondCategoryName AS SecondCategoryName,
-                          MainCategories.MainCategoryId AS MainCategoryId,
-                          MainCategories.MainCategoryName AS MainCategoryName
-                          FROM SecondCategories
-				          LEFT JOIN MainCategories
-                          ON SecondCategories.MainCategoryId = MainCategories.MainCategoryId
-                          where SecondCategories.SecondCategoryName like '%" + key + "%' or MainCategories.MainCategoryName like '%" + key + "%' ; ";
+                    sql = @"SELECT item_sub_category.sub_name AS SubCategoryName,
+                            item_sub_category.sub_Description AS Description,
+                            item_category.cat_name AS CategoryName  , item_category.cat_is_active AS Active
+                            FROM item_sub_category
+                           LEFT JOIN item_category ON item_sub_category.Maincategory_Name = item_category.cat_name
+                                 where item_sub_category.sub_name like '%" + key+"%' or item_category.cat_name like '%"+key+"%'  ; ";
 
                 var dt = this.iDB.ExecuteQueryTable(sql);
 
@@ -69,12 +67,16 @@ namespace IMS.Repository
             {
                 return null;
             }
-
+           
             var secCate = new SubCategories();
-            secCate.SecondCategoryId = Convert.ToInt32(row["SecondCategoryId"].ToString());
-            secCate.SecondCategoryName = row["SecondCategoryName"].ToString();
-            secCate.MainCategoryId = Convert.ToInt32(row["MainCategoryId"].ToString());
-            secCate.MainCategoryName = row["MainCategoryName"].ToString();
+            
+           
+            secCate.SubCategoryName = row["SubCategoryName"].ToString();
+            secCate.SubCategoryDescription = row["Description"].ToString();
+            secCate.MainCategoryName = row["CategoryName"].ToString();
+            secCate.SubCategoryIsActivate = Convert.ToBoolean(row["Active"].ToString());
+
+
             return secCate;
         }
 
@@ -112,9 +114,9 @@ namespace IMS.Repository
 
             foreach (SubCategories sc in list)
             {
-                if (sc.SecondCategoryName == mainCateName)
+                if (sc.SubCategoryName == mainCateName)
                 {
-                    return sc.SecondCategoryId;
+                    return sc.SubCategoryId;
                 }
             }
             return 0;
@@ -128,17 +130,17 @@ namespace IMS.Repository
             }
 
             var s = new SubCategories();
-            s.SecondCategoryName = row["SecondCategoryName"].ToString();
-            s.SecondCategoryId = Convert.ToInt32(row["SecondCategoryId"].ToString());
+            s.SubCategoryName = row["SecondCategoryName"].ToString();
+            s.SubCategoryId = Convert.ToInt32(row["SecondCategoryId"].ToString());
             return s;
         }
 
         //DataCount - DataExists
-        public bool DataExists(int id)
+        public bool DataExists(string name)
         {
             try
             {
-                DataSet ds = iDB.ExecuteQuery("select SecondCategoryId from SecondCategories where SecondCategoryId=" + id);
+                DataSet ds = iDB.ExecuteQuery("select sub_name from item_sub_category where sub_name='" + name+"'");
 
                 Debug.WriteLine(ds.Tables[0].Rows.Count);
 
@@ -156,7 +158,7 @@ namespace IMS.Repository
                 Console.WriteLine(e);
 
                 throw;
-
+                
                 return false;
             }
         }
@@ -166,9 +168,9 @@ namespace IMS.Repository
         {
             try
             {
-                var sql = @"insert into SecondCategories (SecondCategoryName, MainCategoryId)
-                                values ('" + sc.SecondCategoryName + "' , '" + sc.MainCategoryId + "');";
-
+                var sql = @"insert into item_sub_category (sub_name, Maincategory_Name,sub_Description,sub_is_deleted)
+                                values ('"+sc.SubCategoryName+"','"+sc.MainCategoryName+"','"+sc.SubCategoryDescription+"','"+sc.SubCategoryIsActivate.ToString()+"');";
+                iDB.conOpen();
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
                 if (rowCount == 1)
@@ -188,7 +190,7 @@ namespace IMS.Repository
         {
             try
             {
-                string sql = @"update SecondCategories set SecondCategoryName='" + thc.SecondCategoryName + "' , MainCategoryId='" + thc.MainCategoryId + "' where SecondCategoryId='" + thc.SecondCategoryId + "';";
+                string sql = @"update SecondCategories set SecondCategoryName='" + thc.SubCategoryName + "' , MainCategoryId='" + thc.MainCategoryId + "' where SecondCategoryId='" + thc.SubCategoryId + "';";
 
                 int count = this.iDB.ExecuteDMLQuery(sql);
 

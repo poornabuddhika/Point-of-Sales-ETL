@@ -15,6 +15,6 @@ namespace IMS.Entity.InventoryProducts
 
         public bool MainCategoryIsActivate { get; set; }
 
-        public virtual ICollection<SecondCategories> SecondCategories{ get; set; }
+        public virtual ICollection<SubCategories> SecondCategories{ get; set; }
     }
 }

@@ -51,10 +51,16 @@
             this.textCategoryCode = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.checkBoxSubCategoryActive = new System.Windows.Forms.CheckBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.ErrorLabelSubCategoryName = new System.Windows.Forms.Label();
+            this.ErrorLabelSubCategoryCombo = new System.Windows.Forms.Label();
             this.comboSubCategory = new System.Windows.Forms.ComboBox();
             this.texSUBCategoryCodeSearch = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSubCategory = new System.Windows.Forms.DataGridView();
             this.btnSUBCategoryClear = new System.Windows.Forms.Button();
             this.btnSUBCategoryUpdate = new System.Windows.Forms.Button();
             this.btnSUBCategorySave = new System.Windows.Forms.Button();
@@ -99,7 +105,7 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubCategory)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -110,6 +116,9 @@
             // 
             // TabCategory
             // 
+            this.TabCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabCategory.Controls.Add(this.tabPage1);
             this.TabCategory.Controls.Add(this.tabPage2);
             this.TabCategory.Controls.Add(this.tabPage3);
@@ -156,9 +165,8 @@
             // 
             // gridMainCategory
             // 
-            this.gridMainCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridMainCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gridMainCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridMainCategory.Location = new System.Drawing.Point(6, 67);
             this.gridMainCategory.Name = "gridMainCategory";
@@ -378,10 +386,16 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.checkBoxSubCategoryActive);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.ErrorLabelSubCategoryName);
+            this.tabPage2.Controls.Add(this.ErrorLabelSubCategoryCombo);
             this.tabPage2.Controls.Add(this.comboSubCategory);
             this.tabPage2.Controls.Add(this.texSUBCategoryCodeSearch);
             this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.dataGridViewSubCategory);
             this.tabPage2.Controls.Add(this.btnSUBCategoryClear);
             this.tabPage2.Controls.Add(this.btnSUBCategoryUpdate);
             this.tabPage2.Controls.Add(this.btnSUBCategorySave);
@@ -397,12 +411,77 @@
             this.tabPage2.Text = "Sub Category";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(807, 267);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(85, 24);
+            this.label22.TabIndex = 73;
+            this.label22.Text = "Active ::";
+            // 
+            // checkBoxSubCategoryActive
+            // 
+            this.checkBoxSubCategoryActive.AutoSize = true;
+            this.checkBoxSubCategoryActive.Checked = true;
+            this.checkBoxSubCategoryActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSubCategoryActive.Location = new System.Drawing.Point(911, 274);
+            this.checkBoxSubCategoryActive.Name = "checkBoxSubCategoryActive";
+            this.checkBoxSubCategoryActive.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxSubCategoryActive.TabIndex = 72;
+            this.checkBoxSubCategoryActive.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Crimson;
+            this.label25.Location = new System.Drawing.Point(884, 167);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(21, 25);
+            this.label25.TabIndex = 71;
+            this.label25.Text = "*";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Crimson;
+            this.label24.Location = new System.Drawing.Point(884, 110);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(21, 25);
+            this.label24.TabIndex = 70;
+            this.label24.Text = "*";
+            // 
+            // ErrorLabelSubCategoryName
+            // 
+            this.ErrorLabelSubCategoryName.AutoSize = true;
+            this.ErrorLabelSubCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabelSubCategoryName.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorLabelSubCategoryName.Location = new System.Drawing.Point(1275, 165);
+            this.ErrorLabelSubCategoryName.Name = "ErrorLabelSubCategoryName";
+            this.ErrorLabelSubCategoryName.Size = new System.Drawing.Size(118, 18);
+            this.ErrorLabelSubCategoryName.TabIndex = 69;
+            this.ErrorLabelSubCategoryName.Text = "Please Fill this";
+            // 
+            // ErrorLabelSubCategoryCombo
+            // 
+            this.ErrorLabelSubCategoryCombo.AutoSize = true;
+            this.ErrorLabelSubCategoryCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabelSubCategoryCombo.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorLabelSubCategoryCombo.Location = new System.Drawing.Point(1273, 115);
+            this.ErrorLabelSubCategoryCombo.Name = "ErrorLabelSubCategoryCombo";
+            this.ErrorLabelSubCategoryCombo.Size = new System.Drawing.Size(143, 18);
+            this.ErrorLabelSubCategoryCombo.TabIndex = 68;
+            this.ErrorLabelSubCategoryCombo.Text = "Please Select this";
+            // 
             // comboSubCategory
             // 
             this.comboSubCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboSubCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboSubCategory.FormattingEnabled = true;
-            this.comboSubCategory.Location = new System.Drawing.Point(747, 107);
+            this.comboSubCategory.Location = new System.Drawing.Point(911, 105);
             this.comboSubCategory.Name = "comboSubCategory";
             this.comboSubCategory.Size = new System.Drawing.Size(333, 37);
             this.comboSubCategory.TabIndex = 62;
@@ -416,6 +495,7 @@
             this.texSUBCategoryCodeSearch.Name = "texSUBCategoryCodeSearch";
             this.texSUBCategoryCodeSearch.Size = new System.Drawing.Size(298, 26);
             this.texSUBCategoryCodeSearch.TabIndex = 60;
+            this.texSUBCategoryCodeSearch.TextChanged += new System.EventHandler(this.texSUBCategoryCodeSearch_TextChanged);
             // 
             // label11
             // 
@@ -428,20 +508,23 @@
             this.label11.TabIndex = 61;
             this.label11.Text = "Search ::";
             // 
-            // dataGridView2
+            // dataGridViewSubCategory
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(29, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(559, 338);
-            this.dataGridView2.TabIndex = 59;
+            this.dataGridViewSubCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewSubCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSubCategory.Location = new System.Drawing.Point(3, 72);
+            this.dataGridViewSubCategory.Name = "dataGridViewSubCategory";
+            this.dataGridViewSubCategory.RowTemplate.Height = 24;
+            this.dataGridViewSubCategory.Size = new System.Drawing.Size(769, 511);
+            this.dataGridViewSubCategory.TabIndex = 59;
+            this.dataGridViewSubCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSubCategory_CellClick);
             // 
             // btnSUBCategoryClear
             // 
             this.btnSUBCategoryClear.BackColor = System.Drawing.Color.Transparent;
             this.btnSUBCategoryClear.ForeColor = System.Drawing.Color.Black;
-            this.btnSUBCategoryClear.Location = new System.Drawing.Point(996, 292);
+            this.btnSUBCategoryClear.Location = new System.Drawing.Point(1168, 329);
             this.btnSUBCategoryClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnSUBCategoryClear.Name = "btnSUBCategoryClear";
             this.btnSUBCategoryClear.Size = new System.Drawing.Size(141, 37);
@@ -453,7 +536,7 @@
             // 
             this.btnSUBCategoryUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnSUBCategoryUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnSUBCategoryUpdate.Location = new System.Drawing.Point(831, 292);
+            this.btnSUBCategoryUpdate.Location = new System.Drawing.Point(1003, 329);
             this.btnSUBCategoryUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnSUBCategoryUpdate.Name = "btnSUBCategoryUpdate";
             this.btnSUBCategoryUpdate.Size = new System.Drawing.Size(141, 37);
@@ -465,18 +548,19 @@
             // 
             this.btnSUBCategorySave.BackColor = System.Drawing.Color.Transparent;
             this.btnSUBCategorySave.ForeColor = System.Drawing.Color.Black;
-            this.btnSUBCategorySave.Location = new System.Drawing.Point(668, 292);
+            this.btnSUBCategorySave.Location = new System.Drawing.Point(840, 329);
             this.btnSUBCategorySave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSUBCategorySave.Name = "btnSUBCategorySave";
             this.btnSUBCategorySave.Size = new System.Drawing.Size(141, 37);
             this.btnSUBCategorySave.TabIndex = 56;
             this.btnSUBCategorySave.Text = "Save";
             this.btnSUBCategorySave.UseVisualStyleBackColor = false;
+            this.btnSUBCategorySave.Click += new System.EventHandler(this.btnSUBCategorySave_Click);
             // 
             // texSUBCategoryDes
             // 
             this.texSUBCategoryDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texSUBCategoryDes.Location = new System.Drawing.Point(747, 223);
+            this.texSUBCategoryDes.Location = new System.Drawing.Point(911, 221);
             this.texSUBCategoryDes.Margin = new System.Windows.Forms.Padding(4);
             this.texSUBCategoryDes.Name = "texSUBCategoryDes";
             this.texSUBCategoryDes.Size = new System.Drawing.Size(333, 26);
@@ -486,7 +570,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(615, 223);
+            this.label3.Location = new System.Drawing.Point(779, 221);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 20);
@@ -496,7 +580,7 @@
             // texSUBCategoryCode
             // 
             this.texSUBCategoryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texSUBCategoryCode.Location = new System.Drawing.Point(747, 167);
+            this.texSUBCategoryCode.Location = new System.Drawing.Point(911, 165);
             this.texSUBCategoryCode.Margin = new System.Windows.Forms.Padding(4);
             this.texSUBCategoryCode.Name = "texSUBCategoryCode";
             this.texSUBCategoryCode.Size = new System.Drawing.Size(333, 26);
@@ -506,18 +590,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(664, 173);
+            this.label4.Location = new System.Drawing.Point(828, 171);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Code ::";
+            this.label4.Text = "Name ::";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(631, 117);
+            this.label5.Location = new System.Drawing.Point(795, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
@@ -910,7 +994,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubCategory)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -955,7 +1039,7 @@
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.TextBox texSUBCategoryCodeSearch;
         internal System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewSubCategory;
         internal System.Windows.Forms.Button btnSUBCategoryClear;
         internal System.Windows.Forms.Button btnSUBCategoryUpdate;
         internal System.Windows.Forms.Button btnSUBCategorySave;
@@ -993,5 +1077,11 @@
         private System.Windows.Forms.CheckBox checkBoxActive_Category_main;
         private System.Windows.Forms.DataGridView gridMainCategory;
         private System.Windows.Forms.ComboBox comboSubCategory;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label ErrorLabelSubCategoryName;
+        public System.Windows.Forms.Label ErrorLabelSubCategoryCombo;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.CheckBox checkBoxSubCategoryActive;
     }
 }
