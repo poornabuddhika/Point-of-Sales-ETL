@@ -543,6 +543,7 @@
             this.btnSUBCategoryUpdate.TabIndex = 57;
             this.btnSUBCategoryUpdate.Text = "Update";
             this.btnSUBCategoryUpdate.UseVisualStyleBackColor = false;
+            this.btnSUBCategoryUpdate.Click += new System.EventHandler(this.btnSUBCategoryUpdate_Click);
             // 
             // btnSUBCategorySave
             // 

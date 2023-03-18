@@ -285,7 +285,7 @@ namespace IMS.App.UserInterface.Category
 
         #region Sub Caregory
 
-
+        private int hiddenSubCategory_id = 0;
         private SubCategoriesReop subCateReop = new SubCategoriesReop();
 
         public void MainCategoryIdToName()
@@ -392,6 +392,7 @@ namespace IMS.App.UserInterface.Category
                 mc.MainCategoryName = comboSubCategory.Text;
                 mc.SubCategoryDescription = texSUBCategoryDes.Text;
                 mc.SubCategoryIsActivate = checkBoxSubCategoryActive.Checked;
+                mc.SubCategoryId = hiddenSubCategory_id;
 
             }
 
@@ -484,7 +485,49 @@ namespace IMS.App.UserInterface.Category
             comboSubCategory.Text = selectedRow.Cells[1].Value.ToString();
             texSUBCategoryDes.Text = selectedRow.Cells[2].Value.ToString();
             checkBoxSubCategoryActive.Checked =Convert.ToBoolean( selectedRow.Cells[3].Value.ToString());
-            
+            hiddenSubCategory_id =Convert.ToInt32( selectedRow.Cells[4].Value.ToString());
+
+        }
+
+        private void btnSUBCategoryUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SubCategories mcObj = this.FillEntitySubCategory();
+                if (mcObj == null)
+                {
+                    mcObj = new SubCategories();
+
+                    return;
+                }
+
+                var decision = this.subCateRepo.DataExists(mcObj.SubCategoryName);
+
+                if (decision)
+                {
+                    //Update
+                    if (this.subCateRepo.UpdateProduct(mcObj))
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Recode not Exist in the Database");
+                }
+                Refresh();
+                this.PopulateGridViewSubCategory();
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

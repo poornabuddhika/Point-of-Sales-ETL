@@ -15,13 +15,14 @@ namespace IMS.Entity.InventoryProducts
         public string     SubCategoryDescription{ get; set; }
 
         public bool SubCategoryIsActivate { get; set; }
-        public int MainCategoryId { get; set; }
+
+        public int SubCategoryId { get; set; }
+
         public byte[]     SecondCategoryImage      { get; set; }
 
         //OutSide
-        public int SubCategoryId { get; set; }
-
-
+        
+        public int MainCategoryId { get; set; }
 
         public virtual MainCategories               MainCategory   { get; set; }
         public virtual ICollection<ThirdCategories> ThirdCategories{ get; set; }

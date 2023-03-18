@@ -32,13 +32,16 @@ namespace IMS.Repository
                     sql =
                         @"SELECT item_sub_category.sub_name AS SubCategoryName,
                             item_sub_category.sub_Description AS Description,
-                            item_category.cat_name AS CategoryName  , item_category.cat_is_active AS Active
+                            item_category.cat_name AS CategoryName  ,
+                            item_category.cat_is_active AS Active,
+                            item_sub_category.sub_id
                             FROM item_sub_category
                            LEFT JOIN item_category ON item_sub_category.Maincategory_Name = item_category.cat_name";
                 else
                     sql = @"SELECT item_sub_category.sub_name AS SubCategoryName,
                             item_sub_category.sub_Description AS Description,
-                            item_category.cat_name AS CategoryName  , item_category.cat_is_active AS Active
+                            item_category.cat_name AS CategoryName  , item_category.cat_is_active AS Active,
+                            item_sub_category.sub_id
                             FROM item_sub_category
                            LEFT JOIN item_category ON item_sub_category.Maincategory_Name = item_category.cat_name
                                  where item_sub_category.sub_name like '%" + key+"%' or item_category.cat_name like '%"+key+"%'  ; ";
@@ -74,7 +77,8 @@ namespace IMS.Repository
             secCate.SubCategoryName = row["SubCategoryName"].ToString();
             secCate.SubCategoryDescription = row["Description"].ToString();
             secCate.MainCategoryName = row["CategoryName"].ToString();
-            secCate.SubCategoryIsActivate = Convert.ToBoolean(row["Active"].ToString());
+            secCate.SubCategoryIsActivate = Convert.ToBoolean(row["Active"].ToString().Trim());
+            secCate.SubCategoryId = Convert.ToInt32(row["sub_id"].ToString());
 
 
             return secCate;
@@ -190,8 +194,13 @@ namespace IMS.Repository
         {
             try
             {
-                string sql = @"update SecondCategories set SecondCategoryName='" + thc.SubCategoryName + "' , MainCategoryId='" + thc.MainCategoryId + "' where SecondCategoryId='" + thc.SubCategoryId + "';";
-
+                string sql = @"update item_sub_category set 
+                                item_sub_category.sub_name='"+thc.SubCategoryName.ToString()+"'," +
+                                " item_sub_category.Maincategory_Name = '"+thc.MainCategoryName+"' , " +
+                                "item_sub_category.sub_Description = '"+thc.SubCategoryDescription+"' ," +
+                                "item_sub_category.sub_is_deleted = '"+thc.SubCategoryIsActivate+"'" +
+                                "where item_sub_category.sub_id = " + thc.SubCategoryId + "; ";
+                iDB.conOpen();
                 int count = this.iDB.ExecuteDMLQuery(sql);
 
                 if (count == 1)
