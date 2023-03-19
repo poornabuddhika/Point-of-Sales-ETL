@@ -24,8 +24,9 @@ namespace IMS.App.UserInterface.Category
 
         private BrandsRepo brandsRepo = new BrandsRepo();
         private VendorsRepo vendorsRepo = new VendorsRepo();
+        private UnitRepo unitRepo = new UnitRepo();
         BrandFormClass br = new BrandFormClass();
-
+        UnitFormClass unitForm = new UnitFormClass();
 
         //Main Category Region Start
         #region MainCategory
@@ -294,6 +295,12 @@ namespace IMS.App.UserInterface.Category
                 ErrorlabelBrandName.Hide();
                 ErrorlabelBrandTag.Hide();
                 br.PopulateGridViewBrand(GridViewBrand,brandsRepo);
+            }
+            else if(TabCategory.SelectedTab.Text == "UNIT Master")
+            {
+                ErrorlabelUnitName.Hide();
+                ErrorlabelUnitCode.Hide();
+                unitForm.PopulateGridViewUnit(dataGridViewUnit,unitRepo);
             }
         }
 
@@ -623,7 +630,7 @@ namespace IMS.App.UserInterface.Category
                     MessageBox.Show("This Recode not Exist in the Database");
                 }
                 Refresh();
-                this.PopulateGridViewSubCategory();
+                br.PopulateGridViewBrand(GridViewBrand, brandsRepo);
 
             }
 
@@ -649,6 +656,107 @@ namespace IMS.App.UserInterface.Category
         private void textBrandSearch_TextChanged(object sender, EventArgs e)
         {
             br.PopulateGridViewBrand(GridViewBrand,brandsRepo, textBrandSearch.Text);
+        }
+
+        private void buttonUnitSave_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Unit brObj = unitForm.FillEntityUnitCategory(textUnitName, textUnitCode, checkBoxUnit, ErrorlabelUnitName, ErrorlabelUnitCode);
+                if (brObj == null)
+                {
+                    brObj = new Unit();
+
+                    return;
+                }
+
+                var decision = this.unitRepo.DataExists(brObj.UnitName);
+
+                if (decision)
+                {
+                    MessageBox.Show("Please Press Update Button");
+                }
+                else
+                {
+                    //Save
+                    if (this.unitRepo.Save(brObj))
+                    {
+                        MessageBox.Show("Save Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Failed");
+                    }
+                }
+                Refresh();
+                unitForm.PopulateGridViewUnit(dataGridViewUnit, unitRepo);
+
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void buttonUnitUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Unit brObj = unitForm.FillEntityUnitCategory(textUnitName, textUnitCode, checkBoxUnit, ErrorlabelUnitName, ErrorlabelUnitCode);
+                if (brObj == null)
+                {
+                    brObj = new Unit();
+
+                    return;
+                }
+
+                var decision = this.unitRepo.DataExists(brObj.UnitName);
+
+                if (decision)
+                {
+                    //Update
+                    if (this.unitRepo.UpdateProduct(brObj))
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Recode not Exist in the Database");
+                }
+                Refresh();
+                unitForm.PopulateGridViewUnit(dataGridViewUnit, unitRepo);
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textUnitSearch_TextChanged(object sender, EventArgs e)
+        {
+            unitForm.PopulateGridViewUnit(dataGridViewUnit, unitRepo,textUnitSearch.Text);
+        }
+
+        private void dataGridViewUnit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;// get the Row Index
+            DataGridViewRow selectedRow = dataGridViewUnit.Rows[index];
+
+           
+            textUnitName.Text = selectedRow.Cells[1].Value.ToString();
+            textUnitCode.Text = selectedRow.Cells[2].Value.ToString();
+            checkBoxUnit.Checked = Convert.ToBoolean(selectedRow.Cells[3].Value.ToString());
         }
     }
 

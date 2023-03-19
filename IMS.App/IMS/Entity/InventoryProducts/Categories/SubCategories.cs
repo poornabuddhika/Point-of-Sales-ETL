@@ -25,7 +25,7 @@ namespace IMS.Entity.InventoryProducts
         public int MainCategoryId { get; set; }
 
         public virtual MainCategories               MainCategory   { get; set; }
-        public virtual ICollection<ThirdCategories> ThirdCategories{ get; set; }
+        
 
     }
 }

@@ -82,14 +82,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textUnitName = new System.Windows.Forms.TextBox();
+            this.buttonUnitClear = new System.Windows.Forms.Button();
+            this.buttonUnitUpdate = new System.Windows.Forms.Button();
+            this.buttonUnitSave = new System.Windows.Forms.Button();
+            this.textUnitSearch = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.dataGridViewUnit = new System.Windows.Forms.DataGridView();
+            this.textUnitCode = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -107,6 +107,12 @@
             this.label27 = new System.Windows.Forms.Label();
             this.ErrorlabelBrandName = new System.Windows.Forms.Label();
             this.ErrorlabelBrandTag = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.checkBoxUnit = new System.Windows.Forms.CheckBox();
+            this.ErrorlabelUnitCode = new System.Windows.Forms.Label();
+            this.ErrorlabelUnitName = new System.Windows.Forms.Label();
             this.TabCategory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).BeginInit();
@@ -115,7 +121,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewBrand)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnit)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
@@ -764,14 +770,20 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox13);
-            this.tabPage4.Controls.Add(this.button9);
-            this.tabPage4.Controls.Add(this.button10);
-            this.tabPage4.Controls.Add(this.button11);
-            this.tabPage4.Controls.Add(this.textBox10);
+            this.tabPage4.Controls.Add(this.ErrorlabelUnitCode);
+            this.tabPage4.Controls.Add(this.ErrorlabelUnitName);
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.checkBoxUnit);
+            this.tabPage4.Controls.Add(this.label29);
+            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.textUnitName);
+            this.tabPage4.Controls.Add(this.buttonUnitClear);
+            this.tabPage4.Controls.Add(this.buttonUnitUpdate);
+            this.tabPage4.Controls.Add(this.buttonUnitSave);
+            this.tabPage4.Controls.Add(this.textUnitSearch);
             this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.dataGridView4);
-            this.tabPage4.Controls.Add(this.textBox12);
+            this.tabPage4.Controls.Add(this.dataGridViewUnit);
+            this.tabPage4.Controls.Add(this.textUnitCode);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Location = new System.Drawing.Point(4, 38);
@@ -782,61 +794,62 @@
             this.tabPage4.Text = "UNIT Master";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox13
+            // textUnitName
             // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(766, 165);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(333, 26);
-            this.textBox13.TabIndex = 68;
+            this.textUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUnitName.Location = new System.Drawing.Point(937, 157);
+            this.textUnitName.Margin = new System.Windows.Forms.Padding(4);
+            this.textUnitName.Name = "textUnitName";
+            this.textUnitName.Size = new System.Drawing.Size(333, 26);
+            this.textUnitName.TabIndex = 68;
             // 
-            // button9
+            // buttonUnitClear
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(996, 346);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 37);
-            this.button9.TabIndex = 67;
-            this.button9.Text = "Clear";
-            this.button9.UseVisualStyleBackColor = false;
+            this.buttonUnitClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonUnitClear.ForeColor = System.Drawing.Color.Black;
+            this.buttonUnitClear.Location = new System.Drawing.Point(1138, 338);
+            this.buttonUnitClear.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUnitClear.Name = "buttonUnitClear";
+            this.buttonUnitClear.Size = new System.Drawing.Size(141, 37);
+            this.buttonUnitClear.TabIndex = 67;
+            this.buttonUnitClear.Text = "Clear";
+            this.buttonUnitClear.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // buttonUnitUpdate
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(831, 346);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 37);
-            this.button10.TabIndex = 66;
-            this.button10.Text = "Delete";
-            this.button10.UseVisualStyleBackColor = false;
+            this.buttonUnitUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.buttonUnitUpdate.ForeColor = System.Drawing.Color.Black;
+            this.buttonUnitUpdate.Location = new System.Drawing.Point(973, 338);
+            this.buttonUnitUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUnitUpdate.Name = "buttonUnitUpdate";
+            this.buttonUnitUpdate.Size = new System.Drawing.Size(141, 37);
+            this.buttonUnitUpdate.TabIndex = 66;
+            this.buttonUnitUpdate.Text = "Update";
+            this.buttonUnitUpdate.UseVisualStyleBackColor = false;
+            this.buttonUnitUpdate.Click += new System.EventHandler(this.buttonUnitUpdate_Click);
             // 
-            // button11
+            // buttonUnitSave
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(668, 346);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(141, 37);
-            this.button11.TabIndex = 65;
-            this.button11.Text = "Save";
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonUnitSave.BackColor = System.Drawing.Color.Transparent;
+            this.buttonUnitSave.ForeColor = System.Drawing.Color.Black;
+            this.buttonUnitSave.Location = new System.Drawing.Point(810, 338);
+            this.buttonUnitSave.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUnitSave.Name = "buttonUnitSave";
+            this.buttonUnitSave.Size = new System.Drawing.Size(141, 37);
+            this.buttonUnitSave.TabIndex = 65;
+            this.buttonUnitSave.Text = "Save";
+            this.buttonUnitSave.UseVisualStyleBackColor = false;
+            this.buttonUnitSave.Click += new System.EventHandler(this.buttonUnitSave_Click);
             // 
-            // textBox10
+            // textUnitSearch
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(140, 26);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(298, 26);
-            this.textBox10.TabIndex = 63;
+            this.textUnitSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUnitSearch.Location = new System.Drawing.Point(140, 26);
+            this.textUnitSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.textUnitSearch.Name = "textUnitSearch";
+            this.textUnitSearch.Size = new System.Drawing.Size(298, 26);
+            this.textUnitSearch.TabIndex = 63;
+            this.textUnitSearch.TextChanged += new System.EventHandler(this.textUnitSearch_TextChanged);
             // 
             // label13
             // 
@@ -849,46 +862,48 @@
             this.label13.TabIndex = 64;
             this.label13.Text = "Search ::";
             // 
-            // dataGridView4
+            // dataGridViewUnit
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(17, 78);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(559, 338);
-            this.dataGridView4.TabIndex = 62;
+            this.dataGridViewUnit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewUnit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUnit.Location = new System.Drawing.Point(17, 78);
+            this.dataGridViewUnit.Name = "dataGridViewUnit";
+            this.dataGridViewUnit.RowTemplate.Height = 24;
+            this.dataGridViewUnit.Size = new System.Drawing.Size(610, 505);
+            this.dataGridViewUnit.TabIndex = 62;
+            this.dataGridViewUnit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUnit_CellClick);
             // 
-            // textBox12
+            // textUnitCode
             // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(766, 215);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(333, 26);
-            this.textBox12.TabIndex = 57;
+            this.textUnitCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUnitCode.Location = new System.Drawing.Point(937, 210);
+            this.textUnitCode.Margin = new System.Windows.Forms.Padding(4);
+            this.textUnitCode.Name = "textUnitCode";
+            this.textUnitCode.Size = new System.Drawing.Size(333, 26);
+            this.textUnitCode.TabIndex = 57;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(697, 221);
+            this.label15.Location = new System.Drawing.Point(801, 213);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 20);
+            this.label15.Size = new System.Drawing.Size(104, 20);
             this.label15.TabIndex = 58;
-            this.label15.Text = "Unit ::";
+            this.label15.Text = "Unit Code::";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(688, 165);
+            this.label16.Location = new System.Drawing.Point(790, 156);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 20);
+            this.label16.Size = new System.Drawing.Size(115, 20);
             this.label16.TabIndex = 56;
-            this.label16.Text = "Code ::";
+            this.label16.Text = "Unit Name ::";
             // 
             // tabPage5
             // 
@@ -1060,6 +1075,71 @@
             this.ErrorlabelBrandTag.TabIndex = 79;
             this.ErrorlabelBrandTag.Text = "Please Fill this";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Crimson;
+            this.label28.Location = new System.Drawing.Point(909, 156);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(21, 25);
+            this.label28.TabIndex = 81;
+            this.label28.Text = "*";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Crimson;
+            this.label29.Location = new System.Drawing.Point(909, 211);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(21, 25);
+            this.label29.TabIndex = 82;
+            this.label29.Text = "*";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(820, 276);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(85, 24);
+            this.label30.TabIndex = 84;
+            this.label30.Text = "Active ::";
+            // 
+            // checkBoxUnit
+            // 
+            this.checkBoxUnit.AutoSize = true;
+            this.checkBoxUnit.Checked = true;
+            this.checkBoxUnit.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUnit.Location = new System.Drawing.Point(924, 283);
+            this.checkBoxUnit.Name = "checkBoxUnit";
+            this.checkBoxUnit.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxUnit.TabIndex = 83;
+            this.checkBoxUnit.UseVisualStyleBackColor = true;
+            // 
+            // ErrorlabelUnitCode
+            // 
+            this.ErrorlabelUnitCode.AutoSize = true;
+            this.ErrorlabelUnitCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelUnitCode.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelUnitCode.Location = new System.Drawing.Point(1298, 220);
+            this.ErrorlabelUnitCode.Name = "ErrorlabelUnitCode";
+            this.ErrorlabelUnitCode.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelUnitCode.TabIndex = 86;
+            this.ErrorlabelUnitCode.Text = "Please Fill this";
+            // 
+            // ErrorlabelUnitName
+            // 
+            this.ErrorlabelUnitName.AutoSize = true;
+            this.ErrorlabelUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelUnitName.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelUnitName.Location = new System.Drawing.Point(1298, 158);
+            this.ErrorlabelUnitName.Name = "ErrorlabelUnitName";
+            this.ErrorlabelUnitName.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelUnitName.TabIndex = 85;
+            this.ErrorlabelUnitName.Text = "Please Fill this";
+            // 
             // MainCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1081,7 +1161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridViewBrand)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnit)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
@@ -1128,14 +1208,14 @@
         internal System.Windows.Forms.Button buttonBrandUpdate;
         internal System.Windows.Forms.Button btnBrandSave;
         private System.Windows.Forms.TabPage tabPage4;
-        internal System.Windows.Forms.TextBox textBox13;
-        internal System.Windows.Forms.Button button9;
-        internal System.Windows.Forms.Button button10;
-        internal System.Windows.Forms.Button button11;
-        internal System.Windows.Forms.TextBox textBox10;
+        internal System.Windows.Forms.TextBox textUnitName;
+        internal System.Windows.Forms.Button buttonUnitClear;
+        internal System.Windows.Forms.Button buttonUnitUpdate;
+        internal System.Windows.Forms.Button buttonUnitSave;
+        internal System.Windows.Forms.TextBox textUnitSearch;
         internal System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        internal System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.DataGridView dataGridViewUnit;
+        internal System.Windows.Forms.TextBox textUnitCode;
         internal System.Windows.Forms.Label label15;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Button btnupdate_Category;
@@ -1170,5 +1250,11 @@
         private System.Windows.Forms.Label label26;
         public System.Windows.Forms.Label ErrorlabelBrandName;
         public System.Windows.Forms.Label ErrorlabelBrandTag;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.CheckBox checkBoxUnit;
+        public System.Windows.Forms.Label ErrorlabelUnitCode;
+        public System.Windows.Forms.Label ErrorlabelUnitName;
     }
 }

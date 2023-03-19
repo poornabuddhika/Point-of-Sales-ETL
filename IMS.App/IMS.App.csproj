@@ -49,7 +49,7 @@
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Brands.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\MainCategories.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\SubCategories.cs" />
-    <Compile Include="IMS\Entity\InventoryProducts\Categories\ThirdCategories.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Categories\Unit.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Vendors.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Expense\Expenses.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
@@ -60,7 +60,7 @@
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MainCategoriesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MasterCategoriesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\SubCategoriesReop.cs" />
-    <Compile Include="IMS\Repository\InventoryProducts\Categories\ThirdCategoriesRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Categories\UnitRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\VendorsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Orders\OrdersRepo.cs" />
@@ -81,6 +81,7 @@
     <Compile Include="UserInterface\Category\MainCategory.Designer.cs">
       <DependentUpon>MainCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInterface\Category\UnitFormClass.cs" />
     <Compile Include="UserInterface\frmCustomer_ditails.cs">
       <SubType>Form</SubType>
     </Compile>
