@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInterface\Category\BrandFormClass.cs" />
     <Compile Include="UserInterface\Category\MainCategory.cs">
       <SubType>Form</SubType>
     </Compile>

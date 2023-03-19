@@ -16,10 +16,18 @@ namespace IMS.App.UserInterface.Category
 
     public partial class MainCategory : Form  
     {
-
+        //Main Category class
         private MainCategoriesRepo mainCateRepo = new MainCategoriesRepo();
+
+        //Subcategory Class
         private SubCategoriesReop subCateRepo = new SubCategoriesReop();
 
+        private BrandsRepo brandsRepo = new BrandsRepo();
+        private VendorsRepo vendorsRepo = new VendorsRepo();
+        BrandFormClass br = new BrandFormClass();
+
+
+        //Main Category Region Start
         #region MainCategory
         //constructor
         public MainCategory()
@@ -258,7 +266,7 @@ namespace IMS.App.UserInterface.Category
 
 
         #endregion 
-
+        //Main Category Region End
         private void Category_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTab();
@@ -281,11 +289,21 @@ namespace IMS.App.UserInterface.Category
                 MainCategoryIdToName();
                 this.PopulateGridViewSubCategory();
             }
+            else if(TabCategory.SelectedTab.Text == "Brand")
+            {
+                ErrorlabelBrandName.Hide();
+                ErrorlabelBrandTag.Hide();
+                br.PopulateGridViewBrand(GridViewBrand,brandsRepo);
+            }
         }
+
+
+        //sub Catagogy region Start
 
         #region Sub Caregory
 
         private int hiddenSubCategory_id = 0;
+        private int hiddenBrandCategory_id = 0;
         private SubCategoriesReop subCateReop = new SubCategoriesReop();
 
         public void MainCategoryIdToName()
@@ -463,19 +481,10 @@ namespace IMS.App.UserInterface.Category
 
 
 
-
-
-
-
-        #endregion
-
         private void texSUBCategoryCodeSearch_TextChanged(object sender, EventArgs e)
         {
             this.PopulateGridViewSubCategory(this.texSUBCategoryCodeSearch.Text);
         }
-
-
-
 
         private void dataGridViewSubCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -484,8 +493,8 @@ namespace IMS.App.UserInterface.Category
             texSUBCategoryCode.Text = selectedRow.Cells[0].Value.ToString();
             comboSubCategory.Text = selectedRow.Cells[1].Value.ToString();
             texSUBCategoryDes.Text = selectedRow.Cells[2].Value.ToString();
-            checkBoxSubCategoryActive.Checked =Convert.ToBoolean( selectedRow.Cells[3].Value.ToString());
-            hiddenSubCategory_id =Convert.ToInt32( selectedRow.Cells[4].Value.ToString());
+            checkBoxSubCategoryActive.Checked = Convert.ToBoolean(selectedRow.Cells[3].Value.ToString());
+            hiddenSubCategory_id = Convert.ToInt32(selectedRow.Cells[4].Value.ToString());
 
         }
 
@@ -528,6 +537,118 @@ namespace IMS.App.UserInterface.Category
             {
                 MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+
+        #endregion
+
+        //sub Catagogy region End
+
+
+        private void btnBrandSave_Click(object sender, EventArgs e)
+        {
+          
+            
+            try
+            {
+                Brands brObj = br.FillEntityBrandCategory(textBrandName, textBrandTAG, checkBoxBrandISActive, ErrorlabelBrandName,ErrorlabelBrandTag,hiddenBrandCategory_id);
+                if (brObj == null)
+                {
+                    brObj = new Brands();
+
+                    return;
+                }
+
+                var decision = this.brandsRepo.DataExists(brObj.BrandName);
+
+                if (decision)
+                {
+                    MessageBox.Show("Please Press Update Button");
+                }
+                else
+                {
+                    //Save
+                    if (this.brandsRepo.Save(brObj))
+                    {
+                        MessageBox.Show("Save Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Failed");
+                    }
+                }
+                Refresh();
+                br.PopulateGridViewBrand(GridViewBrand, brandsRepo);
+
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void buttonBrandUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Brands brObj = br.FillEntityBrandCategory(textBrandName, textBrandTAG, checkBoxBrandISActive, ErrorlabelBrandName, ErrorlabelBrandTag, hiddenBrandCategory_id);
+                if (brObj == null)
+                {
+                    brObj = new Brands();
+
+                    return;
+                }
+
+                var decision = this.brandsRepo.DataExists(brObj.BrandName);
+
+                if (decision)
+                {
+                    //Update
+                    if (this.brandsRepo.UpdateProduct(brObj))
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Recode not Exist in the Database");
+                }
+                Refresh();
+                this.PopulateGridViewSubCategory();
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void GridViewBrand_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;// get the Row Index
+            DataGridViewRow selectedRow = GridViewBrand.Rows[index];
+           
+            hiddenBrandCategory_id = Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
+            textBrandName.Text = selectedRow.Cells[1].Value.ToString();
+            textBrandTAG.Text = selectedRow.Cells[2].Value.ToString();
+            checkBoxBrandISActive.Checked=Convert.ToBoolean( selectedRow.Cells[3].Value.ToString());
+
+        }
+
+        private void textBrandSearch_TextChanged(object sender, EventArgs e)
+        {
+            br.PopulateGridViewBrand(GridViewBrand,brandsRepo, textBrandSearch.Text);
         }
     }
 

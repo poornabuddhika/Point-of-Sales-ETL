@@ -71,14 +71,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.buttonBrandUpdate = new System.Windows.Forms.Button();
+            this.btnBrandSave = new System.Windows.Forms.Button();
+            this.textBrandSearch = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.GridViewBrand = new System.Windows.Forms.DataGridView();
+            this.textBrandTAG = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBrandName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -101,13 +101,19 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkBoxBrandISActive = new System.Windows.Forms.CheckBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ErrorlabelBrandName = new System.Windows.Forms.Label();
+            this.ErrorlabelBrandTag = new System.Windows.Forms.Label();
             this.TabCategory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubCategory)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewBrand)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -611,15 +617,21 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.ErrorlabelBrandTag);
+            this.tabPage3.Controls.Add(this.ErrorlabelBrandName);
+            this.tabPage3.Controls.Add(this.label27);
+            this.tabPage3.Controls.Add(this.label26);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.checkBoxBrandISActive);
             this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.btnsave);
-            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Controls.Add(this.buttonBrandUpdate);
+            this.tabPage3.Controls.Add(this.btnBrandSave);
+            this.tabPage3.Controls.Add(this.textBrandSearch);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.GridViewBrand);
+            this.tabPage3.Controls.Add(this.textBrandTAG);
             this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.textBrandName);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Location = new System.Drawing.Point(4, 38);
@@ -633,7 +645,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(996, 360);
+            this.button2.Location = new System.Drawing.Point(1157, 362);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 37);
@@ -641,39 +653,41 @@
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonBrandUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(831, 360);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 37);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonBrandUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBrandUpdate.ForeColor = System.Drawing.Color.Black;
+            this.buttonBrandUpdate.Location = new System.Drawing.Point(992, 362);
+            this.buttonBrandUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBrandUpdate.Name = "buttonBrandUpdate";
+            this.buttonBrandUpdate.Size = new System.Drawing.Size(141, 37);
+            this.buttonBrandUpdate.TabIndex = 54;
+            this.buttonBrandUpdate.Text = "Update";
+            this.buttonBrandUpdate.UseVisualStyleBackColor = false;
+            this.buttonBrandUpdate.Click += new System.EventHandler(this.buttonBrandUpdate_Click);
             // 
-            // btnsave
+            // btnBrandSave
             // 
-            this.btnsave.BackColor = System.Drawing.Color.Transparent;
-            this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(668, 360);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(141, 37);
-            this.btnsave.TabIndex = 53;
-            this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnBrandSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrandSave.ForeColor = System.Drawing.Color.Black;
+            this.btnBrandSave.Location = new System.Drawing.Point(829, 362);
+            this.btnBrandSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBrandSave.Name = "btnBrandSave";
+            this.btnBrandSave.Size = new System.Drawing.Size(141, 37);
+            this.btnBrandSave.TabIndex = 53;
+            this.btnBrandSave.Text = "Save";
+            this.btnBrandSave.UseVisualStyleBackColor = false;
+            this.btnBrandSave.Click += new System.EventHandler(this.btnBrandSave_Click);
             // 
-            // textBox7
+            // textBrandSearch
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(140, 40);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(298, 26);
-            this.textBox7.TabIndex = 48;
+            this.textBrandSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBrandSearch.Location = new System.Drawing.Point(140, 40);
+            this.textBrandSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.textBrandSearch.Name = "textBrandSearch";
+            this.textBrandSearch.Size = new System.Drawing.Size(298, 26);
+            this.textBrandSearch.TabIndex = 48;
+            this.textBrandSearch.TextChanged += new System.EventHandler(this.textBrandSearch_TextChanged);
             // 
             // label10
             // 
@@ -686,24 +700,26 @@
             this.label10.TabIndex = 49;
             this.label10.Text = "Search ::";
             // 
-            // dataGridView1
+            // GridViewBrand
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(559, 338);
-            this.dataGridView1.TabIndex = 47;
+            this.GridViewBrand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.GridViewBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewBrand.Location = new System.Drawing.Point(17, 92);
+            this.GridViewBrand.Name = "GridViewBrand";
+            this.GridViewBrand.RowTemplate.Height = 24;
+            this.GridViewBrand.Size = new System.Drawing.Size(666, 470);
+            this.GridViewBrand.TabIndex = 47;
+            this.GridViewBrand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewBrand_CellClick);
             // 
-            // textBox5
+            // textBrandTAG
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(766, 235);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(333, 26);
-            this.textBox5.TabIndex = 44;
+            this.textBrandTAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBrandTAG.Location = new System.Drawing.Point(927, 263);
+            this.textBrandTAG.Margin = new System.Windows.Forms.Padding(4);
+            this.textBrandTAG.Name = "textBrandTAG";
+            this.textBrandTAG.Size = new System.Drawing.Size(333, 26);
+            this.textBrandTAG.TabIndex = 44;
             // 
             // label6
             // 
@@ -715,37 +731,36 @@
             this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 45;
             // 
-            // textBox6
+            // textBrandName
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(766, 179);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(333, 26);
-            this.textBox6.TabIndex = 42;
+            this.textBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBrandName.Location = new System.Drawing.Point(927, 207);
+            this.textBrandName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBrandName.Name = "textBrandName";
+            this.textBrandName.Size = new System.Drawing.Size(333, 26);
+            this.textBrandName.TabIndex = 42;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(681, 235);
+            this.label7.Location = new System.Drawing.Point(800, 266);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.Size = new System.Drawing.Size(114, 20);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Brand ::";
+            this.label7.Text = "Brand TAG::";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(688, 179);
+            this.label9.Location = new System.Drawing.Point(788, 210);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 20);
+            this.label9.Size = new System.Drawing.Size(131, 20);
             this.label9.TabIndex = 41;
-            this.label9.Text = "Code ::";
+            this.label9.Text = "Brand Name ::";
             // 
             // tabPage4
             // 
@@ -980,6 +995,71 @@
             this.label18.TabIndex = 69;
             this.label18.Text = "Rack Number ::";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(834, 316);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(85, 24);
+            this.label23.TabIndex = 75;
+            this.label23.Text = "Active ::";
+            // 
+            // checkBoxBrandISActive
+            // 
+            this.checkBoxBrandISActive.AutoSize = true;
+            this.checkBoxBrandISActive.Checked = true;
+            this.checkBoxBrandISActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxBrandISActive.Location = new System.Drawing.Point(938, 323);
+            this.checkBoxBrandISActive.Name = "checkBoxBrandISActive";
+            this.checkBoxBrandISActive.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxBrandISActive.TabIndex = 74;
+            this.checkBoxBrandISActive.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Crimson;
+            this.label26.Location = new System.Drawing.Point(899, 208);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(21, 25);
+            this.label26.TabIndex = 76;
+            this.label26.Text = "*";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Crimson;
+            this.label27.Location = new System.Drawing.Point(899, 264);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(21, 25);
+            this.label27.TabIndex = 77;
+            this.label27.Text = "*";
+            // 
+            // ErrorlabelBrandName
+            // 
+            this.ErrorlabelBrandName.AutoSize = true;
+            this.ErrorlabelBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelBrandName.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelBrandName.Location = new System.Drawing.Point(1267, 207);
+            this.ErrorlabelBrandName.Name = "ErrorlabelBrandName";
+            this.ErrorlabelBrandName.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelBrandName.TabIndex = 78;
+            this.ErrorlabelBrandName.Text = "Please Fill this";
+            // 
+            // ErrorlabelBrandTag
+            // 
+            this.ErrorlabelBrandTag.AutoSize = true;
+            this.ErrorlabelBrandTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelBrandTag.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelBrandTag.Location = new System.Drawing.Point(1267, 269);
+            this.ErrorlabelBrandTag.Name = "ErrorlabelBrandTag";
+            this.ErrorlabelBrandTag.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelBrandTag.TabIndex = 79;
+            this.ErrorlabelBrandTag.Text = "Please Fill this";
+            // 
             // MainCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -998,7 +1078,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubCategory)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewBrand)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -1026,13 +1106,13 @@
         internal System.Windows.Forms.TextBox texSUBCategoryCode;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        internal System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView GridViewBrand;
+        internal System.Windows.Forms.TextBox textBrandTAG;
         internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.TextBox textBox6;
+        internal System.Windows.Forms.TextBox textBrandName;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label9;
-        internal System.Windows.Forms.TextBox textBox7;
+        internal System.Windows.Forms.TextBox textBrandSearch;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.Button btnClear_Category;
         internal System.Windows.Forms.Button btn_save_Category;
@@ -1045,8 +1125,8 @@
         internal System.Windows.Forms.Button btnSUBCategoryUpdate;
         internal System.Windows.Forms.Button btnSUBCategorySave;
         internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.Button btnsave;
+        internal System.Windows.Forms.Button buttonBrandUpdate;
+        internal System.Windows.Forms.Button btnBrandSave;
         private System.Windows.Forms.TabPage tabPage4;
         internal System.Windows.Forms.TextBox textBox13;
         internal System.Windows.Forms.Button button9;
@@ -1084,5 +1164,11 @@
         public System.Windows.Forms.Label ErrorLabelSubCategoryCombo;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.CheckBox checkBoxSubCategoryActive;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckBox checkBoxBrandISActive;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Label ErrorlabelBrandName;
+        public System.Windows.Forms.Label ErrorlabelBrandTag;
     }
 }

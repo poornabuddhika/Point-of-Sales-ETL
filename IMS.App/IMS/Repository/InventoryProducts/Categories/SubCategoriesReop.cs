@@ -199,7 +199,7 @@ namespace IMS.Repository
                                 " item_sub_category.Maincategory_Name = '"+thc.MainCategoryName+"' , " +
                                 "item_sub_category.sub_Description = '"+thc.SubCategoryDescription+"' ," +
                                 "item_sub_category.sub_is_deleted = '"+thc.SubCategoryIsActivate+"'" +
-                                "where item_sub_category.sub_id = " + thc.SubCategoryId + "; ";
+                                "where item_sub_category.sub_name = " + thc.SubCategoryName + "; ";
                 iDB.conOpen();
                 int count = this.iDB.ExecuteDMLQuery(sql);
 

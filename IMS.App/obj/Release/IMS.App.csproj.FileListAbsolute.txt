@@ -12,3 +12,6 @@ C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.A
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.pdb
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.frmCustomer_ditails.resources
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.frmgrn.resources
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.frmsupplier_detail.resources
