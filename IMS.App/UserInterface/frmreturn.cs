@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace IMS.App.UserInterface
 {
-    public partial class frmsupplier_detail : Form
+    public partial class frmreturn : Form
     {
-        public frmsupplier_detail()
+        public frmreturn()
         {
             InitializeComponent();
         }
 
-        private void frmsupplier_detail_Load(object sender, EventArgs e)
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }

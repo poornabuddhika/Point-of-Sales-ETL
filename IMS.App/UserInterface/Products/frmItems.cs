@@ -116,5 +116,10 @@ namespace IMS.App.UserInterface.Products
         {
 
         }
+
+        private void pnl_stockmaster_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

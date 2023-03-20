@@ -39,10 +39,9 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(65, 662);
+            this.statusStrip1.Location = new System.Drawing.Point(64, 534);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1252, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(924, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -54,7 +53,7 @@
             this.ts_Item});
             this.Item.Location = new System.Drawing.Point(0, 0);
             this.Item.Name = "Item";
-            this.Item.Size = new System.Drawing.Size(65, 684);
+            this.Item.Size = new System.Drawing.Size(64, 556);
             this.Item.TabIndex = 0;
             this.Item.Text = "toolStrip1";
             // 
@@ -67,37 +66,37 @@
             this.ts_Item.Image = global::IMS.App.Properties.Resources.icons8_product_50px;
             this.ts_Item.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ts_Item.Name = "ts_Item";
-            this.ts_Item.Size = new System.Drawing.Size(62, 39);
+            this.ts_Item.Size = new System.Drawing.Size(61, 39);
             this.ts_Item.Text = "toolStripDropDownButton1";
             // 
             // addItemsToolStripMenuItem
             // 
             this.addItemsToolStripMenuItem.Name = "addItemsToolStripMenuItem";
-            this.addItemsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addItemsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.addItemsToolStripMenuItem.Text = "Add Items";
             this.addItemsToolStripMenuItem.Click += new System.EventHandler(this.addItemsToolStripMenuItem_Click);
             // 
             // itemMasterToolStripMenuItem
             // 
             this.itemMasterToolStripMenuItem.Name = "itemMasterToolStripMenuItem";
-            this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.itemMasterToolStripMenuItem.Text = "Item Master";
             this.itemMasterToolStripMenuItem.Click += new System.EventHandler(this.itemMasterToolStripMenuItem_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 684);
+            this.ClientSize = new System.Drawing.Size(988, 556);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.Item);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory System Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load_1);
             this.Item.ResumeLayout(false);
             this.Item.PerformLayout();
             this.ResumeLayout(false);

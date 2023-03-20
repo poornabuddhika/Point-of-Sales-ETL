@@ -59,5 +59,10 @@ namespace IMS.App.UserInterface
         {
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

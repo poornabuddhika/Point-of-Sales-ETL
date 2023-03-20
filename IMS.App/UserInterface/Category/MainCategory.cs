@@ -188,6 +188,9 @@ namespace IMS.App.UserInterface.Category
             checkBoxActive_Category_main.Checked = true;
         }
 
-        
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -104,6 +104,12 @@
     <Compile Include="UserInterface\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInterface\frmreturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\frmreturn.Designer.cs">
+      <DependentUpon>frmreturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\frmsupplier_detail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\frmreturn.resx">
+      <DependentUpon>frmreturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmsupplier_detail.resx">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>

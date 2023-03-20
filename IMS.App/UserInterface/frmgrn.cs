@@ -20,5 +20,10 @@ namespace IMS.App.UserInterface
         {
 
         }
+
+        private void frmgrn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
