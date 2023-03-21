@@ -70,6 +70,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ErrorlabelBrandTag = new System.Windows.Forms.Label();
+            this.ErrorlabelBrandName = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkBoxBrandISActive = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonBrandUpdate = new System.Windows.Forms.Button();
             this.btnBrandSave = new System.Windows.Forms.Button();
@@ -82,6 +88,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ErrorlabelUnitCode = new System.Windows.Forms.Label();
+            this.ErrorlabelUnitName = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.checkBoxUnit = new System.Windows.Forms.CheckBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.textUnitName = new System.Windows.Forms.TextBox();
             this.buttonUnitClear = new System.Windows.Forms.Button();
             this.buttonUnitUpdate = new System.Windows.Forms.Button();
@@ -93,26 +105,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.checkBoxRack = new System.Windows.Forms.CheckBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.ErrorlabelRacNum = new System.Windows.Forms.Label();
+            this.textBoxRackNumber = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.buttonRackUpdate = new System.Windows.Forms.Button();
+            this.buttonRackSave = new System.Windows.Forms.Button();
+            this.textRackNumber = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewRackNumber = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.checkBoxBrandISActive = new System.Windows.Forms.CheckBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.ErrorlabelBrandName = new System.Windows.Forms.Label();
-            this.ErrorlabelBrandTag = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.checkBoxUnit = new System.Windows.Forms.CheckBox();
-            this.ErrorlabelUnitCode = new System.Windows.Forms.Label();
-            this.ErrorlabelUnitName = new System.Windows.Forms.Label();
             this.TabCategory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainCategory)).BeginInit();
@@ -123,7 +127,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnit)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRackNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCategory
@@ -647,6 +651,71 @@
             this.tabPage3.Text = "Brand";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // ErrorlabelBrandTag
+            // 
+            this.ErrorlabelBrandTag.AutoSize = true;
+            this.ErrorlabelBrandTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelBrandTag.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelBrandTag.Location = new System.Drawing.Point(1267, 269);
+            this.ErrorlabelBrandTag.Name = "ErrorlabelBrandTag";
+            this.ErrorlabelBrandTag.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelBrandTag.TabIndex = 79;
+            this.ErrorlabelBrandTag.Text = "Please Fill this";
+            // 
+            // ErrorlabelBrandName
+            // 
+            this.ErrorlabelBrandName.AutoSize = true;
+            this.ErrorlabelBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelBrandName.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelBrandName.Location = new System.Drawing.Point(1267, 207);
+            this.ErrorlabelBrandName.Name = "ErrorlabelBrandName";
+            this.ErrorlabelBrandName.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelBrandName.TabIndex = 78;
+            this.ErrorlabelBrandName.Text = "Please Fill this";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Crimson;
+            this.label27.Location = new System.Drawing.Point(899, 264);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(21, 25);
+            this.label27.TabIndex = 77;
+            this.label27.Text = "*";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Crimson;
+            this.label26.Location = new System.Drawing.Point(899, 208);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(21, 25);
+            this.label26.TabIndex = 76;
+            this.label26.Text = "*";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(834, 316);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(85, 24);
+            this.label23.TabIndex = 75;
+            this.label23.Text = "Active ::";
+            // 
+            // checkBoxBrandISActive
+            // 
+            this.checkBoxBrandISActive.AutoSize = true;
+            this.checkBoxBrandISActive.Checked = true;
+            this.checkBoxBrandISActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxBrandISActive.Location = new System.Drawing.Point(938, 323);
+            this.checkBoxBrandISActive.Name = "checkBoxBrandISActive";
+            this.checkBoxBrandISActive.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxBrandISActive.TabIndex = 74;
+            this.checkBoxBrandISActive.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -794,6 +863,71 @@
             this.tabPage4.Text = "UNIT Master";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // ErrorlabelUnitCode
+            // 
+            this.ErrorlabelUnitCode.AutoSize = true;
+            this.ErrorlabelUnitCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelUnitCode.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelUnitCode.Location = new System.Drawing.Point(1298, 220);
+            this.ErrorlabelUnitCode.Name = "ErrorlabelUnitCode";
+            this.ErrorlabelUnitCode.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelUnitCode.TabIndex = 86;
+            this.ErrorlabelUnitCode.Text = "Please Fill this";
+            // 
+            // ErrorlabelUnitName
+            // 
+            this.ErrorlabelUnitName.AutoSize = true;
+            this.ErrorlabelUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelUnitName.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelUnitName.Location = new System.Drawing.Point(1298, 158);
+            this.ErrorlabelUnitName.Name = "ErrorlabelUnitName";
+            this.ErrorlabelUnitName.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelUnitName.TabIndex = 85;
+            this.ErrorlabelUnitName.Text = "Please Fill this";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(820, 276);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(85, 24);
+            this.label30.TabIndex = 84;
+            this.label30.Text = "Active ::";
+            // 
+            // checkBoxUnit
+            // 
+            this.checkBoxUnit.AutoSize = true;
+            this.checkBoxUnit.Checked = true;
+            this.checkBoxUnit.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUnit.Location = new System.Drawing.Point(924, 283);
+            this.checkBoxUnit.Name = "checkBoxUnit";
+            this.checkBoxUnit.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxUnit.TabIndex = 83;
+            this.checkBoxUnit.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Crimson;
+            this.label29.Location = new System.Drawing.Point(909, 211);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(21, 25);
+            this.label29.TabIndex = 82;
+            this.label29.Text = "*";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Crimson;
+            this.label28.Location = new System.Drawing.Point(909, 156);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(21, 25);
+            this.label28.TabIndex = 81;
+            this.label28.Text = "*";
+            // 
             // textUnitName
             // 
             this.textUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -907,13 +1041,17 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.textBox11);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.checkBoxRack);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.ErrorlabelRacNum);
+            this.tabPage5.Controls.Add(this.textBoxRackNumber);
             this.tabPage5.Controls.Add(this.button12);
-            this.tabPage5.Controls.Add(this.button13);
-            this.tabPage5.Controls.Add(this.button14);
-            this.tabPage5.Controls.Add(this.textBox14);
+            this.tabPage5.Controls.Add(this.buttonRackUpdate);
+            this.tabPage5.Controls.Add(this.buttonRackSave);
+            this.tabPage5.Controls.Add(this.textRackNumber);
             this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Controls.Add(this.dataGridView5);
+            this.tabPage5.Controls.Add(this.dataGridViewRackNumber);
             this.tabPage5.Controls.Add(this.label18);
             this.tabPage5.Location = new System.Drawing.Point(4, 38);
             this.tabPage5.Name = "tabPage5";
@@ -923,15 +1061,57 @@
             this.tabPage5.Text = "Rack Number";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // textBox11
+            // label31
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(766, 165);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(333, 26);
-            this.textBox11.TabIndex = 78;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(669, 274);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(85, 24);
+            this.label31.TabIndex = 89;
+            this.label31.Text = "Active ::";
+            // 
+            // checkBoxRack
+            // 
+            this.checkBoxRack.AutoSize = true;
+            this.checkBoxRack.Checked = true;
+            this.checkBoxRack.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRack.Location = new System.Drawing.Point(773, 281);
+            this.checkBoxRack.Name = "checkBoxRack";
+            this.checkBoxRack.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxRack.TabIndex = 88;
+            this.checkBoxRack.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Crimson;
+            this.label32.Location = new System.Drawing.Point(761, 167);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(21, 25);
+            this.label32.TabIndex = 87;
+            this.label32.Text = "*";
+            // 
+            // ErrorlabelRacNum
+            // 
+            this.ErrorlabelRacNum.AutoSize = true;
+            this.ErrorlabelRacNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorlabelRacNum.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorlabelRacNum.Location = new System.Drawing.Point(1129, 173);
+            this.ErrorlabelRacNum.Name = "ErrorlabelRacNum";
+            this.ErrorlabelRacNum.Size = new System.Drawing.Size(118, 18);
+            this.ErrorlabelRacNum.TabIndex = 86;
+            this.ErrorlabelRacNum.Text = "Please Fill this";
+            // 
+            // textBoxRackNumber
+            // 
+            this.textBoxRackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRackNumber.Location = new System.Drawing.Point(789, 165);
+            this.textBoxRackNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRackNumber.Name = "textBoxRackNumber";
+            this.textBoxRackNumber.Size = new System.Drawing.Size(333, 26);
+            this.textBoxRackNumber.TabIndex = 78;
             // 
             // button12
             // 
@@ -945,39 +1125,40 @@
             this.button12.Text = "Clear";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // buttonRackUpdate
             // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(831, 346);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(141, 37);
-            this.button13.TabIndex = 76;
-            this.button13.Text = "Delete";
-            this.button13.UseVisualStyleBackColor = false;
+            this.buttonRackUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRackUpdate.ForeColor = System.Drawing.Color.Black;
+            this.buttonRackUpdate.Location = new System.Drawing.Point(831, 346);
+            this.buttonRackUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRackUpdate.Name = "buttonRackUpdate";
+            this.buttonRackUpdate.Size = new System.Drawing.Size(141, 37);
+            this.buttonRackUpdate.TabIndex = 76;
+            this.buttonRackUpdate.Text = "Update";
+            this.buttonRackUpdate.UseVisualStyleBackColor = false;
+            this.buttonRackUpdate.Click += new System.EventHandler(this.buttonRackUpdate_Click);
             // 
-            // button14
+            // buttonRackSave
             // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(668, 346);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(141, 37);
-            this.button14.TabIndex = 75;
-            this.button14.Text = "Save";
-            this.button14.UseVisualStyleBackColor = false;
+            this.buttonRackSave.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRackSave.ForeColor = System.Drawing.Color.Black;
+            this.buttonRackSave.Location = new System.Drawing.Point(668, 346);
+            this.buttonRackSave.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRackSave.Name = "buttonRackSave";
+            this.buttonRackSave.Size = new System.Drawing.Size(141, 37);
+            this.buttonRackSave.TabIndex = 75;
+            this.buttonRackSave.Text = "Save";
+            this.buttonRackSave.UseVisualStyleBackColor = false;
+            this.buttonRackSave.Click += new System.EventHandler(this.buttonRackSave_Click);
             // 
-            // textBox14
+            // textRackNumber
             // 
-            this.textBox14.Enabled = false;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(140, 26);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(298, 26);
-            this.textBox14.TabIndex = 73;
+            this.textRackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textRackNumber.Location = new System.Drawing.Point(140, 26);
+            this.textRackNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.textRackNumber.Name = "textRackNumber";
+            this.textRackNumber.Size = new System.Drawing.Size(298, 26);
+            this.textRackNumber.TabIndex = 73;
             // 
             // label14
             // 
@@ -990,155 +1171,27 @@
             this.label14.TabIndex = 74;
             this.label14.Text = "Search ::";
             // 
-            // dataGridView5
+            // dataGridViewRackNumber
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(17, 78);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(559, 338);
-            this.dataGridView5.TabIndex = 72;
+            this.dataGridViewRackNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewRackNumber.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRackNumber.Location = new System.Drawing.Point(17, 78);
+            this.dataGridViewRackNumber.Name = "dataGridViewRackNumber";
+            this.dataGridViewRackNumber.RowTemplate.Height = 24;
+            this.dataGridViewRackNumber.Size = new System.Drawing.Size(559, 486);
+            this.dataGridViewRackNumber.TabIndex = 72;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(618, 171);
+            this.label18.Location = new System.Drawing.Point(614, 171);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(140, 20);
             this.label18.TabIndex = 69;
             this.label18.Text = "Rack Number ::";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(834, 316);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(85, 24);
-            this.label23.TabIndex = 75;
-            this.label23.Text = "Active ::";
-            // 
-            // checkBoxBrandISActive
-            // 
-            this.checkBoxBrandISActive.AutoSize = true;
-            this.checkBoxBrandISActive.Checked = true;
-            this.checkBoxBrandISActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxBrandISActive.Location = new System.Drawing.Point(938, 323);
-            this.checkBoxBrandISActive.Name = "checkBoxBrandISActive";
-            this.checkBoxBrandISActive.Size = new System.Drawing.Size(18, 17);
-            this.checkBoxBrandISActive.TabIndex = 74;
-            this.checkBoxBrandISActive.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Crimson;
-            this.label26.Location = new System.Drawing.Point(899, 208);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(21, 25);
-            this.label26.TabIndex = 76;
-            this.label26.Text = "*";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Crimson;
-            this.label27.Location = new System.Drawing.Point(899, 264);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(21, 25);
-            this.label27.TabIndex = 77;
-            this.label27.Text = "*";
-            // 
-            // ErrorlabelBrandName
-            // 
-            this.ErrorlabelBrandName.AutoSize = true;
-            this.ErrorlabelBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorlabelBrandName.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrorlabelBrandName.Location = new System.Drawing.Point(1267, 207);
-            this.ErrorlabelBrandName.Name = "ErrorlabelBrandName";
-            this.ErrorlabelBrandName.Size = new System.Drawing.Size(118, 18);
-            this.ErrorlabelBrandName.TabIndex = 78;
-            this.ErrorlabelBrandName.Text = "Please Fill this";
-            // 
-            // ErrorlabelBrandTag
-            // 
-            this.ErrorlabelBrandTag.AutoSize = true;
-            this.ErrorlabelBrandTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorlabelBrandTag.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrorlabelBrandTag.Location = new System.Drawing.Point(1267, 269);
-            this.ErrorlabelBrandTag.Name = "ErrorlabelBrandTag";
-            this.ErrorlabelBrandTag.Size = new System.Drawing.Size(118, 18);
-            this.ErrorlabelBrandTag.TabIndex = 79;
-            this.ErrorlabelBrandTag.Text = "Please Fill this";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Crimson;
-            this.label28.Location = new System.Drawing.Point(909, 156);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(21, 25);
-            this.label28.TabIndex = 81;
-            this.label28.Text = "*";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Crimson;
-            this.label29.Location = new System.Drawing.Point(909, 211);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(21, 25);
-            this.label29.TabIndex = 82;
-            this.label29.Text = "*";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(820, 276);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(85, 24);
-            this.label30.TabIndex = 84;
-            this.label30.Text = "Active ::";
-            // 
-            // checkBoxUnit
-            // 
-            this.checkBoxUnit.AutoSize = true;
-            this.checkBoxUnit.Checked = true;
-            this.checkBoxUnit.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxUnit.Location = new System.Drawing.Point(924, 283);
-            this.checkBoxUnit.Name = "checkBoxUnit";
-            this.checkBoxUnit.Size = new System.Drawing.Size(18, 17);
-            this.checkBoxUnit.TabIndex = 83;
-            this.checkBoxUnit.UseVisualStyleBackColor = true;
-            // 
-            // ErrorlabelUnitCode
-            // 
-            this.ErrorlabelUnitCode.AutoSize = true;
-            this.ErrorlabelUnitCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorlabelUnitCode.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrorlabelUnitCode.Location = new System.Drawing.Point(1298, 220);
-            this.ErrorlabelUnitCode.Name = "ErrorlabelUnitCode";
-            this.ErrorlabelUnitCode.Size = new System.Drawing.Size(118, 18);
-            this.ErrorlabelUnitCode.TabIndex = 86;
-            this.ErrorlabelUnitCode.Text = "Please Fill this";
-            // 
-            // ErrorlabelUnitName
-            // 
-            this.ErrorlabelUnitName.AutoSize = true;
-            this.ErrorlabelUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorlabelUnitName.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrorlabelUnitName.Location = new System.Drawing.Point(1298, 158);
-            this.ErrorlabelUnitName.Name = "ErrorlabelUnitName";
-            this.ErrorlabelUnitName.Size = new System.Drawing.Size(118, 18);
-            this.ErrorlabelUnitName.TabIndex = 85;
-            this.ErrorlabelUnitName.Text = "Please Fill this";
             // 
             // MainCategory
             // 
@@ -1164,7 +1217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnit)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRackNumber)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1226,13 +1279,13 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tabPage5;
-        internal System.Windows.Forms.TextBox textBox11;
+        internal System.Windows.Forms.TextBox textBoxRackNumber;
         internal System.Windows.Forms.Button button12;
-        internal System.Windows.Forms.Button button13;
-        internal System.Windows.Forms.Button button14;
-        internal System.Windows.Forms.TextBox textBox14;
+        internal System.Windows.Forms.Button buttonRackUpdate;
+        internal System.Windows.Forms.Button buttonRackSave;
+        internal System.Windows.Forms.TextBox textRackNumber;
         internal System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridViewRackNumber;
         internal System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckBox checkBoxActive_Category_main;
@@ -1256,5 +1309,9 @@
         private System.Windows.Forms.CheckBox checkBoxUnit;
         public System.Windows.Forms.Label ErrorlabelUnitCode;
         public System.Windows.Forms.Label ErrorlabelUnitName;
+        private System.Windows.Forms.Label label32;
+        public System.Windows.Forms.Label ErrorlabelRacNum;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.CheckBox checkBoxRack;
     }
 }

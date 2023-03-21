@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using IMS.Repository;
 using IMS.Entity.InventoryProducts;
 using System.Text.RegularExpressions;
+using IMS.Repository.InventoryProducts;
 
 namespace IMS.App.UserInterface.Category
 {
@@ -25,8 +26,11 @@ namespace IMS.App.UserInterface.Category
         private BrandsRepo brandsRepo = new BrandsRepo();
         private VendorsRepo vendorsRepo = new VendorsRepo();
         private UnitRepo unitRepo = new UnitRepo();
+        private RackRepo rackRepo = new RackRepo();
+
         BrandFormClass br = new BrandFormClass();
         UnitFormClass unitForm = new UnitFormClass();
+        RackNumberFormClass racknumberform = new RackNumberFormClass();
 
         //Main Category Region Start
         #region MainCategory
@@ -757,6 +761,90 @@ namespace IMS.App.UserInterface.Category
             textUnitName.Text = selectedRow.Cells[1].Value.ToString();
             textUnitCode.Text = selectedRow.Cells[2].Value.ToString();
             checkBoxUnit.Checked = Convert.ToBoolean(selectedRow.Cells[3].Value.ToString());
+        }
+
+        private void buttonRackSave_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Rack brObj = racknumberform.FillEntityRack(textBoxRackNumber, ErrorlabelRacNum, checkBoxRack);
+                if (brObj == null)
+                {
+                    brObj = new Rack();
+
+                    return;
+                }
+                
+                var decision = this.rackRepo.DataExists(brObj.RackNumber);
+
+                if (decision)
+                {
+                    MessageBox.Show("Record already exists!!!!!! Please Press Update Button");
+                }
+                else
+                {
+                    //Save
+                    if (this.rackRepo.Save(brObj))
+                    {
+                        MessageBox.Show("Save Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Failed");
+                    }
+                }
+                Refresh();
+                racknumberform.PopulateGridViewRack(dataGridViewRackNumber, rackRepo);
+
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonRackUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Rack brObj = racknumberform.FillEntityRack(textBoxRackNumber, ErrorlabelRacNum, checkBoxRack);
+                if (brObj == null)
+                {
+                    brObj = new Rack();
+
+                    return;
+                }
+
+                var decision = this.rackRepo.DataExists(brObj.RackNumber);
+
+                if (decision)
+                {
+                    //Update
+                    if (this.rackRepo.UpdateProduct(brObj))
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Recode not Exist in the Database");
+                }
+                Refresh();
+                racknumberform.PopulateGridViewRack(dataGridViewRackNumber, rackRepo);
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 
