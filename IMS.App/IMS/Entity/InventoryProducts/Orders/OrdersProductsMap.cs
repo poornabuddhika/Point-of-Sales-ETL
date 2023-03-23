@@ -15,6 +15,6 @@ namespace IMS.Entity.InventoryProducts
         public int ProductId                { get; set; }
 
         public virtual Orders   Order  { get; set; }
-        public virtual Products Product{ get; set; }
+        public virtual Item Product{ get; set; }
     }
 }

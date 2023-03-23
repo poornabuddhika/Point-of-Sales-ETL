@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCategory));
             this.TabCategory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gridMainCategory = new System.Windows.Forms.DataGridView();
@@ -110,10 +111,10 @@
             this.label32 = new System.Windows.Forms.Label();
             this.ErrorlabelRacNum = new System.Windows.Forms.Label();
             this.textBoxRackNumber = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonRackClear = new System.Windows.Forms.Button();
             this.buttonRackUpdate = new System.Windows.Forms.Button();
             this.buttonRackSave = new System.Windows.Forms.Button();
-            this.textRackNumber = new System.Windows.Forms.TextBox();
+            this.textRackSearch = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewRackNumber = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
@@ -144,7 +145,7 @@
             this.TabCategory.Location = new System.Drawing.Point(3, 12);
             this.TabCategory.Name = "TabCategory";
             this.TabCategory.SelectedIndex = 0;
-            this.TabCategory.Size = new System.Drawing.Size(1440, 633);
+            this.TabCategory.Size = new System.Drawing.Size(1568, 705);
             this.TabCategory.TabIndex = 0;
             this.TabCategory.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
@@ -174,7 +175,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1432, 591);
+            this.tabPage1.Size = new System.Drawing.Size(1560, 663);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Category";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -187,7 +188,7 @@
             this.gridMainCategory.Location = new System.Drawing.Point(6, 67);
             this.gridMainCategory.Name = "gridMainCategory";
             this.gridMainCategory.RowTemplate.Height = 24;
-            this.gridMainCategory.Size = new System.Drawing.Size(765, 452);
+            this.gridMainCategory.Size = new System.Drawing.Size(765, 509);
             this.gridMainCategory.TabIndex = 71;
             this.gridMainCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMainCate_CellClick);
             // 
@@ -422,7 +423,7 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Location = new System.Drawing.Point(4, 38);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1432, 591);
+            this.tabPage2.Size = new System.Drawing.Size(1560, 663);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sub Category";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -532,7 +533,7 @@
             this.dataGridViewSubCategory.Location = new System.Drawing.Point(3, 72);
             this.dataGridViewSubCategory.Name = "dataGridViewSubCategory";
             this.dataGridViewSubCategory.RowTemplate.Height = 24;
-            this.dataGridViewSubCategory.Size = new System.Drawing.Size(769, 511);
+            this.dataGridViewSubCategory.Size = new System.Drawing.Size(769, 568);
             this.dataGridViewSubCategory.TabIndex = 59;
             this.dataGridViewSubCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSubCategory_CellClick);
             // 
@@ -547,6 +548,7 @@
             this.btnSUBCategoryClear.TabIndex = 58;
             this.btnSUBCategoryClear.Text = "Clear";
             this.btnSUBCategoryClear.UseVisualStyleBackColor = false;
+            this.btnSUBCategoryClear.Click += new System.EventHandler(this.btnSUBCategoryClear_Click);
             // 
             // btnSUBCategoryUpdate
             // 
@@ -646,7 +648,7 @@
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Location = new System.Drawing.Point(4, 38);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1432, 591);
+            this.tabPage3.Size = new System.Drawing.Size(1560, 663);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Brand";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -783,7 +785,7 @@
             this.GridViewBrand.Location = new System.Drawing.Point(17, 92);
             this.GridViewBrand.Name = "GridViewBrand";
             this.GridViewBrand.RowTemplate.Height = 24;
-            this.GridViewBrand.Size = new System.Drawing.Size(666, 470);
+            this.GridViewBrand.Size = new System.Drawing.Size(666, 527);
             this.GridViewBrand.TabIndex = 47;
             this.GridViewBrand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewBrand_CellClick);
             // 
@@ -858,7 +860,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 38);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1432, 591);
+            this.tabPage4.Size = new System.Drawing.Size(1560, 663);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "UNIT Master";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -948,6 +950,7 @@
             this.buttonUnitClear.TabIndex = 67;
             this.buttonUnitClear.Text = "Clear";
             this.buttonUnitClear.UseVisualStyleBackColor = false;
+            this.buttonUnitClear.Click += new System.EventHandler(this.buttonUnitClear_Click);
             // 
             // buttonUnitUpdate
             // 
@@ -1004,7 +1007,7 @@
             this.dataGridViewUnit.Location = new System.Drawing.Point(17, 78);
             this.dataGridViewUnit.Name = "dataGridViewUnit";
             this.dataGridViewUnit.RowTemplate.Height = 24;
-            this.dataGridViewUnit.Size = new System.Drawing.Size(610, 505);
+            this.dataGridViewUnit.Size = new System.Drawing.Size(610, 562);
             this.dataGridViewUnit.TabIndex = 62;
             this.dataGridViewUnit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUnit_CellClick);
             // 
@@ -1046,17 +1049,17 @@
             this.tabPage5.Controls.Add(this.label32);
             this.tabPage5.Controls.Add(this.ErrorlabelRacNum);
             this.tabPage5.Controls.Add(this.textBoxRackNumber);
-            this.tabPage5.Controls.Add(this.button12);
+            this.tabPage5.Controls.Add(this.buttonRackClear);
             this.tabPage5.Controls.Add(this.buttonRackUpdate);
             this.tabPage5.Controls.Add(this.buttonRackSave);
-            this.tabPage5.Controls.Add(this.textRackNumber);
+            this.tabPage5.Controls.Add(this.textRackSearch);
             this.tabPage5.Controls.Add(this.label14);
             this.tabPage5.Controls.Add(this.dataGridViewRackNumber);
             this.tabPage5.Controls.Add(this.label18);
             this.tabPage5.Location = new System.Drawing.Point(4, 38);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1432, 591);
+            this.tabPage5.Size = new System.Drawing.Size(1560, 663);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Rack Number";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1113,17 +1116,18 @@
             this.textBoxRackNumber.Size = new System.Drawing.Size(333, 26);
             this.textBoxRackNumber.TabIndex = 78;
             // 
-            // button12
+            // buttonRackClear
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(996, 346);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(141, 37);
-            this.button12.TabIndex = 77;
-            this.button12.Text = "Clear";
-            this.button12.UseVisualStyleBackColor = false;
+            this.buttonRackClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRackClear.ForeColor = System.Drawing.Color.Black;
+            this.buttonRackClear.Location = new System.Drawing.Point(996, 346);
+            this.buttonRackClear.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRackClear.Name = "buttonRackClear";
+            this.buttonRackClear.Size = new System.Drawing.Size(141, 37);
+            this.buttonRackClear.TabIndex = 77;
+            this.buttonRackClear.Text = "Clear";
+            this.buttonRackClear.UseVisualStyleBackColor = false;
+            this.buttonRackClear.Click += new System.EventHandler(this.buttonRackClear_Click);
             // 
             // buttonRackUpdate
             // 
@@ -1151,14 +1155,14 @@
             this.buttonRackSave.UseVisualStyleBackColor = false;
             this.buttonRackSave.Click += new System.EventHandler(this.buttonRackSave_Click);
             // 
-            // textRackNumber
+            // textRackSearch
             // 
-            this.textRackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textRackNumber.Location = new System.Drawing.Point(140, 26);
-            this.textRackNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.textRackNumber.Name = "textRackNumber";
-            this.textRackNumber.Size = new System.Drawing.Size(298, 26);
-            this.textRackNumber.TabIndex = 73;
+            this.textRackSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textRackSearch.Location = new System.Drawing.Point(140, 26);
+            this.textRackSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.textRackSearch.Name = "textRackSearch";
+            this.textRackSearch.Size = new System.Drawing.Size(298, 26);
+            this.textRackSearch.TabIndex = 73;
             // 
             // label14
             // 
@@ -1179,7 +1183,7 @@
             this.dataGridViewRackNumber.Location = new System.Drawing.Point(17, 78);
             this.dataGridViewRackNumber.Name = "dataGridViewRackNumber";
             this.dataGridViewRackNumber.RowTemplate.Height = 24;
-            this.dataGridViewRackNumber.Size = new System.Drawing.Size(559, 486);
+            this.dataGridViewRackNumber.Size = new System.Drawing.Size(559, 558);
             this.dataGridViewRackNumber.TabIndex = 72;
             // 
             // label18
@@ -1197,8 +1201,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1455, 645);
+            this.ClientSize = new System.Drawing.Size(1571, 717);
             this.Controls.Add(this.TabCategory);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainCategory";
             this.Text = "MainCategory";
             this.Load += new System.EventHandler(this.MainCategory_Load);
@@ -1280,10 +1285,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tabPage5;
         internal System.Windows.Forms.TextBox textBoxRackNumber;
-        internal System.Windows.Forms.Button button12;
+        internal System.Windows.Forms.Button buttonRackClear;
         internal System.Windows.Forms.Button buttonRackUpdate;
         internal System.Windows.Forms.Button buttonRackSave;
-        internal System.Windows.Forms.TextBox textRackNumber;
+        internal System.Windows.Forms.TextBox textRackSearch;
         internal System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridViewRackNumber;
         internal System.Windows.Forms.Label label18;

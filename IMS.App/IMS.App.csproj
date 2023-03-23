@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>n2o_yKj_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -45,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCass\Category\MainCategoryFormClass.cs" />
+    <Compile Include="AppCass\Category\SubCategoryFormClass.cs" />
+    <Compile Include="AppCass\Products\ItemFormClass.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\BarCodes\BarCodes.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Brands.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\MainCategories.cs" />
@@ -55,7 +61,7 @@
     <Compile Include="IMS\Entity\InventoryProducts\Expense\Expenses.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\OrdersProductsMap.cs" />
-    <Compile Include="IMS\Entity\InventoryProducts\Products\Products.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Products\Item.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Users\Users.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\BrandsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MainCategoriesRepo.cs" />
@@ -76,15 +82,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInterface\Category\BrandFormClass.cs" />
+    <Compile Include="AppCass\Category\BrandFormClass.cs" />
     <Compile Include="UserInterface\Category\MainCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserInterface\Category\MainCategory.Designer.cs">
       <DependentUpon>MainCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\Category\RackNumberFormClass.cs" />
-    <Compile Include="UserInterface\Category\UnitFormClass.cs" />
+    <Compile Include="AppCass\Category\RackNumberFormClass.cs" />
+    <Compile Include="AppCass\Category\UnitFormClass.cs" />
     <Compile Include="UserInterface\frmCustomer_ditails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,12 +120,6 @@
     </Compile>
     <Compile Include="UserInterface\frmsupplier_detail.Designer.cs">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\Products\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserInterface\Products\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\Products\frmItems.cs">
       <SubType>Form</SubType>
@@ -155,9 +155,6 @@
     <EmbeddedResource Include="UserInterface\frmsupplier_detail.resx">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\Products\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Products\frmItems.resx">
       <DependentUpon>frmItems.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +185,7 @@
     <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="n2o_yKj_icon.ico" />
     <Content Include="Resources\25.gif" />
     <Content Include="Resources\25396004_524937024529466_4105891004819227245_n.jpg" />
     <Content Include="Resources\animated_loading__by__amiri.gif" />

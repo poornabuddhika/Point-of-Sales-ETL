@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItems));
             this.Label2 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
             this.btnnew = new System.Windows.Forms.Button();
@@ -89,7 +90,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbotype = new System.Windows.Forms.ComboBox();
+            this.ComboMainCategory = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
@@ -106,7 +108,7 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(7, 138);
+            this.Label2.Location = new System.Drawing.Point(7, 177);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(140, 20);
@@ -164,7 +166,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(25, 337);
+            this.Label1.Location = new System.Drawing.Point(25, 86);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(117, 20);
@@ -184,7 +186,6 @@
             // 
             // txtitemid
             // 
-            this.txtitemid.Enabled = false;
             this.txtitemid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtitemid.Location = new System.Drawing.Point(147, 38);
             this.txtitemid.Margin = new System.Windows.Forms.Padding(4);
@@ -215,7 +216,6 @@
             this.btnsave.TabIndex = 52;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click_1);
             // 
             // textRackNo
             // 
@@ -280,6 +280,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
+            this.pnl_stockmaster.Controls.Add(this.label28);
             this.pnl_stockmaster.Controls.Add(this.lblinc);
             this.pnl_stockmaster.Controls.Add(this.Label9);
             this.pnl_stockmaster.Controls.Add(this.btnlast);
@@ -328,7 +329,7 @@
             this.pnl_stockmaster.Controls.Add(this.label15);
             this.pnl_stockmaster.Controls.Add(this.label11);
             this.pnl_stockmaster.Controls.Add(this.label14);
-            this.pnl_stockmaster.Controls.Add(this.cbotype);
+            this.pnl_stockmaster.Controls.Add(this.ComboMainCategory);
             this.pnl_stockmaster.Controls.Add(this.label13);
             this.pnl_stockmaster.Controls.Add(this.richTextBox1);
             this.pnl_stockmaster.Controls.Add(this.label12);
@@ -345,7 +346,7 @@
             this.pnl_stockmaster.Location = new System.Drawing.Point(0, 0);
             this.pnl_stockmaster.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_stockmaster.Name = "pnl_stockmaster";
-            this.pnl_stockmaster.Size = new System.Drawing.Size(1922, 635);
+            this.pnl_stockmaster.Size = new System.Drawing.Size(1922, 775);
             this.pnl_stockmaster.TabIndex = 46;
             // 
             // lblinc
@@ -482,7 +483,7 @@
             // 
             this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(148, 241);
+            this.comboBox5.Location = new System.Drawing.Point(148, 280);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(296, 28);
@@ -492,7 +493,7 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(148, 283);
+            this.comboBox4.Location = new System.Drawing.Point(148, 322);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(296, 28);
@@ -777,7 +778,6 @@
             this.label16.Size = new System.Drawing.Size(66, 20);
             this.label16.TabIndex = 22;
             this.label16.Text = "Cost ::";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // textBox1
             // 
@@ -814,38 +814,39 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 286);
+            this.label14.Location = new System.Drawing.Point(7, 325);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 20);
             this.label14.TabIndex = 17;
             this.label14.Text = "Selling Unit ::";
             // 
-            // cbotype
+            // ComboMainCategory
             // 
-            this.cbotype.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbotype.FormattingEnabled = true;
-            this.cbotype.Location = new System.Drawing.Point(647, 111);
-            this.cbotype.Margin = new System.Windows.Forms.Padding(4);
-            this.cbotype.Name = "cbotype";
-            this.cbotype.Size = new System.Drawing.Size(296, 28);
-            this.cbotype.TabIndex = 2;
+            this.ComboMainCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboMainCategory.FormattingEnabled = true;
+            this.ComboMainCategory.Location = new System.Drawing.Point(647, 116);
+            this.ComboMainCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboMainCategory.Name = "ComboMainCategory";
+            this.ComboMainCategory.Size = new System.Drawing.Size(296, 28);
+            this.ComboMainCategory.TabIndex = 2;
+            this.ComboMainCategory.SelectedIndexChanged += new System.EventHandler(this.ComboMainCategory_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(7, 247);
+            this.label13.Location = new System.Drawing.Point(7, 286);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 20);
+            this.label13.Size = new System.Drawing.Size(143, 20);
             this.label13.TabIndex = 15;
-            this.label13.Text = "Porches unit ::";
+            this.label13.Text = "Purchase unit ::";
             // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(147, 187);
+            this.richTextBox1.Location = new System.Drawing.Point(147, 226);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(336, 31);
@@ -856,7 +857,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(7, 190);
+            this.label12.Location = new System.Drawing.Point(7, 229);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(140, 20);
@@ -866,7 +867,7 @@
             // txtname
             // 
             this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(147, 331);
+            this.txtname.Location = new System.Drawing.Point(147, 80);
             this.txtname.Margin = new System.Windows.Forms.Padding(4);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(335, 26);
@@ -875,7 +876,7 @@
             // textBarcode
             // 
             this.textBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBarcode.Location = new System.Drawing.Point(147, 84);
+            this.textBarcode.Location = new System.Drawing.Point(147, 123);
             this.textBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.textBarcode.Name = "textBarcode";
             this.textBarcode.Size = new System.Drawing.Size(335, 26);
@@ -885,7 +886,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(50, 87);
+            this.label10.Location = new System.Drawing.Point(50, 126);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 20);
@@ -895,18 +896,29 @@
             // txtdescription
             // 
             this.txtdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdescription.Location = new System.Drawing.Point(147, 135);
+            this.txtdescription.Location = new System.Drawing.Point(147, 174);
             this.txtdescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescription.Name = "txtdescription";
             this.txtdescription.Size = new System.Drawing.Size(336, 31);
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Crimson;
+            this.label28.Location = new System.Drawing.Point(626, 121);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(21, 25);
+            this.label28.TabIndex = 67;
+            this.label28.Text = "*";
+            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 733);
+            this.ClientSize = new System.Drawing.Size(1924, 776);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.btnnew);
             this.Controls.Add(this.btndelete);
@@ -914,6 +926,7 @@
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.pnl_stockmaster);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -945,7 +958,7 @@
         internal System.Windows.Forms.TextBox textBarcode;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.RichTextBox txtdescription;
-        internal System.Windows.Forms.ComboBox cbotype;
+        internal System.Windows.Forms.ComboBox ComboMainCategory;
         internal System.Windows.Forms.TextBox txtname;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label label11;
@@ -998,5 +1011,6 @@
         internal System.Windows.Forms.Button btnprev;
         internal System.Windows.Forms.Button btnfirst;
         internal System.Windows.Forms.Label lblmax;
+        private System.Windows.Forms.Label label28;
     }
 }

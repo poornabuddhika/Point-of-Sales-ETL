@@ -46,9 +46,9 @@ namespace IMS.Repository
 
 
 
-        public List<Products> GetAll(string key)
+        public List<Item> GetAll(string key)
         {
-            List<Products> productsList = new List<Products>();
+            List<Item> productsList = new List<Item>();
 
             string sql;
             try
@@ -98,7 +98,7 @@ namespace IMS.Repository
                 int x = 0;
                 while (x < dt.Rows.Count)
                 {
-                    Products px = ConvertToEntity(dt.Rows[x++]);
+                    Item px = ConvertToEntity(dt.Rows[x++]);
                     productsList.Add(px);
                     x++;
                 }
@@ -111,20 +111,22 @@ namespace IMS.Repository
             }
         }
 
-        private Products ConvertToEntity(DataRow row)
+        private Item ConvertToEntity(DataRow row)
         {
             if (row == null)
             {
                 return null;
             }
 
-            var products = new Products();
+            var products = new Item();
+            /*
             products.ProductName = row["ProductName"].ToString();
             products.BrandName = row["BrandName"].ToString();
             products.VendorName = row["VendorName"].ToString();
             products.ThirdCategoryName = row["ThirdCategoryName"].ToString();
             products.SecondCategoryName = row["SecondCategoryName"].ToString();
             products.MainCategoryName = row["MainCategoryName"].ToString();
+            */
             return products;
         }
     }

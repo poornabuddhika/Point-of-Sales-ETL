@@ -12,21 +12,21 @@ using IMS.Entity.InventoryProducts;
 
 namespace IMS.Repository
 {
-    public class ProductsRepo
+    public class ItemRepo
     {
         private InventoryDBDataAccess iDB {get; set;}
 
-        public ProductsRepo()
+        public ItemRepo()
         {
             this.iDB = new InventoryDBDataAccess();
         }
 
 
-        public string GetTotalProducts()
+        public string GetTotalItems()
         {
-            return iDB.GetSingleData("select count(ProductId) as id from Products ", "id");
+            return iDB.GetSingleData("select count(ProductId) as id from Items ", "id");
         }
-        public string GetAvailableProducts()
+        public string GetAvailableItems()
         {
             return iDB.GetSingleData("select count(ProductId) as id from Products where ProductStatus='YES' ", "id");
         }
@@ -36,9 +36,9 @@ namespace IMS.Repository
         }
 
         //view & search
-        public List<Products> GetAll(string key)
+        public List<Item> GetAll(string key)
         {
-            List<Products> productList = new List<Products>();
+            List<Item> productList = new List<Item>();
 
             string sql;
             try
@@ -66,7 +66,7 @@ namespace IMS.Repository
                 int x = 0;
                 while (x < dt.Rows.Count)
                 {
-                    Products pro = this.ConvertToEntity(dt.Rows[x]);
+                    Item pro = this.ConvertToEntity(dt.Rows[x]);
                     productList.Add(pro);
                     x++;
                 }
@@ -79,19 +79,20 @@ namespace IMS.Repository
             }
         }
 
-        private Products ConvertToEntity(DataRow row)
+        private Item ConvertToEntity(DataRow row)
         {
             if (row == null)
             {
                 return null;
             }
 
-            var product = new Products();
-            product.ProductId = Convert.ToInt32(row["pID"].ToString());
-            product.ProductIdTag = row["pTag"].ToString();
-            product.ProductName = row["pName"].ToString();
+            var product = new Item();
+            product.ItemtId = Convert.ToInt32(row["pID"].ToString());
+            product.ItemIdTag = row["pTag"].ToString();
+            product.ItemName = row["pName"].ToString();
             product.BrandName = row["pBrandName"].ToString();
             product.ProductStatus = row["pStatus"].ToString();
+            /*
             product.ProductMSRP = Convert.ToDouble(row["pMSRP"].ToString());
             product.ProductPerUnitPrice = Convert.ToDouble(row["pPerUnPrice"].ToString());
             product.ProductQuantityPerUnit = Convert.ToDouble(row["pQuaPerUn"].ToString());
@@ -101,6 +102,7 @@ namespace IMS.Repository
             product.ProductWeight = Convert.ToDouble(row["pWeight"].ToString());
             product.ProductUnitStock = Convert.ToInt32(row["pUnStock"].ToString());
             product.ProductDescription = row["pDisc"].ToString();
+            */
             return product;
         }
 
@@ -134,16 +136,18 @@ namespace IMS.Repository
         }
 
         //save - Product
-        public bool Save(Products pro)
+        public bool Save(Item pro)
         {
             try
             {
+                string sql = null;
+                /*
                 var sql = @"insert into Products (ProductName, BrandId, ProductDescription, ProductQuantityPerUnit,
-                                ProductPerUnitPrice, ProductMSRP, ProductStatus, ProductDiscountRate, ProductSize, 
+                                ProductPerUnitPrice, ProductMSRP, Itemstatus, ProductDiscountRate, Itemsize, 
                                 ProductColor, ProductWeight, ProductUnitStock)
                                 values ('" + pro.ProductName + "' , '" + pro.BrandId + "' , '" + pro.ProductDescription + "' ,'" + pro.ProductQuantityPerUnit + "' ,'" 
-                                + pro.ProductPerUnitPrice + "' ,'" + pro.ProductMSRP + "' ,'" + pro.ProductStatus + "' ,'" + pro.ProductDiscountRate + "' ,'" + pro.ProductSize + "' ,'" + pro.ProductColor + "' ,'" + pro.ProductWeight + "' ,'" + pro.ProductUnitStock + "');";
-
+                                + pro.ProductPerUnitPrice + "' ,'" + pro.ProductMSRP + "' ,'" + pro.Itemstatus + "' ,'" + pro.ProductDiscountRate + "' ,'" + pro.Itemsize + "' ,'" + pro.ProductColor + "' ,'" + pro.ProductWeight + "' ,'" + pro.ProductUnitStock + "');";
+                */
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
                 if (rowCount == 1)
@@ -159,14 +163,16 @@ namespace IMS.Repository
         }
 
         //update - Product
-        public bool UpdateProduct(Products product)
+        public bool UpdateProduct(Item product)
         {
             try
             {
-                string sql = @"update Products set ProductName='" + product.ProductName + "' , BrandId='" + product.BrandId + "',ProductDescription='" + product.ProductDescription + "', ProductQuantityPerUnit='" + product.ProductQuantityPerUnit + "'," +
-                             "ProductPerUnitPrice='" + product.ProductPerUnitPrice + "', ProductMSRP='" + product.ProductMSRP + "', ProductStatus='" + product.ProductStatus + "',ProductDiscountRate='" + product.ProductDiscountRate + "',ProductSize='" +
-                             product.ProductSize + "',ProductColor='" + product.ProductColor + "',ProductWeight='" + product.ProductWeight + "',ProductUnitStock='" + product.ProductUnitStock + "' where ProductId='" + product.ProductId + "'";
-
+                string sql = null;
+                /*
+                string sql = @"update Items set ProductName='" + product.ProductName + "' , BrandId='" + product.BrandId + "',ProductDescription='" + product.ProductDescription + "', ProductQuantityPerUnit='" + product.ProductQuantityPerUnit + "'," +
+                             "ProductPerUnitPrice='" + product.ProductPerUnitPrice + "', ProductMSRP='" + product.ProductMSRP + "', Itemstatus='" + product.Itemstatus + "',ProductDiscountRate='" + product.ProductDiscountRate + "',Itemsize='" +
+                             product.Itemsize + "',ProductColor='" + product.ProductColor + "',ProductWeight='" + product.ProductWeight + "',ProductUnitStock='" + product.ProductUnitStock + "' where ProductId='" + product.ProductId + "'";
+                */
                 int count = this.iDB.ExecuteDMLQuery(sql);
 
                 if (count == 1)
@@ -192,7 +198,7 @@ namespace IMS.Repository
 
             try
             {
-                sql = @"delete from Products where ProductId ='" + id + "';";
+                sql = @"delete from Items where ProductId ='" + id + "';";
                 var dataTable = this.iDB.ExecuteDMLQuery(sql);
                 
                 return true;

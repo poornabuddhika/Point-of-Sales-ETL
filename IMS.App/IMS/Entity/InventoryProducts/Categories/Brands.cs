@@ -25,6 +25,6 @@ namespace IMS.Entity.InventoryProducts
         public string VendorName{get; set;} 
 
         public virtual Vendors Vendor{ get; set; }
-        public virtual ICollection<Products> Products{ get; set; }
+        public virtual ICollection<Item> Products{ get; set; }
     }
 }

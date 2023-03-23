@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IMS.Repository;
+using IMS.App.AppCass.Products;
 
 
 
@@ -15,106 +17,26 @@ namespace IMS.App.UserInterface.Products
 {
     public partial class frmItems : Form
     {
+        private MainCategoriesRepo mainCateRepo = new MainCategoriesRepo();
+
+
+        ItemFormClass itemFormClass = new ItemFormClass();
         public frmItems()
         {
             InitializeComponent();
         }
+
+
        
-
-        private void select_navigation(string sql)
-        {
-          
-        }
-        public void navigate_records(int inc)
-        {
-            
-
-
-        }
-        private void btnnew_Click(object sender, EventArgs e)
-        {
-
-           
-
-        }
 
         private void frmItems_Load(object sender, EventArgs e)
         {
-            btnnew_Click(sender, e);
+            itemFormClass.MainCategoryIdToName(ComboMainCategory,  mainCateRepo);
         }
 
-        private void cbotype_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-               
- 
-        }
-
-        private void btnsave_Click(object sender, EventArgs e)
+        private void ComboMainCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
-        }
-
-        private void btnupdate_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btndelete_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtitemid_TextChanged(object sender, EventArgs e)
-        {
-            
-             
-        }
-
-        private void dtglist_Click(object sender, EventArgs e)
-        { 
-           
-        }
-
-        private void btnfirst_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void btnlast_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnprev_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnnext_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txtsearch_TextChanged(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnsave_Click_1(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("");
         }
     }
 }
