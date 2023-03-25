@@ -39,12 +39,19 @@
             this.txtitemid = new System.Windows.Forms.TextBox();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
-            this.textRackNo = new System.Windows.Forms.TextBox();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.dtglist = new System.Windows.Forms.DataGridView();
             this.btnadd = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
             this.pnl_stockmaster = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboRackNumber = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -62,52 +69,63 @@
             this.label27 = new System.Windows.Forms.Label();
             this.comboPurchaseUnit = new System.Windows.Forms.ComboBox();
             this.comboSellingUnit = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
+            this.TextBoxOptionTwo = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxOptionOne = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxServeItem = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxWeight = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxDiscountAmount = new System.Windows.Forms.RichTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxDiscount = new System.Windows.Forms.RichTextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.TextBoxProductQty = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.comboBoxSubCategory = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxPacketSize = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxMrp = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxCost = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSellingPrice = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.ComboMainCategory = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textDescriptionTwo = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.TextBox();
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // Label2
@@ -161,7 +179,7 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(29, 42);
+            this.Label8.Location = new System.Drawing.Point(35, 42);
             this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(84, 20);
@@ -215,6 +233,7 @@
             // btnsave
             // 
             this.btnsave.BackColor = System.Drawing.Color.Transparent;
+            this.btnsave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnsave.ForeColor = System.Drawing.Color.Black;
             this.btnsave.Location = new System.Drawing.Point(134, 786);
             this.btnsave.Margin = new System.Windows.Forms.Padding(4);
@@ -223,15 +242,7 @@
             this.btnsave.TabIndex = 52;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = false;
-            // 
-            // textRackNo
-            // 
-            this.textRackNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textRackNo.Location = new System.Drawing.Point(646, 42);
-            this.textRackNo.Margin = new System.Windows.Forms.Padding(4);
-            this.textRackNo.Name = "textRackNo";
-            this.textRackNo.Size = new System.Drawing.Size(297, 26);
-            this.textRackNo.TabIndex = 9;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // Panel2
             // 
@@ -287,6 +298,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
+            this.pnl_stockmaster.Controls.Add(this.pictureBox9);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox8);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox7);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox6);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox5);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox4);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox3);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox2);
+            this.pnl_stockmaster.Controls.Add(this.pictureBox1);
+            this.pnl_stockmaster.Controls.Add(this.label37);
+            this.pnl_stockmaster.Controls.Add(this.comboRackNumber);
+            this.pnl_stockmaster.Controls.Add(this.label36);
             this.pnl_stockmaster.Controls.Add(this.label35);
             this.pnl_stockmaster.Controls.Add(this.label34);
             this.pnl_stockmaster.Controls.Add(this.label33);
@@ -309,42 +332,39 @@
             this.pnl_stockmaster.Controls.Add(this.label27);
             this.pnl_stockmaster.Controls.Add(this.comboPurchaseUnit);
             this.pnl_stockmaster.Controls.Add(this.comboSellingUnit);
-            this.pnl_stockmaster.Controls.Add(this.comboBox3);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox11);
+            this.pnl_stockmaster.Controls.Add(this.comboBoxSupplier);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxOptionTwo);
             this.pnl_stockmaster.Controls.Add(this.label26);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox10);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxOptionOne);
             this.pnl_stockmaster.Controls.Add(this.label25);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox9);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxServeItem);
             this.pnl_stockmaster.Controls.Add(this.label7);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox8);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxWeight);
             this.pnl_stockmaster.Controls.Add(this.label4);
             this.pnl_stockmaster.Controls.Add(this.Panel2);
             this.pnl_stockmaster.Controls.Add(this.label24);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox7);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxDiscountAmount);
             this.pnl_stockmaster.Controls.Add(this.label23);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox6);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxDiscount);
             this.pnl_stockmaster.Controls.Add(this.label22);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox5);
+            this.pnl_stockmaster.Controls.Add(this.TextBoxProductQty);
             this.pnl_stockmaster.Controls.Add(this.label21);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox4);
-            this.pnl_stockmaster.Controls.Add(this.label20);
             this.pnl_stockmaster.Controls.Add(this.comboBoxSubCategory);
-            this.pnl_stockmaster.Controls.Add(this.textBox5);
+            this.pnl_stockmaster.Controls.Add(this.textBoxPacketSize);
             this.pnl_stockmaster.Controls.Add(this.label19);
             this.pnl_stockmaster.Controls.Add(this.label18);
-            this.pnl_stockmaster.Controls.Add(this.textBox3);
+            this.pnl_stockmaster.Controls.Add(this.textBoxMrp);
             this.pnl_stockmaster.Controls.Add(this.label17);
-            this.pnl_stockmaster.Controls.Add(this.textRackNo);
             this.pnl_stockmaster.Controls.Add(this.label5);
-            this.pnl_stockmaster.Controls.Add(this.textBox2);
+            this.pnl_stockmaster.Controls.Add(this.textBoxCost);
             this.pnl_stockmaster.Controls.Add(this.label16);
-            this.pnl_stockmaster.Controls.Add(this.textBox1);
+            this.pnl_stockmaster.Controls.Add(this.textBoxSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.label15);
             this.pnl_stockmaster.Controls.Add(this.label11);
             this.pnl_stockmaster.Controls.Add(this.label14);
             this.pnl_stockmaster.Controls.Add(this.ComboMainCategory);
             this.pnl_stockmaster.Controls.Add(this.label13);
-            this.pnl_stockmaster.Controls.Add(this.richTextBox1);
+            this.pnl_stockmaster.Controls.Add(this.textDescriptionTwo);
             this.pnl_stockmaster.Controls.Add(this.label12);
             this.pnl_stockmaster.Controls.Add(this.txtname);
             this.pnl_stockmaster.Controls.Add(this.Label1);
@@ -361,6 +381,94 @@
             this.pnl_stockmaster.Name = "pnl_stockmaster";
             this.pnl_stockmaster.Size = new System.Drawing.Size(1928, 890);
             this.pnl_stockmaster.TabIndex = 46;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Crimson;
+            this.label37.Location = new System.Drawing.Point(629, 48);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(21, 25);
+            this.label37.TabIndex = 78;
+            this.label37.Text = "*";
+            // 
+            // comboRackNumber
+            // 
+            this.comboRackNumber.BackColor = System.Drawing.Color.LightYellow;
+            this.comboRackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRackNumber.FormattingEnabled = true;
+            this.comboRackNumber.Location = new System.Drawing.Point(657, 45);
+            this.comboRackNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.comboRackNumber.Name = "comboRackNumber";
+            this.comboRackNumber.Size = new System.Drawing.Size(140, 28);
+            this.comboRackNumber.TabIndex = 77;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Crimson;
+            this.label36.Location = new System.Drawing.Point(126, 126);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(21, 25);
+            this.label36.TabIndex = 76;
+            this.label36.Text = "*";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Crimson;
+            this.label35.Location = new System.Drawing.Point(121, 396);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(21, 25);
+            this.label35.TabIndex = 75;
+            this.label35.Text = "*";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Crimson;
+            this.label34.Location = new System.Drawing.Point(120, 38);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(21, 25);
+            this.label34.TabIndex = 74;
+            this.label34.Text = "*";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Crimson;
+            this.label33.Location = new System.Drawing.Point(121, 82);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(21, 25);
+            this.label33.TabIndex = 73;
+            this.label33.Text = "*";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Crimson;
+            this.label32.Location = new System.Drawing.Point(129, 325);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(21, 25);
+            this.label32.TabIndex = 72;
+            this.label32.Text = "*";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Crimson;
+            this.label31.Location = new System.Drawing.Point(130, 286);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(21, 25);
+            this.label31.TabIndex = 71;
+            this.label31.Text = "*";
             // 
             // label30
             // 
@@ -548,25 +656,25 @@
             this.comboSellingUnit.Size = new System.Drawing.Size(168, 28);
             this.comboSellingUnit.TabIndex = 49;
             // 
-            // comboBox3
+            // comboBoxSupplier
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(145, 586);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(335, 28);
-            this.comboBox3.TabIndex = 48;
+            this.comboBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSupplier.FormattingEnabled = true;
+            this.comboBoxSupplier.Location = new System.Drawing.Point(145, 586);
+            this.comboBoxSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(335, 28);
+            this.comboBoxSupplier.TabIndex = 48;
             // 
-            // richTextBox11
+            // TextBoxOptionTwo
             // 
-            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox11.Location = new System.Drawing.Point(660, 623);
-            this.richTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox11.TabIndex = 47;
-            this.richTextBox11.Text = "";
+            this.TextBoxOptionTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxOptionTwo.Location = new System.Drawing.Point(660, 623);
+            this.TextBoxOptionTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxOptionTwo.Name = "TextBoxOptionTwo";
+            this.TextBoxOptionTwo.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxOptionTwo.TabIndex = 47;
+            this.TextBoxOptionTwo.Text = "";
             // 
             // label26
             // 
@@ -579,15 +687,15 @@
             this.label26.TabIndex = 46;
             this.label26.Text = "Option ll  ::";
             // 
-            // richTextBox10
+            // TextBoxOptionOne
             // 
-            this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox10.Location = new System.Drawing.Point(660, 551);
-            this.richTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox10.TabIndex = 45;
-            this.richTextBox10.Text = "";
+            this.TextBoxOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxOptionOne.Location = new System.Drawing.Point(660, 551);
+            this.TextBoxOptionOne.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxOptionOne.Name = "TextBoxOptionOne";
+            this.TextBoxOptionOne.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxOptionOne.TabIndex = 45;
+            this.TextBoxOptionOne.Text = "";
             // 
             // label25
             // 
@@ -600,15 +708,15 @@
             this.label25.TabIndex = 44;
             this.label25.Text = "Option   ::";
             // 
-            // richTextBox9
+            // TextBoxServeItem
             // 
-            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox9.Location = new System.Drawing.Point(660, 487);
-            this.richTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox9.TabIndex = 43;
-            this.richTextBox9.Text = "";
+            this.TextBoxServeItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxServeItem.Location = new System.Drawing.Point(660, 487);
+            this.TextBoxServeItem.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxServeItem.Name = "TextBoxServeItem";
+            this.TextBoxServeItem.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxServeItem.TabIndex = 43;
+            this.TextBoxServeItem.Text = "";
             // 
             // label7
             // 
@@ -621,15 +729,15 @@
             this.label7.TabIndex = 42;
             this.label7.Text = "Serve Item  ::";
             // 
-            // richTextBox8
+            // TextBoxWeight
             // 
-            this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox8.Location = new System.Drawing.Point(660, 424);
-            this.richTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox8.TabIndex = 41;
-            this.richTextBox8.Text = "";
+            this.TextBoxWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxWeight.Location = new System.Drawing.Point(660, 424);
+            this.TextBoxWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxWeight.Name = "TextBoxWeight";
+            this.TextBoxWeight.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxWeight.TabIndex = 41;
+            this.TextBoxWeight.Text = "";
             // 
             // label4
             // 
@@ -653,15 +761,15 @@
             this.label24.TabIndex = 38;
             this.label24.Text = "Status ::";
             // 
-            // richTextBox7
+            // TextBoxDiscountAmount
             // 
-            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox7.Location = new System.Drawing.Point(660, 357);
-            this.richTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox7.TabIndex = 37;
-            this.richTextBox7.Text = "";
+            this.TextBoxDiscountAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxDiscountAmount.Location = new System.Drawing.Point(660, 357);
+            this.TextBoxDiscountAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxDiscountAmount.Name = "TextBoxDiscountAmount";
+            this.TextBoxDiscountAmount.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxDiscountAmount.TabIndex = 37;
+            this.TextBoxDiscountAmount.Text = "";
             // 
             // label23
             // 
@@ -674,68 +782,47 @@
             this.label23.TabIndex = 36;
             this.label23.Text = " Discount Amount ::";
             // 
-            // richTextBox6
+            // TextBoxDiscount
             // 
-            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox6.Location = new System.Drawing.Point(660, 318);
-            this.richTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox6.TabIndex = 35;
-            this.richTextBox6.Text = "";
+            this.TextBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxDiscount.Location = new System.Drawing.Point(660, 311);
+            this.TextBoxDiscount.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxDiscount.Name = "TextBoxDiscount";
+            this.TextBoxDiscount.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxDiscount.TabIndex = 35;
+            this.TextBoxDiscount.Text = "";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(550, 329);
+            this.label22.Location = new System.Drawing.Point(550, 320);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(102, 20);
             this.label22.TabIndex = 34;
             this.label22.Text = "Discount ::";
             // 
-            // richTextBox5
+            // TextBoxProductQty
             // 
-            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox5.Location = new System.Drawing.Point(660, 279);
-            this.richTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(237, 31);
-            this.richTextBox5.TabIndex = 33;
-            this.richTextBox5.Text = "";
+            this.TextBoxProductQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxProductQty.Location = new System.Drawing.Point(662, 260);
+            this.TextBoxProductQty.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxProductQty.Name = "TextBoxProductQty";
+            this.TextBoxProductQty.Size = new System.Drawing.Size(237, 31);
+            this.TextBoxProductQty.TabIndex = 33;
+            this.TextBoxProductQty.Text = "";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(486, 284);
+            this.label21.Location = new System.Drawing.Point(490, 271);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(168, 20);
             this.label21.TabIndex = 32;
             this.label21.Text = "Product Quantity ::";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(660, 234);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(297, 31);
-            this.richTextBox4.TabIndex = 31;
-            this.richTextBox4.Text = "";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(549, 242);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 20);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "Product  ::";
             // 
             // comboBoxSubCategory
             // 
@@ -748,14 +835,14 @@
             this.comboBoxSubCategory.Size = new System.Drawing.Size(296, 28);
             this.comboBoxSubCategory.TabIndex = 29;
             // 
-            // textBox5
+            // textBoxPacketSize
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(145, 658);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(335, 26);
-            this.textBox5.TabIndex = 27;
+            this.textBoxPacketSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPacketSize.Location = new System.Drawing.Point(145, 658);
+            this.textBoxPacketSize.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPacketSize.Name = "textBoxPacketSize";
+            this.textBoxPacketSize.Size = new System.Drawing.Size(335, 26);
+            this.textBoxPacketSize.TabIndex = 27;
             // 
             // label19
             // 
@@ -779,14 +866,14 @@
             this.label18.TabIndex = 26;
             this.label18.Text = "Supplier ::";
             // 
-            // textBox3
+            // textBoxMrp
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(145, 525);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(335, 26);
-            this.textBox3.TabIndex = 23;
+            this.textBoxMrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMrp.Location = new System.Drawing.Point(145, 525);
+            this.textBoxMrp.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxMrp.Name = "textBoxMrp";
+            this.textBoxMrp.Size = new System.Drawing.Size(335, 26);
+            this.textBoxMrp.TabIndex = 23;
             // 
             // label17
             // 
@@ -799,14 +886,14 @@
             this.label17.TabIndex = 24;
             this.label17.Text = "MRP ::";
             // 
-            // textBox2
+            // textBoxCost
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 462);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(335, 26);
-            this.textBox2.TabIndex = 21;
+            this.textBoxCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCost.Location = new System.Drawing.Point(147, 462);
+            this.textBoxCost.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCost.Name = "textBoxCost";
+            this.textBoxCost.Size = new System.Drawing.Size(335, 26);
+            this.textBoxCost.TabIndex = 21;
             // 
             // label16
             // 
@@ -819,14 +906,15 @@
             this.label16.TabIndex = 22;
             this.label16.Text = "Cost ::";
             // 
-            // textBox1
+            // textBoxSellingPrice
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(148, 390);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 26);
-            this.textBox1.TabIndex = 19;
+            this.textBoxSellingPrice.BackColor = System.Drawing.Color.LightYellow;
+            this.textBoxSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSellingPrice.Location = new System.Drawing.Point(148, 390);
+            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSellingPrice.Name = "textBoxSellingPrice";
+            this.textBoxSellingPrice.Size = new System.Drawing.Size(335, 26);
+            this.textBoxSellingPrice.TabIndex = 19;
             // 
             // label15
             // 
@@ -884,15 +972,15 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Purchase unit ::";
             // 
-            // richTextBox1
+            // textDescriptionTwo
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(147, 226);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(336, 31);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.textDescriptionTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDescriptionTwo.Location = new System.Drawing.Point(147, 226);
+            this.textDescriptionTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.textDescriptionTwo.Name = "textDescriptionTwo";
+            this.textDescriptionTwo.Size = new System.Drawing.Size(336, 31);
+            this.textDescriptionTwo.TabIndex = 14;
+            this.textDescriptionTwo.Text = "";
             // 
             // label12
             // 
@@ -928,7 +1016,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(50, 126);
+            this.label10.Location = new System.Drawing.Point(34, 126);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 20);
@@ -945,60 +1033,113 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
-            // label31
+            // pictureBox1
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Crimson;
-            this.label31.Location = new System.Drawing.Point(130, 286);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(21, 25);
-            this.label31.TabIndex = 71;
-            this.label31.Text = "*";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox1.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox1.Location = new System.Drawing.Point(815, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
             // 
-            // label32
+            // pictureBox2
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Crimson;
-            this.label32.Location = new System.Drawing.Point(129, 325);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(21, 25);
-            this.label32.TabIndex = 72;
-            this.label32.Text = "*";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox2.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox2.Location = new System.Drawing.Point(961, 116);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 81;
+            this.pictureBox2.TabStop = false;
             // 
-            // label33
+            // pictureBox3
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Crimson;
-            this.label33.Location = new System.Drawing.Point(121, 82);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(21, 25);
-            this.label33.TabIndex = 73;
-            this.label33.Text = "*";
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox3.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox3.Location = new System.Drawing.Point(962, 159);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 82;
+            this.pictureBox3.TabStop = false;
             // 
-            // label34
+            // pictureBox4
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Crimson;
-            this.label34.Location = new System.Drawing.Point(120, 38);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(21, 25);
-            this.label34.TabIndex = 74;
-            this.label34.Text = "*";
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox4.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox4.Location = new System.Drawing.Point(962, 198);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 83;
+            this.pictureBox4.TabStop = false;
             // 
-            // label35
+            // pictureBox5
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Crimson;
-            this.label35.Location = new System.Drawing.Point(121, 392);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(21, 25);
-            this.label35.TabIndex = 75;
-            this.label35.Text = "*";
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox5.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox5.Location = new System.Drawing.Point(351, 286);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 84;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox6.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox6.Location = new System.Drawing.Point(351, 322);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 85;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox7.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox7.Location = new System.Drawing.Point(487, 38);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 86;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox8.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox8.Location = new System.Drawing.Point(489, 80);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 87;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.pictureBox9.Image = global::IMS.App.Properties.Resources.error;
+            this.pictureBox9.Location = new System.Drawing.Point(490, 390);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 88;
+            this.pictureBox9.TabStop = false;
             // 
             // frmItems
             // 
@@ -1022,6 +1163,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1038,7 +1188,6 @@
         internal System.Windows.Forms.TextBox txtitemid;
         internal System.Windows.Forms.Button btnupdate;
         internal System.Windows.Forms.Button btnsave;
-        internal System.Windows.Forms.TextBox textRackNo;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Panel pnl_stockmaster;
         internal System.Windows.Forms.TextBox textBarcode;
@@ -1049,40 +1198,38 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.Label label13;
-        internal System.Windows.Forms.RichTextBox richTextBox1;
+        internal System.Windows.Forms.RichTextBox textDescriptionTwo;
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label14;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox textBoxSellingPrice;
         internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.TextBox textBoxCost;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Label label18;
-        internal System.Windows.Forms.TextBox textBox3;
+        internal System.Windows.Forms.TextBox textBoxMrp;
         internal System.Windows.Forms.Label label17;
-        internal System.Windows.Forms.TextBox textBox5;
+        internal System.Windows.Forms.TextBox textBoxPacketSize;
         internal System.Windows.Forms.Label label19;
-        internal System.Windows.Forms.RichTextBox richTextBox4;
-        internal System.Windows.Forms.Label label20;
         internal System.Windows.Forms.ComboBox comboBoxSubCategory;
-        internal System.Windows.Forms.RichTextBox richTextBox5;
+        internal System.Windows.Forms.RichTextBox TextBoxProductQty;
         internal System.Windows.Forms.Label label21;
-        internal System.Windows.Forms.RichTextBox richTextBox6;
+        internal System.Windows.Forms.RichTextBox TextBoxDiscount;
         internal System.Windows.Forms.Label label22;
-        internal System.Windows.Forms.RichTextBox richTextBox7;
+        internal System.Windows.Forms.RichTextBox TextBoxDiscountAmount;
         internal System.Windows.Forms.Label label23;
         internal System.Windows.Forms.Label label24;
-        internal System.Windows.Forms.RichTextBox richTextBox8;
+        internal System.Windows.Forms.RichTextBox TextBoxWeight;
         internal System.Windows.Forms.Label label4;
-        internal System.Windows.Forms.RichTextBox richTextBox9;
+        internal System.Windows.Forms.RichTextBox TextBoxServeItem;
         internal System.Windows.Forms.Label label7;
-        internal System.Windows.Forms.RichTextBox richTextBox10;
+        internal System.Windows.Forms.RichTextBox TextBoxOptionOne;
         internal System.Windows.Forms.Label label25;
-        internal System.Windows.Forms.RichTextBox richTextBox11;
+        internal System.Windows.Forms.RichTextBox TextBoxOptionTwo;
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.Label label27;
         internal System.Windows.Forms.ComboBox comboPurchaseUnit;
         internal System.Windows.Forms.ComboBox comboSellingUnit;
-        internal System.Windows.Forms.ComboBox comboBox3;
+        internal System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.CheckBox checkBoxISActive;
         internal System.Windows.Forms.DataGridView dtglist;
         internal System.Windows.Forms.Button btnadd;
@@ -1104,5 +1251,17 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label37;
+        internal System.Windows.Forms.ComboBox comboRackNumber;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

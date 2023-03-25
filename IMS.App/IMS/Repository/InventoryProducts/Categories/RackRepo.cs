@@ -9,7 +9,7 @@ using IMS.Entity;
 using IMS.Entity.InventoryProducts;
 using System.Diagnostics;
 
-namespace IMS.Repository.InventoryProducts
+namespace IMS.Repository
 {
     class RackRepo
     {

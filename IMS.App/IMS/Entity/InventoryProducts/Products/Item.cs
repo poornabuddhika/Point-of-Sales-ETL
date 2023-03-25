@@ -8,29 +8,61 @@ namespace IMS.Entity.InventoryProducts
 {
     public class Item
     {
-        public int              ItemtId             { get; set; }
-        public string           ItemIdTag          { get; set; }
-        public string           ItemName           { get; set; }
-        public int  BrandId               { get; set; }
-        public string           ItemDescription    { get; set; }
-        public double ItemQuantityPerUnit{ get; set; }
-        public double ItemPerUnitPrice   { get; set; }
-        public double ItemMSRP           { get; set; }
-        public string           ProductStatus         { get; set; }
-        public double ItemDiscountRate   { get; set; }
-        public double ItemSize           { get; set; }
-        public string           ItemColor          { get; set; }
-       // public byte[]           ProductPictures       { get; set; }
-        public double ItemWeight         { get; set; }
-        public int           ItemUnitStock      { get; set; }
+        public string    ItemtId    { get; set; }
+       
+        public string    ItemName           { get; set; }
 
-        //outside
-        public string BrandName         { get; set; }
-        public string VendorName        { get; set; }
+        public string Barcode { get; set; }
 
-        public string SubCategoryName{ get; set; }
-        public string MainCategoryName  { get; set; }
+        public string DescriptionOne { get; set; }
 
-        public virtual Brands Brand{ get; set; }
+        public string DescriptionTwo { get; set; }
+
+        public string PurchaseUnit { get; set; }
+
+        public string SellingUnit { get; set; }
+
+        public string SellingPrice { get; set; }
+
+        
+        public double Cost { get; set; }
+
+        public string MRP { get; set; }
+
+        public string Supplier { get; set; }
+
+        public double PacketSize { get; set; }
+
+        public string RackNumber { get; set; }
+
+        public string CategoryName { get; set; }
+
+        public string subCategory { get; set; }
+
+        public string brands { get; set; }
+
+        public double ProductQty { get; set; }
+
+        public double DisCount { get; set; }
+
+        public double DiscountAmount { get; set; }
+
+        public double WeightItem { get; set; }
+
+        public double ServeItem { get; set; }
+
+
+        public string OptionOne { get; set; }
+
+
+        public string OptionTwo { get; set; }
+
+
+        public bool IsActive { get; set; }
+
+
+
+
+
     }
 }

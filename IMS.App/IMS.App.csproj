@@ -72,7 +72,7 @@
     <Compile Include="IMS\Repository\InventoryProducts\Categories\VendorsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Orders\OrdersRepo.cs" />
-    <Compile Include="IMS\Repository\InventoryProducts\Products\ProductsRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Products\ItemRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Users\UsersRepo.cs" />
     <Compile Include="IMS\DataAccess\InventoryProducts\InventoryDBDataAccess.cs" />
     <Compile Include="POS_ETLDataSet.Designer.cs">
@@ -192,6 +192,8 @@
     <Content Include="Resources\customer.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\emp.png" />
+    <Content Include="Resources\error.png" />
+    <None Include="Resources\error1.png" />
     <Content Include="Resources\icons8_account_120px_2.png" />
     <Content Include="Resources\icons8_add_database_20px.png" />
     <Content Include="Resources\icons8_add_shopping_cart_20px.png" />
