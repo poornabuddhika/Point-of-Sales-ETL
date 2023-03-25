@@ -78,7 +78,7 @@ namespace IMS.Repository
             string sql;
             try
             {
-                sql = @"SELECT BrandId , BrandName FROM Brands";
+                sql = @"SELECT bra_name from item_brand WHERE bra_is_ISActive='TRUE'";
                 return this.iDB.ExecuteQueryTable(sql);
             }
             catch (Exception e)
@@ -160,7 +160,7 @@ namespace IMS.Repository
             iDB.conOpen();
             try
             {
-                var sql = @"insert into item_brand (bra_name, bra_TAG,bra_is_deleted)
+                var sql = @"insert into item_brand (bra_name, bra_TAG,bra_is_ISActive)
                                 values ('" + br.BrandName + "' , '" + br.BrandTag + "','"+ br.BrandIsActive + "' );";
 
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
@@ -184,7 +184,7 @@ namespace IMS.Repository
             {
                 iDB.conOpen();
                 string sql = @"update item_brand set item_brand.bra_name='"+br.BrandName+"' , item_brand.bra_TAG='"+br.BrandTag+
-                    "',item_brand.bra_is_deleted='"+br.BrandIsActive+ "' where item_brand.bra_name='" + br.BrandName+"' ";
+                    "',item_brand.bra_is_ISActive='" + br.BrandIsActive+ "' where item_brand.bra_name='" + br.BrandName+"' ";
 
                 int count = this.iDB.ExecuteDMLQuery(sql);
 

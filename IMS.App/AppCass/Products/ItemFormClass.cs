@@ -31,24 +31,66 @@ namespace IMS.App.AppCass.Products
         }
       
 
-        public void SubCategoryIdToName(ComboBox ComboMainCategory, SubCategoriesReop subCateRepo, string SubCategoryName)
+        public void SubCategoryIdToName(ComboBox comboBoxSubCategory, SubCategoriesReop subCateRepo, string SubCategoryName)
         {
-            ComboMainCategory.Items.Clear();
-            ComboMainCategory.Items.Add("--Not Selected--");
-            ComboMainCategory.SelectedIndex = ComboMainCategory.FindStringExact("--Not Selected--");
+            comboBoxSubCategory.Items.Clear();
+            comboBoxSubCategory.Items.Add("--Not Selected--");
+            comboBoxSubCategory.SelectedIndex = comboBoxSubCategory.FindStringExact("--Not Selected--");
             foreach (SubCategories row in subCateRepo.LoadComboSubCategory(SubCategoryName))
             {
 
 
-                ComboMainCategory.Items.Add(row.MainCategoryName.ToString());
+                comboBoxSubCategory.Items.Add(row.SubCategoryName.ToString());
 
 
             }
 
         }
 
+        internal void ComboSellingUnitlist(ComboBox comboSellingUnit, UnitRepo unitRepo)
+        {
+            comboSellingUnit.Items.Add("--Not Selected--");
+            comboSellingUnit.SelectedIndex = comboSellingUnit.FindStringExact("--Not Selected--");
+            foreach (Unit unit in unitRepo.GetAll(null))
+            {
 
 
+                comboSellingUnit.Items.Add(unit.UnitCode.ToString());
+
+
+            }
+        }
+
+        public void BrndName(ComboBox comboBoxBrand, BrandsRepo brandRepo)
+        {
+            comboBoxBrand.Items.Add("--Not Selected--");
+            comboBoxBrand.SelectedIndex = comboBoxBrand.FindStringExact("--Not Selected--");
+            foreach (DataRow row in brandRepo.LoadComboBrandName().Rows)
+            {
+
+
+                comboBoxBrand.Items.Add(row["bra_name"].ToString());
+
+
+            }
+        }
+
+
+        public void ComboPurchaseUnitlist(ComboBox comboPurchaseUnit,UnitRepo unitRepo)
+        {
+
+            comboPurchaseUnit.Items.Add("--Not Selected--");
+            comboPurchaseUnit.SelectedIndex = comboPurchaseUnit.FindStringExact("--Not Selected--");
+            foreach (Unit unit in unitRepo.GetAll(null))
+            {
+
+
+                comboPurchaseUnit.Items.Add(unit.UnitCode.ToString());
+
+
+            }
+
+        }
 
     }
 }

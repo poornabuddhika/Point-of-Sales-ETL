@@ -21,6 +21,13 @@ namespace IMS.App.UserInterface.Products
 
 
         ItemFormClass itemFormClass = new ItemFormClass();
+
+        SubCategoriesReop subCateRepo = new SubCategoriesReop();
+
+        BrandsRepo brandRepo = new BrandsRepo();
+
+        private UnitRepo unitRepo = new UnitRepo();
+
         public frmItems()
         {
             InitializeComponent();
@@ -32,11 +39,25 @@ namespace IMS.App.UserInterface.Products
         private void frmItems_Load(object sender, EventArgs e)
         {
             itemFormClass.MainCategoryIdToName(ComboMainCategory,  mainCateRepo);
+            itemFormClass.ComboPurchaseUnitlist(comboPurchaseUnit, unitRepo);
+            itemFormClass.ComboSellingUnitlist(comboSellingUnit, unitRepo);
         }
 
         private void ComboMainCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("");
+            if(ComboMainCategory.SelectedIndex==0)
+            {
+                comboBoxSubCategory.Items.Clear();
+                comboBoxSubCategory.Text = "";
+                comboBoxSubCategory.Enabled = false;
+            }
+            else
+            {
+                comboBoxSubCategory.Enabled = true;
+                itemFormClass.SubCategoryIdToName(comboBoxSubCategory, subCateRepo, ComboMainCategory.SelectedItem.ToString());
+                itemFormClass.BrndName(comboBoxBrand, brandRepo);
+            }
+            
         }
     }
 }
