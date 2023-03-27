@@ -85,33 +85,35 @@ namespace IMS.Repository
             {
                 return null;
             }
-
-            var product = new Item();
-            product.ItemtId = Convert.ToInt32(row["pID"].ToString());
-            product.ItemIdTag = row["pTag"].ToString();
-            product.ItemName = row["pName"].ToString();
-            product.BrandName = row["pBrandName"].ToString();
-            product.ProductStatus = row["pStatus"].ToString();
+            
+           var product = new Item();
             /*
-            product.ProductMSRP = Convert.ToDouble(row["pMSRP"].ToString());
-            product.ProductPerUnitPrice = Convert.ToDouble(row["pPerUnPrice"].ToString());
-            product.ProductQuantityPerUnit = Convert.ToDouble(row["pQuaPerUn"].ToString());
-            product.ProductDiscountRate = Convert.ToDouble(row["pDisRate"].ToString());
-            product.ProductSize = Convert.ToDouble(row["pSize"].ToString());
-            product.ProductColor = row["pColor"].ToString();
-            product.ProductWeight = Convert.ToDouble(row["pWeight"].ToString());
-            product.ProductUnitStock = Convert.ToInt32(row["pUnStock"].ToString());
-            product.ProductDescription = row["pDisc"].ToString();
-            */
+           product.ItemtId = Convert.ToInt32(row["pID"].ToString());
+           product.ItemIdTag = row["pTag"].ToString();
+           product.ItemName = row["pName"].ToString();
+           product.BrandName = row["pBrandName"].ToString();
+           product.ProductStatus = row["pStatus"].ToString();
+
+           product.ProductMSRP = Convert.ToDouble(row["pMSRP"].ToString());
+           product.ProductPerUnitPrice = Convert.ToDouble(row["pPerUnPrice"].ToString());
+           product.ProductQuantityPerUnit = Convert.ToDouble(row["pQuaPerUn"].ToString());
+           product.ProductDiscountRate = Convert.ToDouble(row["pDisRate"].ToString());
+           product.ProductSize = Convert.ToDouble(row["pSize"].ToString());
+           product.ProductColor = row["pColor"].ToString();
+           product.ProductWeight = Convert.ToDouble(row["pWeight"].ToString());
+           product.ProductUnitStock = Convert.ToInt32(row["pUnStock"].ToString());
+           product.ProductDescription = row["pDisc"].ToString();
+           */
             return product;
         }
 
         //DataCount - DataExists
-        public bool DataExists(int id)
+        public bool DataExists(string id,string name)
         {
             try
             {
-                DataSet ds = iDB.ExecuteQuery("select ProductId from Products where ProductId="+id);
+                
+                DataSet ds = iDB.ExecuteQuery("SELECT Item_ItemMaster.ItemName,Item_ItemMaster.Item_ID from Item_ItemMaster WHERE Item_ItemMaster.ItemName = '"+name+"' or Item_ItemMaster.Item_ID = '"+id+"'");
 
                 //System.Windows.MessageBox.Show(ds.Tables[0].Rows.Count);
                 Debug.WriteLine(ds.Tables[0].Rows.Count);
@@ -140,14 +142,16 @@ namespace IMS.Repository
         {
             try
             {
-                string sql = null;
-                /*
-                var sql = @"insert into Products (ProductName, BrandId, ProductDescription, ProductQuantityPerUnit,
-                                ProductPerUnitPrice, ProductMSRP, Itemstatus, ProductDiscountRate, Itemsize, 
-                                ProductColor, ProductWeight, ProductUnitStock)
-                                values ('" + pro.ProductName + "' , '" + pro.BrandId + "' , '" + pro.ProductDescription + "' ,'" + pro.ProductQuantityPerUnit + "' ,'" 
-                                + pro.ProductPerUnitPrice + "' ,'" + pro.ProductMSRP + "' ,'" + pro.Itemstatus + "' ,'" + pro.ProductDiscountRate + "' ,'" + pro.Itemsize + "' ,'" + pro.ProductColor + "' ,'" + pro.ProductWeight + "' ,'" + pro.ProductUnitStock + "');";
-                */
+               
+                
+                var sql = @"INSERT INTO [dbo].[Item_ItemMaster] ([Item_ID], [ItemName], [Barcode], [Description1], [Description2],
+                            [Purchase_Unit], [Selling_Unit], [Selling_Price], [ItemCost], [MRP], [Supplier], [Packet_Size], [Rack_No],
+                            [Category], [Sub_Category], [Brand_Name], [Product_Qty], [Discount], [DiscountAmount], [Weight], [Save_Item], [OptionOne], [optionTwo], [Status]) 
+                            VALUES 
+                            ('"+pro.ItemtId+"', '"+pro.ItemName+"','"+pro.Barcode+"', '"+pro.DescriptionOne+"', '"+pro.DescriptionTwo+"','"+
+                            pro.PurchaseUnit+"','"+pro.SellingUnit+"', '"+pro.SellingPrice+"', '"+pro.Cost+"', '"+pro.MRP+"','"+pro.Supplier+"', '"+pro.PacketSize+"', '"+pro.RackNumber+
+                            "','"+pro.CategoryName+"', '"+pro.subCategory+"', '"+pro.brands+"', '"+pro.ProductQty+"', '"+pro.DisCount+"', '"+pro.DiscountAmount+"','"+pro.WeightItem+"', '"+pro.ServeItem+"', '"+pro.OptionOne+"', '"+pro.OptionTwo+"','"+pro.IsActive+"');";
+                
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
                 if (rowCount == 1)

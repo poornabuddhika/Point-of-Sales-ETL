@@ -93,7 +93,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxCost = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBoxSellingPrice = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -105,27 +104,33 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.ERRReck = new System.Windows.Forms.PictureBox();
+            this.ERRCategory = new System.Windows.Forms.PictureBox();
+            this.ERRSubCategory = new System.Windows.Forms.PictureBox();
+            this.ERRBrandName = new System.Windows.Forms.PictureBox();
+            this.ERRPurchaseUnit = new System.Windows.Forms.PictureBox();
+            this.ERRSellingUnit = new System.Windows.Forms.PictureBox();
+            this.ERRID = new System.Windows.Forms.PictureBox();
+            this.ERRName = new System.Windows.Forms.PictureBox();
+            this.ERRSellingPrice = new System.Windows.Forms.PictureBox();
+            this.ERRBarcode = new System.Windows.Forms.PictureBox();
+            this.ErrDiscount = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxSellingPrice = new System.Windows.Forms.RichTextBox();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // Label2
@@ -217,6 +222,7 @@
             this.txtitemid.Name = "txtitemid";
             this.txtitemid.Size = new System.Drawing.Size(333, 26);
             this.txtitemid.TabIndex = 7;
+            this.txtitemid.TextChanged += new System.EventHandler(this.txtitemid_TextChanged);
             // 
             // btnupdate
             // 
@@ -298,15 +304,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
-            this.pnl_stockmaster.Controls.Add(this.pictureBox9);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox8);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox7);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox6);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox5);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox4);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox3);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox2);
-            this.pnl_stockmaster.Controls.Add(this.pictureBox1);
+            this.pnl_stockmaster.Controls.Add(this.textBoxSellingPrice);
+            this.pnl_stockmaster.Controls.Add(this.label20);
+            this.pnl_stockmaster.Controls.Add(this.ErrDiscount);
+            this.pnl_stockmaster.Controls.Add(this.ERRBarcode);
+            this.pnl_stockmaster.Controls.Add(this.ERRSellingPrice);
+            this.pnl_stockmaster.Controls.Add(this.ERRName);
+            this.pnl_stockmaster.Controls.Add(this.ERRID);
+            this.pnl_stockmaster.Controls.Add(this.ERRSellingUnit);
+            this.pnl_stockmaster.Controls.Add(this.ERRPurchaseUnit);
+            this.pnl_stockmaster.Controls.Add(this.ERRBrandName);
+            this.pnl_stockmaster.Controls.Add(this.ERRSubCategory);
+            this.pnl_stockmaster.Controls.Add(this.ERRCategory);
+            this.pnl_stockmaster.Controls.Add(this.ERRReck);
             this.pnl_stockmaster.Controls.Add(this.label37);
             this.pnl_stockmaster.Controls.Add(this.comboRackNumber);
             this.pnl_stockmaster.Controls.Add(this.label36);
@@ -358,7 +368,6 @@
             this.pnl_stockmaster.Controls.Add(this.label5);
             this.pnl_stockmaster.Controls.Add(this.textBoxCost);
             this.pnl_stockmaster.Controls.Add(this.label16);
-            this.pnl_stockmaster.Controls.Add(this.textBoxSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.label15);
             this.pnl_stockmaster.Controls.Add(this.label11);
             this.pnl_stockmaster.Controls.Add(this.label14);
@@ -403,6 +412,7 @@
             this.comboRackNumber.Name = "comboRackNumber";
             this.comboRackNumber.Size = new System.Drawing.Size(140, 28);
             this.comboRackNumber.TabIndex = 77;
+            this.comboRackNumber.TextChanged += new System.EventHandler(this.comboRackNumber_TextChanged);
             // 
             // label36
             // 
@@ -491,6 +501,7 @@
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(296, 28);
             this.comboBoxBrand.TabIndex = 69;
+            this.comboBoxBrand.TextChanged += new System.EventHandler(this.comboBoxBrand_TextChanged);
             // 
             // label29
             // 
@@ -644,6 +655,7 @@
             this.comboPurchaseUnit.Name = "comboPurchaseUnit";
             this.comboPurchaseUnit.Size = new System.Drawing.Size(168, 28);
             this.comboPurchaseUnit.TabIndex = 50;
+            this.comboPurchaseUnit.TextChanged += new System.EventHandler(this.comboPurchaseUnit_TextChanged);
             // 
             // comboSellingUnit
             // 
@@ -655,6 +667,7 @@
             this.comboSellingUnit.Name = "comboSellingUnit";
             this.comboSellingUnit.Size = new System.Drawing.Size(168, 28);
             this.comboSellingUnit.TabIndex = 49;
+            this.comboSellingUnit.TextChanged += new System.EventHandler(this.comboSellingUnit_TextChanged);
             // 
             // comboBoxSupplier
             // 
@@ -784,6 +797,7 @@
             // 
             // TextBoxDiscount
             // 
+            this.TextBoxDiscount.BackColor = System.Drawing.Color.LightYellow;
             this.TextBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxDiscount.Location = new System.Drawing.Point(660, 311);
             this.TextBoxDiscount.Margin = new System.Windows.Forms.Padding(4);
@@ -791,6 +805,7 @@
             this.TextBoxDiscount.Size = new System.Drawing.Size(237, 31);
             this.TextBoxDiscount.TabIndex = 35;
             this.TextBoxDiscount.Text = "";
+            this.TextBoxDiscount.TextChanged += new System.EventHandler(this.TextBoxDiscount_TextChanged);
             // 
             // label22
             // 
@@ -834,6 +849,7 @@
             this.comboBoxSubCategory.Name = "comboBoxSubCategory";
             this.comboBoxSubCategory.Size = new System.Drawing.Size(296, 28);
             this.comboBoxSubCategory.TabIndex = 29;
+            this.comboBoxSubCategory.TextChanged += new System.EventHandler(this.comboBoxSubCategory_TextChanged);
             // 
             // textBoxPacketSize
             // 
@@ -906,16 +922,6 @@
             this.label16.TabIndex = 22;
             this.label16.Text = "Cost ::";
             // 
-            // textBoxSellingPrice
-            // 
-            this.textBoxSellingPrice.BackColor = System.Drawing.Color.LightYellow;
-            this.textBoxSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSellingPrice.Location = new System.Drawing.Point(148, 390);
-            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSellingPrice.Name = "textBoxSellingPrice";
-            this.textBoxSellingPrice.Size = new System.Drawing.Size(335, 26);
-            this.textBoxSellingPrice.TabIndex = 19;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -960,6 +966,7 @@
             this.ComboMainCategory.Size = new System.Drawing.Size(296, 28);
             this.ComboMainCategory.TabIndex = 2;
             this.ComboMainCategory.SelectedIndexChanged += new System.EventHandler(this.ComboMainCategory_SelectedIndexChanged);
+            this.ComboMainCategory.TextChanged += new System.EventHandler(this.ComboMainCategory_TextChanged);
             // 
             // label13
             // 
@@ -1002,6 +1009,7 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(335, 26);
             this.txtname.TabIndex = 0;
+            this.txtname.TextChanged += new System.EventHandler(this.txtname_TextChanged);
             // 
             // textBarcode
             // 
@@ -1011,6 +1019,7 @@
             this.textBarcode.Name = "textBarcode";
             this.textBarcode.Size = new System.Drawing.Size(335, 26);
             this.textBarcode.TabIndex = 11;
+            this.textBarcode.TextChanged += new System.EventHandler(this.textBarcode_TextChanged);
             // 
             // label10
             // 
@@ -1033,113 +1042,159 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
-            // pictureBox1
+            // ERRReck
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox1.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox1.Location = new System.Drawing.Point(815, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 80;
-            this.pictureBox1.TabStop = false;
+            this.ERRReck.BackColor = System.Drawing.Color.Transparent;
+            this.ERRReck.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRReck.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRReck.Location = new System.Drawing.Point(817, 45);
+            this.ERRReck.Name = "ERRReck";
+            this.ERRReck.Size = new System.Drawing.Size(35, 27);
+            this.ERRReck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRReck.TabIndex = 80;
+            this.ERRReck.TabStop = false;
             // 
-            // pictureBox2
+            // ERRCategory
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox2.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox2.Location = new System.Drawing.Point(961, 116);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 81;
-            this.pictureBox2.TabStop = false;
+            this.ERRCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Location = new System.Drawing.Point(961, 116);
+            this.ERRCategory.Name = "ERRCategory";
+            this.ERRCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRCategory.TabIndex = 81;
+            this.ERRCategory.TabStop = false;
             // 
-            // pictureBox3
+            // ERRSubCategory
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox3.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox3.Location = new System.Drawing.Point(962, 159);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 82;
-            this.pictureBox3.TabStop = false;
+            this.ERRSubCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSubCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Location = new System.Drawing.Point(962, 159);
+            this.ERRSubCategory.Name = "ERRSubCategory";
+            this.ERRSubCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRSubCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSubCategory.TabIndex = 82;
+            this.ERRSubCategory.TabStop = false;
             // 
-            // pictureBox4
+            // ERRBrandName
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox4.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox4.Location = new System.Drawing.Point(962, 198);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 83;
-            this.pictureBox4.TabStop = false;
+            this.ERRBrandName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBrandName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Location = new System.Drawing.Point(962, 198);
+            this.ERRBrandName.Name = "ERRBrandName";
+            this.ERRBrandName.Size = new System.Drawing.Size(35, 27);
+            this.ERRBrandName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBrandName.TabIndex = 83;
+            this.ERRBrandName.TabStop = false;
             // 
-            // pictureBox5
+            // ERRPurchaseUnit
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox5.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox5.Location = new System.Drawing.Point(351, 286);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 84;
-            this.pictureBox5.TabStop = false;
+            this.ERRPurchaseUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRPurchaseUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Location = new System.Drawing.Point(351, 286);
+            this.ERRPurchaseUnit.Name = "ERRPurchaseUnit";
+            this.ERRPurchaseUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRPurchaseUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRPurchaseUnit.TabIndex = 84;
+            this.ERRPurchaseUnit.TabStop = false;
             // 
-            // pictureBox6
+            // ERRSellingUnit
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox6.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox6.Location = new System.Drawing.Point(351, 322);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 85;
-            this.pictureBox6.TabStop = false;
+            this.ERRSellingUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Location = new System.Drawing.Point(351, 322);
+            this.ERRSellingUnit.Name = "ERRSellingUnit";
+            this.ERRSellingUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingUnit.TabIndex = 85;
+            this.ERRSellingUnit.TabStop = false;
             // 
-            // pictureBox7
+            // ERRID
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox7.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox7.Location = new System.Drawing.Point(487, 38);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 86;
-            this.pictureBox7.TabStop = false;
+            this.ERRID.BackColor = System.Drawing.Color.Transparent;
+            this.ERRID.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Location = new System.Drawing.Point(487, 38);
+            this.ERRID.Name = "ERRID";
+            this.ERRID.Size = new System.Drawing.Size(35, 27);
+            this.ERRID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRID.TabIndex = 86;
+            this.ERRID.TabStop = false;
             // 
-            // pictureBox8
+            // ERRName
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox8.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox8.Location = new System.Drawing.Point(489, 80);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 87;
-            this.pictureBox8.TabStop = false;
+            this.ERRName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Location = new System.Drawing.Point(489, 80);
+            this.ERRName.Name = "ERRName";
+            this.ERRName.Size = new System.Drawing.Size(35, 27);
+            this.ERRName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRName.TabIndex = 87;
+            this.ERRName.TabStop = false;
             // 
-            // pictureBox9
+            // ERRSellingPrice
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.pictureBox9.Image = global::IMS.App.Properties.Resources.error;
-            this.pictureBox9.Location = new System.Drawing.Point(490, 390);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 88;
-            this.pictureBox9.TabStop = false;
+            this.ERRSellingPrice.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingPrice.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Location = new System.Drawing.Point(490, 390);
+            this.ERRSellingPrice.Name = "ERRSellingPrice";
+            this.ERRSellingPrice.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingPrice.TabIndex = 88;
+            this.ERRSellingPrice.TabStop = false;
+            // 
+            // ERRBarcode
+            // 
+            this.ERRBarcode.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBarcode.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Location = new System.Drawing.Point(487, 123);
+            this.ERRBarcode.Name = "ERRBarcode";
+            this.ERRBarcode.Size = new System.Drawing.Size(35, 27);
+            this.ERRBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBarcode.TabIndex = 89;
+            this.ERRBarcode.TabStop = false;
+            // 
+            // ErrDiscount
+            // 
+            this.ErrDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.ErrDiscount.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ErrDiscount.Image = global::IMS.App.Properties.Resources.error;
+            this.ErrDiscount.Location = new System.Drawing.Point(920, 313);
+            this.ErrDiscount.Name = "ErrDiscount";
+            this.ErrDiscount.Size = new System.Drawing.Size(35, 27);
+            this.ErrDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ErrDiscount.TabIndex = 90;
+            this.ErrDiscount.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Crimson;
+            this.label20.Location = new System.Drawing.Point(633, 317);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(21, 25);
+            this.label20.TabIndex = 91;
+            this.label20.Text = "*";
+            // 
+            // textBoxSellingPrice
+            // 
+            this.textBoxSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSellingPrice.Location = new System.Drawing.Point(144, 390);
+            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSellingPrice.Name = "textBoxSellingPrice";
+            this.textBoxSellingPrice.Size = new System.Drawing.Size(336, 31);
+            this.textBoxSellingPrice.TabIndex = 92;
+            this.textBoxSellingPrice.Text = "";
+            this.textBoxSellingPrice.TextChanged += new System.EventHandler(this.textBoxSellingPrice_TextChanged);
             // 
             // frmItems
             // 
@@ -1163,15 +1218,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1201,7 +1258,6 @@
         internal System.Windows.Forms.RichTextBox textDescriptionTwo;
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label14;
-        internal System.Windows.Forms.TextBox textBoxSellingPrice;
         internal System.Windows.Forms.Label label15;
         internal System.Windows.Forms.TextBox textBoxCost;
         internal System.Windows.Forms.Label label16;
@@ -1254,14 +1310,18 @@
         private System.Windows.Forms.Label label37;
         internal System.Windows.Forms.ComboBox comboRackNumber;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ERRSellingPrice;
+        private System.Windows.Forms.PictureBox ERRName;
+        private System.Windows.Forms.PictureBox ERRID;
+        private System.Windows.Forms.PictureBox ERRSellingUnit;
+        private System.Windows.Forms.PictureBox ERRPurchaseUnit;
+        private System.Windows.Forms.PictureBox ERRBrandName;
+        private System.Windows.Forms.PictureBox ERRSubCategory;
+        private System.Windows.Forms.PictureBox ERRCategory;
+        private System.Windows.Forms.PictureBox ERRReck;
+        private System.Windows.Forms.PictureBox ERRBarcode;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox ErrDiscount;
+        internal System.Windows.Forms.RichTextBox textBoxSellingPrice;
     }
 }

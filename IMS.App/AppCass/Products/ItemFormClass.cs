@@ -109,37 +109,22 @@ namespace IMS.App.AppCass.Products
 
         public Item FillEntityItem(Item item)
         {
-            var mc = new MainCategories();
-            if (item.ItemName == "" || item.ItemtId == "")
+            var mc = new Item();
+            
+            if (item.ErrorList.Count !=0)
             {
 
-                if (textCategoryCode.Text == "")
-                {
-
-                    labelCategoryCodeError.Show();
-
-                }
-                if (textCategoryName.Text == "")
-                {
-
-                    labelCategoryNameError.Show();
-
-                }
+               
+               
                 MessageBox.Show("Please Fill Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mc = null;
             }
-            else if (textCategoryCode.Text != "" & textCategoryName.Text != "")
+            else 
             {
-                labelCategoryCodeError.Hide();
-                labelCategoryNameError.Hide();
-                mc.MainCategoryCode = textCategoryCode.Text;
-                mc.MainCategoryName = textCategoryName.Text;
-                mc.MainCategoryDescription = textCategoryDescrip.Text;
-                mc.MainCategoryStockCover = textCategoryStockCover.Text;
-                mc.MainCategoryIsActivate = checkBoxActive_Category_main.Checked;
+                mc = item;
             }
 
-
+        
             return mc;
 
         }

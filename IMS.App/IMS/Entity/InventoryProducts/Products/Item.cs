@@ -61,7 +61,7 @@ namespace IMS.Entity.InventoryProducts
         public bool IsActive { get; set; }
 
 
-
+        public List<string> ErrorList { get; set; }
 
 
     }
