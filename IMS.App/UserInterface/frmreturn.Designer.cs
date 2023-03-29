@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -94,6 +95,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.pOS_ETLDataSet = new IMS.App.POS_ETLDataSet();
+            this.pOSETLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pOSETLDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pOS_ETLDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSETLDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSETLDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label22
@@ -700,6 +707,21 @@
             this.label23.TabIndex = 109;
             this.label23.Text = "Return NO";
             // 
+            // pOS_ETLDataSet
+            // 
+            this.pOS_ETLDataSet.DataSetName = "POS_ETLDataSet";
+            this.pOS_ETLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pOSETLDataSetBindingSource
+            // 
+            this.pOSETLDataSetBindingSource.DataSource = this.pOS_ETLDataSet;
+            this.pOSETLDataSetBindingSource.Position = 0;
+            // 
+            // pOSETLDataSetBindingSource1
+            // 
+            this.pOSETLDataSetBindingSource1.DataSource = this.pOS_ETLDataSet;
+            this.pOSETLDataSetBindingSource1.Position = 0;
+            // 
             // frmreturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,6 +795,9 @@
             this.Controls.Add(this.label1);
             this.Name = "frmreturn";
             this.Text = "frmreturn";
+            ((System.ComponentModel.ISupportInitialize)(this.pOS_ETLDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSETLDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSETLDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -846,5 +871,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label23;
+        private POS_ETLDataSet pOS_ETLDataSet;
+        private System.Windows.Forms.BindingSource pOSETLDataSetBindingSource;
+        private System.Windows.Forms.BindingSource pOSETLDataSetBindingSource1;
     }
 }

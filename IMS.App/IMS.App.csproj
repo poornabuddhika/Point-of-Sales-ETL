@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="POS_ETLDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface\Category\MainCategory.cs">
@@ -185,6 +190,17 @@
     </None>
     <None Include="POS_ETLDataSet.xss">
       <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POS_ETLDataSet1.xsc">
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="POS_ETLDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POS_ETLDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POS_ETLDataSet1.xss">
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

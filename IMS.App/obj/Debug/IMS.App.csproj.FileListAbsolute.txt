@@ -16,3 +16,4 @@ C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.cs
 C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.exe
 C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.pdb
 C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmreturn.resources
+C:\Users\dushan\Documents\GitHub\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmlocationtransfers.resources
