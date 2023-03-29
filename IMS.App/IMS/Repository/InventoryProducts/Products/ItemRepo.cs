@@ -44,23 +44,10 @@ namespace IMS.Repository
             try
             {
                 if (key == null)
-                    sql = @"SELECT Products.ProductId AS pID, Products.ProductIdTag AS pTag, Brands.BrandName AS pBrandName,
-                    Products.ProductName AS pName, Products.ProductStatus AS pStatus, Products.ProductMSRP AS pMSRP, 
-                    Products.ProductPerUnitPrice AS pPerUnPrice, Products.ProductQuantityPerUnit AS pQuaPerUn,
-					Products.ProductDiscountRate AS pDisRate, Products.ProductSize AS pSize, Products.ProductColor AS pColor, 
-                    Products.ProductWeight AS pWeight, Products.ProductUnitStock AS pUnStock, Products.ProductDescription AS pDisc
-                    FROM     Products 
-					left join Brands
-					on Brands.BrandId=Products.BrandId";
+                    sql = @"SELECT * FROM     [dbo].[Item_ItemMaster] ";
                 else
-                    sql = @"SELECT Products.ProductId AS pID, Products.ProductIdTag AS pTag, Products.ProductName AS pName,
-                    Brands.BrandName AS pBrandName, Products.ProductStatus AS pStatus, Products.ProductMSRP AS pMSRP, 
-                    Products.ProductPerUnitPrice AS pPerUnPrice, Products.ProductQuantityPerUnit AS pQuaPerUn,
-                    Products.ProductDiscountRate AS pDisRate, Products.ProductSize AS pSize, Products.ProductColor AS pColor, 
-                    Products.ProductWeight AS pWeight, Products.ProductUnitStock AS pUnStock, Products.ProductDescription AS pDisc
-                    FROM     Products INNER JOIN
-                    Brands ON Products.BrandId = Brands.BrandId 
-                    where Products.ProductIdTag like '%" + key + "%' or Products.ProductName like '%" + key + "%' or  Brands.BrandName like '%" + key + "%'; ";
+                    sql = @"SELECT * FROM     [dbo].[Item_ItemMaster]
+                    where [Item_ID] '%" + key + "%' or Products.ProductName like '%" + key + "%' or   [ItemName] like '%" + key + "%'; ";
                 var dt = this.iDB.ExecuteQueryTable(sql);
 
                 int x = 0;

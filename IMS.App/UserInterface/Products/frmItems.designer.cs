@@ -32,7 +32,6 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
             this.btnnew = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,8 +39,6 @@
             this.btnupdate = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.dtglist = new System.Windows.Forms.DataGridView();
-            this.btnadd = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
             this.pnl_stockmaster = new System.Windows.Forms.Panel();
             this.textBoxMrp = new CurrencyTextBox.CurrencyTextBox();
@@ -117,8 +114,8 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
+            this.GridViewItem = new System.Windows.Forms.DataGridView();
             this.Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
@@ -131,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).BeginInit();
             this.SuspendLayout();
             // 
             // Label2
@@ -148,7 +146,7 @@
             // 
             this.Button1.BackColor = System.Drawing.Color.Transparent;
             this.Button1.ForeColor = System.Drawing.Color.Black;
-            this.Button1.Location = new System.Drawing.Point(725, 786);
+            this.Button1.Location = new System.Drawing.Point(638, 786);
             this.Button1.Margin = new System.Windows.Forms.Padding(4);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(141, 37);
@@ -159,26 +157,16 @@
             // btnnew
             // 
             this.btnnew.BackColor = System.Drawing.Color.Transparent;
+            this.btnnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnew.ForeColor = System.Drawing.Color.Black;
-            this.btnnew.Location = new System.Drawing.Point(576, 786);
+            this.btnnew.Location = new System.Drawing.Point(457, 785);
             this.btnnew.Margin = new System.Windows.Forms.Padding(4);
             this.btnnew.Name = "btnnew";
             this.btnnew.Size = new System.Drawing.Size(141, 37);
             this.btnnew.TabIndex = 49;
-            this.btnnew.Text = "New";
+            this.btnnew.Text = "Clear";
             this.btnnew.UseVisualStyleBackColor = false;
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.Transparent;
-            this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(429, 786);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(141, 37);
-            this.btndelete.TabIndex = 50;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = false;
+            this.btnnew.Click += new System.EventHandler(this.btnnew_Click);
             // 
             // Label8
             // 
@@ -227,6 +215,7 @@
             // btnupdate
             // 
             this.btnupdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
             this.btnupdate.Location = new System.Drawing.Point(284, 786);
             this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
@@ -241,6 +230,7 @@
             // 
             this.btnsave.BackColor = System.Drawing.Color.Transparent;
             this.btnsave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.Color.Black;
             this.btnsave.Location = new System.Drawing.Point(134, 786);
             this.btnsave.Margin = new System.Windows.Forms.Padding(4);
@@ -255,38 +245,12 @@
             // 
             this.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.dtglist);
-            this.Panel2.Controls.Add(this.btnadd);
+            this.Panel2.Controls.Add(this.GridViewItem);
             this.Panel2.Location = new System.Drawing.Point(1061, 119);
             this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(850, 536);
+            this.Panel2.Size = new System.Drawing.Size(850, 733);
             this.Panel2.TabIndex = 48;
-            // 
-            // dtglist
-            // 
-            this.dtglist.AllowUserToAddRows = false;
-            this.dtglist.AllowUserToDeleteRows = false;
-            this.dtglist.AllowUserToResizeColumns = false;
-            this.dtglist.AllowUserToResizeRows = false;
-            this.dtglist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtglist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtglist.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtglist.Location = new System.Drawing.Point(0, 0);
-            this.dtglist.Margin = new System.Windows.Forms.Padding(4);
-            this.dtglist.Name = "dtglist";
-            this.dtglist.Size = new System.Drawing.Size(848, 534);
-            this.dtglist.TabIndex = 6;
-            // 
-            // btnadd
-            // 
-            this.btnadd.Location = new System.Drawing.Point(459, 68);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(189, 31);
-            this.btnadd.TabIndex = 2;
-            this.btnadd.Text = "Add";
-            this.btnadd.UseVisualStyleBackColor = true;
             // 
             // Label3
             // 
@@ -305,7 +269,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
+            this.pnl_stockmaster.Controls.Add(this.Button1);
             this.pnl_stockmaster.Controls.Add(this.textBoxMrp);
+            this.pnl_stockmaster.Controls.Add(this.btnnew);
             this.pnl_stockmaster.Controls.Add(this.textBoxCost);
             this.pnl_stockmaster.Controls.Add(this.textSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.label20);
@@ -716,7 +682,7 @@
             // 
             this.lblinc.AutoSize = true;
             this.lblinc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinc.Location = new System.Drawing.Point(1368, 82);
+            this.lblinc.Location = new System.Drawing.Point(1297, 85);
             this.lblinc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblinc.Name = "lblinc";
             this.lblinc.Size = new System.Drawing.Size(19, 20);
@@ -727,7 +693,7 @@
             // 
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(1397, 82);
+            this.Label9.Location = new System.Drawing.Point(1326, 85);
             this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(25, 20);
@@ -738,7 +704,7 @@
             // 
             this.btnlast.BackColor = System.Drawing.Color.Transparent;
             this.btnlast.ForeColor = System.Drawing.Color.Black;
-            this.btnlast.Location = new System.Drawing.Point(1645, 75);
+            this.btnlast.Location = new System.Drawing.Point(1574, 78);
             this.btnlast.Margin = new System.Windows.Forms.Padding(4);
             this.btnlast.Name = "btnlast";
             this.btnlast.Size = new System.Drawing.Size(52, 37);
@@ -750,7 +716,7 @@
             // 
             this.btnnext.BackColor = System.Drawing.Color.Transparent;
             this.btnnext.ForeColor = System.Drawing.Color.Black;
-            this.btnnext.Location = new System.Drawing.Point(1581, 75);
+            this.btnnext.Location = new System.Drawing.Point(1510, 78);
             this.btnnext.Margin = new System.Windows.Forms.Padding(4);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(52, 37);
@@ -762,7 +728,7 @@
             // 
             this.btnprev.BackColor = System.Drawing.Color.Transparent;
             this.btnprev.ForeColor = System.Drawing.Color.Black;
-            this.btnprev.Location = new System.Drawing.Point(1520, 75);
+            this.btnprev.Location = new System.Drawing.Point(1449, 78);
             this.btnprev.Margin = new System.Windows.Forms.Padding(4);
             this.btnprev.Name = "btnprev";
             this.btnprev.Size = new System.Drawing.Size(52, 37);
@@ -774,7 +740,7 @@
             // 
             this.btnfirst.BackColor = System.Drawing.Color.Transparent;
             this.btnfirst.ForeColor = System.Drawing.Color.Black;
-            this.btnfirst.Location = new System.Drawing.Point(1460, 75);
+            this.btnfirst.Location = new System.Drawing.Point(1389, 78);
             this.btnfirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnfirst.Name = "btnfirst";
             this.btnfirst.Size = new System.Drawing.Size(52, 37);
@@ -786,7 +752,7 @@
             // 
             this.lblmax.AutoSize = true;
             this.lblmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmax.Location = new System.Drawing.Point(1433, 82);
+            this.lblmax.Location = new System.Drawing.Point(1362, 85);
             this.lblmax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblmax.Name = "lblmax";
             this.lblmax.Size = new System.Drawing.Size(19, 20);
@@ -1211,14 +1177,22 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
+            // GridViewItem
+            // 
+            this.GridViewItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewItem.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.Location = new System.Drawing.Point(-1, -1);
+            this.GridViewItem.Name = "GridViewItem";
+            this.GridViewItem.RowTemplate.Height = 24;
+            this.GridViewItem.Size = new System.Drawing.Size(851, 734);
+            this.GridViewItem.TabIndex = 3;
+            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 865);
-            this.Controls.Add(this.Button1);
-            this.Controls.Add(this.btnnew);
-            this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.pnl_stockmaster);
@@ -1230,7 +1204,6 @@
             this.Text = "Item Master";
             this.Load += new System.EventHandler(this.frmItems_Load);
             this.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtglist)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).EndInit();
@@ -1244,6 +1217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1253,7 +1227,6 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Button btnnew;
-        internal System.Windows.Forms.Button btndelete;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Label label5;
@@ -1300,8 +1273,6 @@
         internal System.Windows.Forms.ComboBox comboSellingUnit;
         internal System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.CheckBox checkBoxISActive;
-        internal System.Windows.Forms.DataGridView dtglist;
-        internal System.Windows.Forms.Button btnadd;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.TextBox txtsearch;
         internal System.Windows.Forms.Label lblinc;
@@ -1338,5 +1309,6 @@
         private CurrencyTextBox.CurrencyTextBox textSellingPrice;
         private CurrencyTextBox.CurrencyTextBox textBoxMrp;
         private CurrencyTextBox.CurrencyTextBox textBoxCost;
+        private System.Windows.Forms.DataGridView GridViewItem;
     }
 }

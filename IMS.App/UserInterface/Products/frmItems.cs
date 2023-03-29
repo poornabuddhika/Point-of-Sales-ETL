@@ -48,7 +48,7 @@ namespace IMS.App.UserInterface.Products
             itemFormClass.ComboPurchaseUnitlist(comboPurchaseUnit, unitRepo);
             itemFormClass.ComboSellingUnitlist(comboSellingUnit, unitRepo);
             itemFormClass.ComboRackNumberlist(comboRackNumber, rackRepo);
-
+            itemFormClass.PopulateGridViewUnit(GridViewItem, itemRepo);
 
         }
 
@@ -152,7 +152,7 @@ namespace IMS.App.UserInterface.Products
             itemNew.Cost = Convert.ToDecimal(textBoxCost.DollarValue.ToString());
             itemNew.MRP = textBoxMrp.DollarValue;
             itemNew.Supplier = "";
-            itemNew.PacketSize = Convert.ToDouble(textBoxPacketSize.Text);
+            itemNew.PacketSize =(textBoxPacketSize.Text=="")? 0: Convert.ToDouble(textBoxPacketSize.Text);
 
 
             if (comboRackNumber.SelectedIndex == 0) { ERRReck.Show(); errorList.Add("Please Select the Rack Number"); } else { itemNew.RackNumber = comboRackNumber.SelectedItem.ToString(); }
@@ -161,19 +161,19 @@ namespace IMS.App.UserInterface.Products
             if (ComboMainCategory.SelectedIndex == 0) { ERRCategory.Show(); errorList.Add("Please Select Main Category"); } else { itemNew.CategoryName = ComboMainCategory.SelectedItem.ToString(); }
 
 
-            if (comboBoxSubCategory.SelectedIndex == 0) { ERRSubCategory.Show(); errorList.Add("Please Select Sub Category"); } else { itemNew.subCategory = comboBoxSubCategory.SelectedItem.ToString(); }
+            if (comboBoxSubCategory.SelectedIndex <= 0) { ERRSubCategory.Show(); errorList.Add("Please Select Sub Category"); } else { itemNew.subCategory = comboBoxSubCategory.SelectedItem.ToString(); }
 
 
-            if (comboBoxBrand.SelectedIndex == 0) { ERRBrandName.Show(); errorList.Add("Please Select Brand"); } else { itemNew.brands = comboBoxBrand.SelectedItem.ToString(); }
+            if (comboBoxBrand.SelectedIndex <= 0) { ERRBrandName.Show(); errorList.Add("Please Select Brand"); } else { itemNew.brands = comboBoxBrand.SelectedItem.ToString(); }
 
-            itemNew.ProductQty = Convert.ToDouble(TextBoxProductQty.Text.ToString());
+            itemNew.ProductQty = (TextBoxProductQty.Text=="")?0: Convert.ToDouble(TextBoxProductQty.Text.ToString());
 
 
             if (TextBoxDiscount.Text == "") { ErrDiscount.Show(); errorList.Add("Please Fill Discount Amount"); } else { itemNew.DisCount = Convert.ToDouble(TextBoxDiscount.Text); }
 
-            itemNew.DiscountAmount = Convert.ToDouble(TextBoxDiscountAmount.Text);
-            itemNew.WeightItem = Convert.ToDouble(TextBoxWeight.Text);
-            itemNew.ServeItem = Convert.ToDouble(TextBoxServeItem.Text);
+            itemNew.DiscountAmount = (TextBoxDiscountAmount.Text=="")?0: Convert.ToDouble(TextBoxDiscountAmount.Text);
+            itemNew.WeightItem =(TextBoxWeight.Text=="")?0: Convert.ToDouble(TextBoxWeight.Text);
+            itemNew.ServeItem = (TextBoxServeItem.Text == "") ? 0: Convert.ToDouble(TextBoxServeItem.Text);
             itemNew.OptionOne = TextBoxOptionOne.Text;
             itemNew.OptionTwo = TextBoxOptionTwo.Text;
             itemNew.IsActive = checkBoxISActive.Checked;
@@ -358,7 +358,7 @@ namespace IMS.App.UserInterface.Products
                     MessageBox.Show("This Recode not Exist in the Database");
                 }
                 Refresh();
-                //itemFormClass.PopulateGridViewUnit(dataGridViewUnit, unitRepo);
+                itemFormClass.PopulateGridViewUnit(GridViewItem, itemRepo);
 
             }
 
@@ -366,6 +366,61 @@ namespace IMS.App.UserInterface.Products
             {
                 MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnnew_Click(object sender, EventArgs e)
+        {
+            txtitemid.Text = "";
+
+            txtname.Text = "";
+
+            textBarcode.Clear();
+
+            txtdescription.Clear();
+
+            textDescriptionTwo.Clear();
+
+            comboPurchaseUnit.SelectedIndex = 0;
+
+
+            comboSellingUnit.SelectedIndex = 0;
+
+
+
+            textSellingPrice.Text = "";
+
+
+            textBoxCost.Text = "";
+            textBoxMrp.Text = "";
+            
+            textBoxPacketSize.Text = "";
+
+
+            comboRackNumber.SelectedIndex = 0;
+
+
+            ComboMainCategory.SelectedIndex = 0;
+
+
+            comboBoxSubCategory.SelectedIndex = -1;
+
+
+            comboBoxBrand.SelectedIndex = -1;
+
+            TextBoxProductQty.Text = "";
+
+
+            TextBoxDiscount.Text = "";
+
+            TextBoxDiscountAmount.Text = "";
+            TextBoxWeight.Text = "";
+            TextBoxServeItem.Text = "";
+            TextBoxOptionOne.Text = "";
+            TextBoxOptionTwo.Text = "";
+            checkBoxISActive.Checked = true;
+
+
+
         }
     }
 }
