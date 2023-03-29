@@ -48,6 +48,8 @@ namespace IMS.App.UserInterface.Products
             itemFormClass.ComboPurchaseUnitlist(comboPurchaseUnit, unitRepo);
             itemFormClass.ComboSellingUnitlist(comboSellingUnit, unitRepo);
             itemFormClass.ComboRackNumberlist(comboRackNumber, rackRepo);
+
+
         }
 
         private void ComboMainCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,15 +131,27 @@ namespace IMS.App.UserInterface.Products
 
             if (comboPurchaseUnit.SelectedIndex == 0) { ERRPurchaseUnit.Show(); errorList.Add("Please Select Purchase Unit"); } else { itemNew.PurchaseUnit = comboPurchaseUnit.SelectedItem.ToString(); }
 
-            if (comboSellingUnit.SelectedIndex == 0) { ERRSellingUnit.Show(); errorList.Add("Please Select Selling Unit"); } else { itemNew.SellingUnit = comboSellingUnit.SelectedItem.ToString(); }
+            
+           if (comboSellingUnit.SelectedIndex == 0) { ERRSellingUnit.Show(); errorList.Add("Please Select Selling Unit"); } else { itemNew.SellingUnit = comboSellingUnit.SelectedItem.ToString(); }
 
 
+            
+            if (textSellingPrice.Text == "")
+            {
+                ERRSellingPrice.Show();
+                errorList.Add("Please Fill Selling Price");
+            }
+            else
+            {
+                // MessageBox.Show(textSellingPrice.DollarValue.ToString());
+                itemNew.SellingPrice = Convert.ToDecimal(textSellingPrice.DollarValue);
+                
+            }
+            
 
-            if (textBoxSellingPrice.Text == ""){ERRSellingPrice.Show();errorList.Add("Please Fill Selling Price");} else{itemNew.SellingPrice = textBoxSellingPrice.Text; }
-
-            itemNew.Cost = Convert.ToDouble(textBoxCost.Text);
-            itemNew.MRP = textBoxMrp.Text;
-            itemNew.Supplier = comboBoxSupplier.SelectedItem.ToString();
+            itemNew.Cost = Convert.ToDecimal(textBoxCost.DollarValue.ToString());
+            itemNew.MRP = textBoxMrp.DollarValue;
+            itemNew.Supplier = "";
             itemNew.PacketSize = Convert.ToDouble(textBoxPacketSize.Text);
 
 
@@ -172,7 +186,7 @@ namespace IMS.App.UserInterface.Products
 
         }
 
-        private void txtitemid_TextChanged(object sender, EventArgs e)
+        void txtitemid_TextChanged(object sender, EventArgs e)
         {
             if (txtitemid.Text == "")
             {
@@ -184,7 +198,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void txtname_TextChanged(object sender, EventArgs e)
+        void txtname_TextChanged(object sender, EventArgs e)
         {
             if (txtname.Text == "")
             {
@@ -196,7 +210,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void textBarcode_TextChanged(object sender, EventArgs e)
+        void textBarcode_TextChanged(object sender, EventArgs e)
         {
             if (textBarcode.Text == "")
             {
@@ -208,7 +222,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void comboPurchaseUnit_TextChanged(object sender, EventArgs e)
+        void comboPurchaseUnit_TextChanged(object sender, EventArgs e)
         {
             if (comboPurchaseUnit.SelectedIndex == 0)
             {
@@ -220,7 +234,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void comboSellingUnit_TextChanged(object sender, EventArgs e)
+        void comboSellingUnit_TextChanged(object sender, EventArgs e)
         {
             if (comboSellingUnit.SelectedIndex == 0)
             {
@@ -233,9 +247,9 @@ namespace IMS.App.UserInterface.Products
 
         }
 
-        private void textBoxSellingPrice_TextChanged(object sender, EventArgs e)
+        void textBoxSellingPrice_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxSellingPrice.Text == "")
+            if (textSellingPrice.Text == "")
             {
                 ERRSellingPrice.Show();
             }
@@ -245,7 +259,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void comboRackNumber_TextChanged(object sender, EventArgs e)
+        void comboRackNumber_TextChanged(object sender, EventArgs e)
         {
             if (comboRackNumber.SelectedIndex == 0)
             {
@@ -257,7 +271,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void ComboMainCategory_TextChanged(object sender, EventArgs e)
+        void ComboMainCategory_TextChanged(object sender, EventArgs e)
         {
             if (ComboMainCategory.SelectedIndex == 0)
             {
@@ -269,7 +283,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void comboBoxSubCategory_TextChanged(object sender, EventArgs e)
+        void comboBoxSubCategory_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxSubCategory.SelectedIndex == 0)
             {
@@ -282,7 +296,7 @@ namespace IMS.App.UserInterface.Products
 
         }
 
-        private void comboBoxBrand_TextChanged(object sender, EventArgs e)
+        void comboBoxBrand_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxBrand.SelectedIndex == 0)
             {
@@ -294,7 +308,7 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
-        private void TextBoxDiscount_TextChanged(object sender, EventArgs e)
+        void TextBoxDiscount_TextChanged(object sender, EventArgs e)
         {
             if (TextBoxDiscount.Text == "")
             {
@@ -306,6 +320,10 @@ namespace IMS.App.UserInterface.Products
             }
         }
 
+        void textBoxSellingPrice_TextChanged_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
+

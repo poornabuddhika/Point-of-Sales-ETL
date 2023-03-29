@@ -1,7 +1,8 @@
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\IMS.App.exe.config
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\IMS.App.pdb
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\CurrencyTextBox.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\CurrencyTextBox.pdb
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.Properties.Resources.resources
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.Category.MainCategory.resources
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.frmCustomer_ditails.resources
@@ -12,5 +13,6 @@ C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.A
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.Products.frmItems.resources
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csproj.GenerateResource.cache
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csproj.CoreCompileInputs.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csproj.CopyComplete
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.pdb

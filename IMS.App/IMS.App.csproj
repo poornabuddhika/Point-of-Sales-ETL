@@ -416,5 +416,11 @@
     <Folder Include="UserInterface\Contacts\" />
     <Folder Include="UserInterface\Reports\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CurrencyTextBox\CurrencyTextBox.csproj">
+      <Project>{d0ee7c64-b83c-4204-9b44-a9c948a5542c}</Project>
+      <Name>CurrencyTextBox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

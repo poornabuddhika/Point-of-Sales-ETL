@@ -142,8 +142,9 @@ namespace IMS.Repository
         {
             try
             {
-               
-                
+
+                iDB.conOpen();
+
                 var sql = @"INSERT INTO [dbo].[Item_ItemMaster] ([Item_ID], [ItemName], [Barcode], [Description1], [Description2],
                             [Purchase_Unit], [Selling_Unit], [Selling_Price], [ItemCost], [MRP], [Supplier], [Packet_Size], [Rack_No],
                             [Category], [Sub_Category], [Brand_Name], [Product_Qty], [Discount], [DiscountAmount], [Weight], [Save_Item], [OptionOne], [optionTwo], [Status]) 

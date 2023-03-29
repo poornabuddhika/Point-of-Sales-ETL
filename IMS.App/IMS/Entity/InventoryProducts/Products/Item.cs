@@ -22,12 +22,12 @@ namespace IMS.Entity.InventoryProducts
 
         public string SellingUnit { get; set; }
 
-        public string SellingPrice { get; set; }
+        public decimal SellingPrice { get; set; }
 
         
-        public double Cost { get; set; }
+        public decimal Cost { get; set; }
 
-        public string MRP { get; set; }
+        public decimal MRP { get; set; }
 
         public string Supplier { get; set; }
 

@@ -44,6 +44,21 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
             this.pnl_stockmaster = new System.Windows.Forms.Panel();
+            this.textBoxMrp = new CurrencyTextBox.CurrencyTextBox();
+            this.textBoxCost = new CurrencyTextBox.CurrencyTextBox();
+            this.textSellingPrice = new CurrencyTextBox.CurrencyTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.ErrDiscount = new System.Windows.Forms.PictureBox();
+            this.ERRBarcode = new System.Windows.Forms.PictureBox();
+            this.ERRSellingPrice = new System.Windows.Forms.PictureBox();
+            this.ERRName = new System.Windows.Forms.PictureBox();
+            this.ERRID = new System.Windows.Forms.PictureBox();
+            this.ERRSellingUnit = new System.Windows.Forms.PictureBox();
+            this.ERRPurchaseUnit = new System.Windows.Forms.PictureBox();
+            this.ERRBrandName = new System.Windows.Forms.PictureBox();
+            this.ERRSubCategory = new System.Windows.Forms.PictureBox();
+            this.ERRCategory = new System.Windows.Forms.PictureBox();
+            this.ERRReck = new System.Windows.Forms.PictureBox();
             this.label37 = new System.Windows.Forms.Label();
             this.comboRackNumber = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -89,9 +104,7 @@
             this.textBoxPacketSize = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBoxMrp = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBoxCost = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -104,33 +117,20 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
-            this.ERRReck = new System.Windows.Forms.PictureBox();
-            this.ERRCategory = new System.Windows.Forms.PictureBox();
-            this.ERRSubCategory = new System.Windows.Forms.PictureBox();
-            this.ERRBrandName = new System.Windows.Forms.PictureBox();
-            this.ERRPurchaseUnit = new System.Windows.Forms.PictureBox();
-            this.ERRSellingUnit = new System.Windows.Forms.PictureBox();
-            this.ERRID = new System.Windows.Forms.PictureBox();
-            this.ERRName = new System.Windows.Forms.PictureBox();
-            this.ERRSellingPrice = new System.Windows.Forms.PictureBox();
-            this.ERRBarcode = new System.Windows.Forms.PictureBox();
-            this.ErrDiscount = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxSellingPrice = new System.Windows.Forms.RichTextBox();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
             this.SuspendLayout();
             // 
             // Label2
@@ -304,7 +304,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
-            this.pnl_stockmaster.Controls.Add(this.textBoxSellingPrice);
+            this.pnl_stockmaster.Controls.Add(this.textBoxMrp);
+            this.pnl_stockmaster.Controls.Add(this.textBoxCost);
+            this.pnl_stockmaster.Controls.Add(this.textSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.label20);
             this.pnl_stockmaster.Controls.Add(this.ErrDiscount);
             this.pnl_stockmaster.Controls.Add(this.ERRBarcode);
@@ -363,10 +365,8 @@
             this.pnl_stockmaster.Controls.Add(this.textBoxPacketSize);
             this.pnl_stockmaster.Controls.Add(this.label19);
             this.pnl_stockmaster.Controls.Add(this.label18);
-            this.pnl_stockmaster.Controls.Add(this.textBoxMrp);
             this.pnl_stockmaster.Controls.Add(this.label17);
             this.pnl_stockmaster.Controls.Add(this.label5);
-            this.pnl_stockmaster.Controls.Add(this.textBoxCost);
             this.pnl_stockmaster.Controls.Add(this.label16);
             this.pnl_stockmaster.Controls.Add(this.label15);
             this.pnl_stockmaster.Controls.Add(this.label11);
@@ -390,6 +390,192 @@
             this.pnl_stockmaster.Name = "pnl_stockmaster";
             this.pnl_stockmaster.Size = new System.Drawing.Size(1928, 890);
             this.pnl_stockmaster.TabIndex = 46;
+            // 
+            // textBoxMrp
+            // 
+            this.textBoxMrp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxMrp.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.textBoxMrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMrp.Location = new System.Drawing.Point(144, 515);
+            this.textBoxMrp.Name = "textBoxMrp";
+            this.textBoxMrp.Size = new System.Drawing.Size(336, 38);
+            this.textBoxMrp.TabIndex = 95;
+            // 
+            // textBoxCost
+            // 
+            this.textBoxCost.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxCost.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.textBoxCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCost.Location = new System.Drawing.Point(144, 457);
+            this.textBoxCost.Name = "textBoxCost";
+            this.textBoxCost.Size = new System.Drawing.Size(336, 38);
+            this.textBoxCost.TabIndex = 94;
+            // 
+            // textSellingPrice
+            // 
+            this.textSellingPrice.BackColor = System.Drawing.Color.LightYellow;
+            this.textSellingPrice.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.textSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSellingPrice.Location = new System.Drawing.Point(158, 387);
+            this.textSellingPrice.Name = "textSellingPrice";
+            this.textSellingPrice.Size = new System.Drawing.Size(265, 38);
+            this.textSellingPrice.TabIndex = 93;
+            this.textSellingPrice.TextChanged += new System.EventHandler(this.textBoxSellingPrice_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Crimson;
+            this.label20.Location = new System.Drawing.Point(633, 317);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(21, 25);
+            this.label20.TabIndex = 91;
+            this.label20.Text = "*";
+            // 
+            // ErrDiscount
+            // 
+            this.ErrDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.ErrDiscount.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ErrDiscount.Image = global::IMS.App.Properties.Resources.error;
+            this.ErrDiscount.Location = new System.Drawing.Point(920, 313);
+            this.ErrDiscount.Name = "ErrDiscount";
+            this.ErrDiscount.Size = new System.Drawing.Size(35, 27);
+            this.ErrDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ErrDiscount.TabIndex = 90;
+            this.ErrDiscount.TabStop = false;
+            // 
+            // ERRBarcode
+            // 
+            this.ERRBarcode.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBarcode.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Location = new System.Drawing.Point(487, 123);
+            this.ERRBarcode.Name = "ERRBarcode";
+            this.ERRBarcode.Size = new System.Drawing.Size(35, 27);
+            this.ERRBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBarcode.TabIndex = 89;
+            this.ERRBarcode.TabStop = false;
+            // 
+            // ERRSellingPrice
+            // 
+            this.ERRSellingPrice.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingPrice.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Location = new System.Drawing.Point(429, 394);
+            this.ERRSellingPrice.Name = "ERRSellingPrice";
+            this.ERRSellingPrice.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingPrice.TabIndex = 88;
+            this.ERRSellingPrice.TabStop = false;
+            // 
+            // ERRName
+            // 
+            this.ERRName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Location = new System.Drawing.Point(489, 80);
+            this.ERRName.Name = "ERRName";
+            this.ERRName.Size = new System.Drawing.Size(35, 27);
+            this.ERRName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRName.TabIndex = 87;
+            this.ERRName.TabStop = false;
+            // 
+            // ERRID
+            // 
+            this.ERRID.BackColor = System.Drawing.Color.Transparent;
+            this.ERRID.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Location = new System.Drawing.Point(487, 38);
+            this.ERRID.Name = "ERRID";
+            this.ERRID.Size = new System.Drawing.Size(35, 27);
+            this.ERRID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRID.TabIndex = 86;
+            this.ERRID.TabStop = false;
+            // 
+            // ERRSellingUnit
+            // 
+            this.ERRSellingUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Location = new System.Drawing.Point(351, 322);
+            this.ERRSellingUnit.Name = "ERRSellingUnit";
+            this.ERRSellingUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingUnit.TabIndex = 85;
+            this.ERRSellingUnit.TabStop = false;
+            // 
+            // ERRPurchaseUnit
+            // 
+            this.ERRPurchaseUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRPurchaseUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Location = new System.Drawing.Point(351, 286);
+            this.ERRPurchaseUnit.Name = "ERRPurchaseUnit";
+            this.ERRPurchaseUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRPurchaseUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRPurchaseUnit.TabIndex = 84;
+            this.ERRPurchaseUnit.TabStop = false;
+            // 
+            // ERRBrandName
+            // 
+            this.ERRBrandName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBrandName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Location = new System.Drawing.Point(962, 198);
+            this.ERRBrandName.Name = "ERRBrandName";
+            this.ERRBrandName.Size = new System.Drawing.Size(35, 27);
+            this.ERRBrandName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBrandName.TabIndex = 83;
+            this.ERRBrandName.TabStop = false;
+            // 
+            // ERRSubCategory
+            // 
+            this.ERRSubCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSubCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Location = new System.Drawing.Point(962, 159);
+            this.ERRSubCategory.Name = "ERRSubCategory";
+            this.ERRSubCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRSubCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSubCategory.TabIndex = 82;
+            this.ERRSubCategory.TabStop = false;
+            // 
+            // ERRCategory
+            // 
+            this.ERRCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Location = new System.Drawing.Point(961, 116);
+            this.ERRCategory.Name = "ERRCategory";
+            this.ERRCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRCategory.TabIndex = 81;
+            this.ERRCategory.TabStop = false;
+            // 
+            // ERRReck
+            // 
+            this.ERRReck.BackColor = System.Drawing.Color.Transparent;
+            this.ERRReck.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRReck.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRReck.Location = new System.Drawing.Point(817, 45);
+            this.ERRReck.Name = "ERRReck";
+            this.ERRReck.Size = new System.Drawing.Size(35, 27);
+            this.ERRReck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRReck.TabIndex = 80;
+            this.ERRReck.TabStop = false;
             // 
             // label37
             // 
@@ -882,15 +1068,6 @@
             this.label18.TabIndex = 26;
             this.label18.Text = "Supplier ::";
             // 
-            // textBoxMrp
-            // 
-            this.textBoxMrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMrp.Location = new System.Drawing.Point(145, 525);
-            this.textBoxMrp.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMrp.Name = "textBoxMrp";
-            this.textBoxMrp.Size = new System.Drawing.Size(335, 26);
-            this.textBoxMrp.TabIndex = 23;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -901,15 +1078,6 @@
             this.label17.Size = new System.Drawing.Size(67, 20);
             this.label17.TabIndex = 24;
             this.label17.Text = "MRP ::";
-            // 
-            // textBoxCost
-            // 
-            this.textBoxCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCost.Location = new System.Drawing.Point(147, 462);
-            this.textBoxCost.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCost.Name = "textBoxCost";
-            this.textBoxCost.Size = new System.Drawing.Size(335, 26);
-            this.textBoxCost.TabIndex = 21;
             // 
             // label16
             // 
@@ -1042,160 +1210,6 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
-            // ERRReck
-            // 
-            this.ERRReck.BackColor = System.Drawing.Color.Transparent;
-            this.ERRReck.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRReck.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRReck.Location = new System.Drawing.Point(817, 45);
-            this.ERRReck.Name = "ERRReck";
-            this.ERRReck.Size = new System.Drawing.Size(35, 27);
-            this.ERRReck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRReck.TabIndex = 80;
-            this.ERRReck.TabStop = false;
-            // 
-            // ERRCategory
-            // 
-            this.ERRCategory.BackColor = System.Drawing.Color.Transparent;
-            this.ERRCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRCategory.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRCategory.Location = new System.Drawing.Point(961, 116);
-            this.ERRCategory.Name = "ERRCategory";
-            this.ERRCategory.Size = new System.Drawing.Size(35, 27);
-            this.ERRCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRCategory.TabIndex = 81;
-            this.ERRCategory.TabStop = false;
-            // 
-            // ERRSubCategory
-            // 
-            this.ERRSubCategory.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSubCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSubCategory.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSubCategory.Location = new System.Drawing.Point(962, 159);
-            this.ERRSubCategory.Name = "ERRSubCategory";
-            this.ERRSubCategory.Size = new System.Drawing.Size(35, 27);
-            this.ERRSubCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSubCategory.TabIndex = 82;
-            this.ERRSubCategory.TabStop = false;
-            // 
-            // ERRBrandName
-            // 
-            this.ERRBrandName.BackColor = System.Drawing.Color.Transparent;
-            this.ERRBrandName.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRBrandName.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRBrandName.Location = new System.Drawing.Point(962, 198);
-            this.ERRBrandName.Name = "ERRBrandName";
-            this.ERRBrandName.Size = new System.Drawing.Size(35, 27);
-            this.ERRBrandName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRBrandName.TabIndex = 83;
-            this.ERRBrandName.TabStop = false;
-            // 
-            // ERRPurchaseUnit
-            // 
-            this.ERRPurchaseUnit.BackColor = System.Drawing.Color.Transparent;
-            this.ERRPurchaseUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRPurchaseUnit.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRPurchaseUnit.Location = new System.Drawing.Point(351, 286);
-            this.ERRPurchaseUnit.Name = "ERRPurchaseUnit";
-            this.ERRPurchaseUnit.Size = new System.Drawing.Size(35, 27);
-            this.ERRPurchaseUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRPurchaseUnit.TabIndex = 84;
-            this.ERRPurchaseUnit.TabStop = false;
-            // 
-            // ERRSellingUnit
-            // 
-            this.ERRSellingUnit.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSellingUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingUnit.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingUnit.Location = new System.Drawing.Point(351, 322);
-            this.ERRSellingUnit.Name = "ERRSellingUnit";
-            this.ERRSellingUnit.Size = new System.Drawing.Size(35, 27);
-            this.ERRSellingUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSellingUnit.TabIndex = 85;
-            this.ERRSellingUnit.TabStop = false;
-            // 
-            // ERRID
-            // 
-            this.ERRID.BackColor = System.Drawing.Color.Transparent;
-            this.ERRID.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRID.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRID.Location = new System.Drawing.Point(487, 38);
-            this.ERRID.Name = "ERRID";
-            this.ERRID.Size = new System.Drawing.Size(35, 27);
-            this.ERRID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRID.TabIndex = 86;
-            this.ERRID.TabStop = false;
-            // 
-            // ERRName
-            // 
-            this.ERRName.BackColor = System.Drawing.Color.Transparent;
-            this.ERRName.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRName.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRName.Location = new System.Drawing.Point(489, 80);
-            this.ERRName.Name = "ERRName";
-            this.ERRName.Size = new System.Drawing.Size(35, 27);
-            this.ERRName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRName.TabIndex = 87;
-            this.ERRName.TabStop = false;
-            // 
-            // ERRSellingPrice
-            // 
-            this.ERRSellingPrice.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSellingPrice.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingPrice.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingPrice.Location = new System.Drawing.Point(490, 390);
-            this.ERRSellingPrice.Name = "ERRSellingPrice";
-            this.ERRSellingPrice.Size = new System.Drawing.Size(35, 27);
-            this.ERRSellingPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSellingPrice.TabIndex = 88;
-            this.ERRSellingPrice.TabStop = false;
-            // 
-            // ERRBarcode
-            // 
-            this.ERRBarcode.BackColor = System.Drawing.Color.Transparent;
-            this.ERRBarcode.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRBarcode.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRBarcode.Location = new System.Drawing.Point(487, 123);
-            this.ERRBarcode.Name = "ERRBarcode";
-            this.ERRBarcode.Size = new System.Drawing.Size(35, 27);
-            this.ERRBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRBarcode.TabIndex = 89;
-            this.ERRBarcode.TabStop = false;
-            // 
-            // ErrDiscount
-            // 
-            this.ErrDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.ErrDiscount.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ErrDiscount.Image = global::IMS.App.Properties.Resources.error;
-            this.ErrDiscount.Location = new System.Drawing.Point(920, 313);
-            this.ErrDiscount.Name = "ErrDiscount";
-            this.ErrDiscount.Size = new System.Drawing.Size(35, 27);
-            this.ErrDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ErrDiscount.TabIndex = 90;
-            this.ErrDiscount.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Crimson;
-            this.label20.Location = new System.Drawing.Point(633, 317);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(21, 25);
-            this.label20.TabIndex = 91;
-            this.label20.Text = "*";
-            // 
-            // textBoxSellingPrice
-            // 
-            this.textBoxSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSellingPrice.Location = new System.Drawing.Point(144, 390);
-            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSellingPrice.Name = "textBoxSellingPrice";
-            this.textBoxSellingPrice.Size = new System.Drawing.Size(336, 31);
-            this.textBoxSellingPrice.TabIndex = 92;
-            this.textBoxSellingPrice.Text = "";
-            this.textBoxSellingPrice.TextChanged += new System.EventHandler(this.textBoxSellingPrice_TextChanged);
-            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1218,17 +1232,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSellingUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRPurchaseUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1259,10 +1273,8 @@
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label14;
         internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.TextBox textBoxCost;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Label label18;
-        internal System.Windows.Forms.TextBox textBoxMrp;
         internal System.Windows.Forms.Label label17;
         internal System.Windows.Forms.TextBox textBoxPacketSize;
         internal System.Windows.Forms.Label label19;
@@ -1322,6 +1334,8 @@
         private System.Windows.Forms.PictureBox ERRBarcode;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox ErrDiscount;
-        internal System.Windows.Forms.RichTextBox textBoxSellingPrice;
+        private CurrencyTextBox.CurrencyTextBox textSellingPrice;
+        private CurrencyTextBox.CurrencyTextBox textBoxMrp;
+        private CurrencyTextBox.CurrencyTextBox textBoxCost;
     }
 }
