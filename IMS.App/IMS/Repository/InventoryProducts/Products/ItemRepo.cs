@@ -168,16 +168,23 @@ namespace IMS.Repository
         }
 
         //update - Product
-        public bool UpdateProduct(Item product)
+        public bool UpdateProduct(Item pro)
         {
             try
             {
-                string sql = null;
-                /*
-                string sql = @"update Items set ProductName='" + product.ProductName + "' , BrandId='" + product.BrandId + "',ProductDescription='" + product.ProductDescription + "', ProductQuantityPerUnit='" + product.ProductQuantityPerUnit + "'," +
-                             "ProductPerUnitPrice='" + product.ProductPerUnitPrice + "', ProductMSRP='" + product.ProductMSRP + "', Itemstatus='" + product.Itemstatus + "',ProductDiscountRate='" + product.ProductDiscountRate + "',Itemsize='" +
-                             product.Itemsize + "',ProductColor='" + product.ProductColor + "',ProductWeight='" + product.ProductWeight + "',ProductUnitStock='" + product.ProductUnitStock + "' where ProductId='" + product.ProductId + "'";
-                */
+
+                string sql = @"update  [dbo].[Item_ItemMaster] set [Item_ID] ='" + pro.ItemtId + "', [ItemName]='"+ pro.ItemName + "', [Barcode]='"+ pro.Barcode + "', [Description1]='"+ pro.DescriptionOne + "', [Description2]='"+ pro.DescriptionTwo + "',"+
+
+                    "[Purchase_Unit]='"+ pro.PurchaseUnit + "', [Selling_Unit]='"+ pro.SellingUnit + "', [Selling_Price]='"+ pro.SellingPrice + "', [ItemCost]='"+ pro.Cost + "', [MRP]='"+ pro.MRP + "', [Supplier]='"+ pro.Supplier + "', [Packet_Size]='"+ pro.PacketSize + "', [Rack_No]='"+ pro.RackNumber + "',"+
+
+                   " [Category]='" + pro.CategoryName + "', [Sub_Category]='" + pro.subCategory + "', [Brand_Name]='" + pro.brands + "', [Product_Qty]='" + pro.ProductQty + "', [Discount]='" + pro.DisCount + "', [DiscountAmount]='" + pro.DiscountAmount + "', [Weight]='" + pro.WeightItem + "', [Save_Item]='" 
+                   
+                   + pro.ServeItem + "', [OptionOne]='" + pro.OptionOne + "', [optionTwo]='" + pro.OptionTwo + "', [Status]='" + pro.IsActive + "'  where  [Item_ID] ='" + pro.ItemtId + "' ;";
+
+                    
+                              
+                                 
+
                 int count = this.iDB.ExecuteDMLQuery(sql);
 
                 if (count == 1)

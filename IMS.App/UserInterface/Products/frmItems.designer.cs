@@ -235,6 +235,7 @@
             this.btnupdate.TabIndex = 51;
             this.btnupdate.Text = "Update";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btnsave
             // 

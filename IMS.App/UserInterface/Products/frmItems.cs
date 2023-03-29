@@ -324,6 +324,49 @@ namespace IMS.App.UserInterface.Products
         {
 
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Item itObj = itemFormClass.FillEntityItem(fillItem());
+                if (itObj == null)
+                {
+                    itObj = new Item();
+
+                    return;
+                }
+
+                var decision = this.itemRepo.DataExists(itObj.ItemtId, itObj.ItemName);
+
+                
+
+                if (decision)
+                {
+                    //Update
+                    if (this.itemRepo.UpdateProduct(itObj))
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Recode not Exist in the Database");
+                }
+                Refresh();
+                //itemFormClass.PopulateGridViewUnit(dataGridViewUnit, unitRepo);
+
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show("Please Fill Correct Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
