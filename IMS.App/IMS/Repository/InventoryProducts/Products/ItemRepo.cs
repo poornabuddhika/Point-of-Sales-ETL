@@ -36,7 +36,7 @@ namespace IMS.Repository
         }
 
         //view & search
-        public List<Item> GetAll(string key)
+        public DataTable GetAll(string key)
         {
             List<Item> productList = new List<Item>();
 
@@ -44,20 +44,15 @@ namespace IMS.Repository
             try
             {
                 if (key == null)
-                    sql = @"SELECT * FROM     [dbo].[Item_ItemMaster] ";
+                    sql = @"SELECT [Item_ID], [ItemName],[Discount], [Status]  FROM     [dbo].[Item_ItemMaster] ";
                 else
-                    sql = @"SELECT * FROM     [dbo].[Item_ItemMaster]
-                    where [Item_ID] '%" + key + "%' or Products.ProductName like '%" + key + "%' or   [ItemName] like '%" + key + "%'; ";
+                    sql = @"SELECT [Item_ID], [ItemName],[Discount], [Status]  FROM     [dbo].[Item_ItemMaster]
+                    where [Item_ID]  like '%" + key + "%' or [ItemName] like '%" + key + "%' or   [Status] like '%" + key + "%'; ";
                 var dt = this.iDB.ExecuteQueryTable(sql);
 
-                int x = 0;
-                while (x < dt.Rows.Count)
-                {
-                    Item pro = this.ConvertToEntity(dt.Rows[x]);
-                    productList.Add(pro);
-                    x++;
-                }
-                return productList;
+                
+               
+                return dt;
             }
             catch (Exception e)
             {
@@ -74,23 +69,11 @@ namespace IMS.Repository
             }
             
            var product = new Item();
-            /*
-           product.ItemtId = Convert.ToInt32(row["pID"].ToString());
-           product.ItemIdTag = row["pTag"].ToString();
-           product.ItemName = row["pName"].ToString();
-           product.BrandName = row["pBrandName"].ToString();
-           product.ProductStatus = row["pStatus"].ToString();
 
-           product.ProductMSRP = Convert.ToDouble(row["pMSRP"].ToString());
-           product.ProductPerUnitPrice = Convert.ToDouble(row["pPerUnPrice"].ToString());
-           product.ProductQuantityPerUnit = Convert.ToDouble(row["pQuaPerUn"].ToString());
-           product.ProductDiscountRate = Convert.ToDouble(row["pDisRate"].ToString());
-           product.ProductSize = Convert.ToDouble(row["pSize"].ToString());
-           product.ProductColor = row["pColor"].ToString();
-           product.ProductWeight = Convert.ToDouble(row["pWeight"].ToString());
-           product.ProductUnitStock = Convert.ToInt32(row["pUnStock"].ToString());
-           product.ProductDescription = row["pDisc"].ToString();
-           */
+
+
+            
+
             return product;
         }
 

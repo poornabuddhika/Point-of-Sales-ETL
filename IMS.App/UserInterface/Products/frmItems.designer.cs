@@ -39,6 +39,7 @@
             this.btnupdate = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.GridViewItem = new System.Windows.Forms.DataGridView();
             this.Label3 = new System.Windows.Forms.Label();
             this.pnl_stockmaster = new System.Windows.Forms.Panel();
             this.textBoxMrp = new CurrencyTextBox.CurrencyTextBox();
@@ -114,8 +115,8 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
-            this.GridViewItem = new System.Windows.Forms.DataGridView();
             this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).BeginInit();
             this.pnl_stockmaster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
@@ -128,7 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).BeginInit();
             this.SuspendLayout();
             // 
             // Label2
@@ -251,6 +251,17 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(850, 733);
             this.Panel2.TabIndex = 48;
+            // 
+            // GridViewItem
+            // 
+            this.GridViewItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewItem.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.Location = new System.Drawing.Point(-1, -1);
+            this.GridViewItem.Name = "GridViewItem";
+            this.GridViewItem.RowTemplate.Height = 24;
+            this.GridViewItem.Size = new System.Drawing.Size(851, 734);
+            this.GridViewItem.TabIndex = 3;
             // 
             // Label3
             // 
@@ -776,6 +787,7 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(349, 23);
             this.txtsearch.TabIndex = 54;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // checkBoxISActive
             // 
@@ -1177,17 +1189,6 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
-            // GridViewItem
-            // 
-            this.GridViewItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.GridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewItem.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.GridViewItem.Location = new System.Drawing.Point(-1, -1);
-            this.GridViewItem.Name = "GridViewItem";
-            this.GridViewItem.RowTemplate.Height = 24;
-            this.GridViewItem.Size = new System.Drawing.Size(851, 734);
-            this.GridViewItem.TabIndex = 3;
-            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1204,6 +1205,7 @@
             this.Text = "Item Master";
             this.Load += new System.EventHandler(this.frmItems_Load);
             this.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).EndInit();
@@ -1217,7 +1219,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).EndInit();
             this.ResumeLayout(false);
 
         }

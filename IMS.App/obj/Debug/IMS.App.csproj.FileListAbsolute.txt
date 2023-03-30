@@ -17,3 +17,5 @@ C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.csproj.CopyComplete
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmlocationtransfers.resources
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Debug\IMS.App.UserInterface.frmreturn.resources

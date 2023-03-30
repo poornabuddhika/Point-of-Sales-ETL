@@ -133,7 +133,7 @@ namespace IMS.App.AppCass.Products
        public void PopulateGridViewUnit(DataGridView GridViewItem,ItemRepo itemRepo, string searchKey = null)
         {
             GridViewItem.AutoGenerateColumns = true;
-            GridViewItem.DataSource = itemRepo.GetAll(searchKey).ToList();
+            GridViewItem.DataSource = itemRepo.GetAll(searchKey);
             subCategoryGridViewLoading(GridViewItem);
             GridViewItem.ClearSelection();
             GridViewItem.Refresh();
@@ -161,24 +161,24 @@ namespace IMS.App.AppCass.Products
             GridViewItem.Columns[1].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
             GridViewItem.Columns[2].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
             GridViewItem.Columns[3].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            GridViewItem.Columns[4].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
-            GridViewItem.Columns[5].HeaderCell.Style.Font = new Font("Tahoma", 11, FontStyle.Bold);
+
 
             GridViewItem.Columns[0].Width = 120;
             GridViewItem.Columns[1].Width = 140;
             GridViewItem.Columns[2].Width = 160;
             GridViewItem.Columns[3].Width = 160;
-            GridViewItem.Columns[4].Width = 0;
 
 
             GridViewItem.RowsDefaultCellStyle.Font = new Font("Tahoma", 11, FontStyle.Regular);
 
-            GridViewItem.Columns[0].HeaderCell.Value = "Sub CategoryName";
-            GridViewItem.Columns[1].HeaderCell.Value = "Main CategoryName";
-            
+            GridViewItem.Columns[0].HeaderCell.Value = "Item ID";
+            GridViewItem.Columns[1].HeaderCell.Value = "Item Name";
+            GridViewItem.Columns[2].HeaderCell.Value = "Discount";
+            GridViewItem.Columns[3].HeaderCell.Value = "Status";
 
 
-        }
+           
+    }
 
 
 

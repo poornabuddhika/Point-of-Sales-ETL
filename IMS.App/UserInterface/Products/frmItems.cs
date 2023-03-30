@@ -427,6 +427,11 @@ namespace IMS.App.UserInterface.Products
         {
 
         }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            itemFormClass.PopulateGridViewUnit(GridViewItem, itemRepo, txtsearch.Text);
+        }
     }
 }
 

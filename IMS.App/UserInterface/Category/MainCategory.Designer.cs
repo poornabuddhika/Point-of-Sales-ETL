@@ -1163,6 +1163,7 @@
             this.textRackSearch.Name = "textRackSearch";
             this.textRackSearch.Size = new System.Drawing.Size(298, 26);
             this.textRackSearch.TabIndex = 73;
+            this.textRackSearch.TextChanged += new System.EventHandler(this.textRackSearch_TextChanged);
             // 
             // label14
             // 

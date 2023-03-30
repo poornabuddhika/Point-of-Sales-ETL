@@ -676,6 +676,11 @@ namespace IMS.App.UserInterface.Category
         {
             unitForm.RefreshUnitContent( textUnitName,textUnitCode,textUnitSearch,checkBoxUnit,ErrorlabelUnitName,ErrorlabelUnitCode);
         }
+
+        private void textRackSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
