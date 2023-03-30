@@ -80,6 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="POS_ETLDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppCass\Category\BrandFormClass.cs" />
@@ -103,6 +108,12 @@
     <Compile Include="UserInterface\frmgrn.Designer.cs">
       <DependentUpon>frmgrn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInterface\frmlocationtransfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\frmlocationtransfers.Designer.cs">
+      <DependentUpon>frmlocationtransfers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +125,12 @@
     </Compile>
     <Compile Include="UserInterface\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\frmreturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\frmreturn.Designer.cs">
+      <DependentUpon>frmreturn.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\frmsupplier_detail.cs">
       <SubType>Form</SubType>
@@ -146,11 +163,17 @@
     <EmbeddedResource Include="UserInterface\frmgrn.resx">
       <DependentUpon>frmgrn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\frmlocationtransfers.resx">
+      <DependentUpon>frmlocationtransfers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\frmreturn.resx">
+      <DependentUpon>frmreturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmsupplier_detail.resx">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>
@@ -169,6 +192,17 @@
     </None>
     <None Include="POS_ETLDataSet.xss">
       <DependentUpon>POS_ETLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POS_ETLDataSet1.xsc">
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="POS_ETLDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POS_ETLDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POS_ETLDataSet1.xss">
+      <DependentUpon>POS_ETLDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

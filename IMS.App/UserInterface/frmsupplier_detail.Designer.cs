@@ -348,6 +348,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "frmsupplier_detail";
             this.Text = "frmsupplier_detail";
+            this.Load += new System.EventHandler(this.frmsupplier_detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

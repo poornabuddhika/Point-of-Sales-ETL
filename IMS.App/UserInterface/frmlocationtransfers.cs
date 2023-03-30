@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace IMS.App.UserInterface
 {
-    public partial class frmsupplier_detail : Form
+    public partial class frmlocationtransfers : Form
     {
-        public frmsupplier_detail()
+        public frmlocationtransfers()
         {
             InitializeComponent();
         }
 
-        private void frmsupplier_detail_Load(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
