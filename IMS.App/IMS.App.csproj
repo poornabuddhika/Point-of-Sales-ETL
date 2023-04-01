@@ -96,10 +96,10 @@
     </Compile>
     <Compile Include="AppCass\Category\RackNumberFormClass.cs" />
     <Compile Include="AppCass\Category\UnitFormClass.cs" />
-    <Compile Include="UserInterface\frmCustomer_ditails.cs">
+    <Compile Include="UserInterface\SupplierCustomer\frmCustomer_ditails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\frmCustomer_ditails.Designer.cs">
+    <Compile Include="UserInterface\SupplierCustomer\frmCustomer_ditails.Designer.cs">
       <DependentUpon>frmCustomer_ditails.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\frmgrn.cs">
@@ -132,10 +132,10 @@
     <Compile Include="UserInterface\frmreturn.Designer.cs">
       <DependentUpon>frmreturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\frmsupplier_detail.cs">
+    <Compile Include="UserInterface\SupplierCustomer\frmsupplier_detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\frmsupplier_detail.Designer.cs">
+    <Compile Include="UserInterface\SupplierCustomer\frmsupplier_detail.Designer.cs">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\Products\frmItems.cs">
@@ -157,7 +157,7 @@
     <EmbeddedResource Include="UserInterface\Category\MainCategory.resx">
       <DependentUpon>MainCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\frmCustomer_ditails.resx">
+    <EmbeddedResource Include="UserInterface\SupplierCustomer\frmCustomer_ditails.resx">
       <DependentUpon>frmCustomer_ditails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmgrn.resx">
@@ -175,7 +175,7 @@
     <EmbeddedResource Include="UserInterface\frmreturn.resx">
       <DependentUpon>frmreturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\frmsupplier_detail.resx">
+    <EmbeddedResource Include="UserInterface\SupplierCustomer\frmsupplier_detail.resx">
       <DependentUpon>frmsupplier_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Products\frmItems.resx">
