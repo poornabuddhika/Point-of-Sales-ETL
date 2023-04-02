@@ -139,12 +139,6 @@ namespace IMS.App.UserInterface
         {
 
         }
-
-        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForm();
-            showFrm(new frmsupplier_detail());
-        }
     }
 }
     
