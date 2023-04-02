@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbldate = new System.Windows.Forms.Label();
@@ -49,8 +50,9 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(89, 230);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(310, 24);
+            this.comboBox1.Size = new System.Drawing.Size(311, 24);
             this.comboBox1.TabIndex = 58;
             // 
             // label3
@@ -68,7 +70,7 @@
             // 
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(166, 337);
+            this.lbldate.Location = new System.Drawing.Point(165, 337);
             this.lbldate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(87, 29);
@@ -90,7 +92,7 @@
             // 
             this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.Location = new System.Drawing.Point(299, 274);
-            this.Button3.Margin = new System.Windows.Forms.Padding(4);
+            this.Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(100, 33);
             this.Button3.TabIndex = 54;
@@ -101,7 +103,7 @@
             // 
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(191, 274);
-            this.Button2.Margin = new System.Windows.Forms.Padding(4);
+            this.Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(100, 33);
             this.Button2.TabIndex = 53;
@@ -129,12 +131,13 @@
             this.Label1.Size = new System.Drawing.Size(106, 20);
             this.Label1.TabIndex = 50;
             this.Label1.Text = "Username :";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(84, 163);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(84, 162);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(315, 26);
             this.txtPassword.TabIndex = 51;
@@ -143,8 +146,8 @@
             // txtUserId
             // 
             this.txtUserId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserId.Location = new System.Drawing.Point(84, 99);
-            this.txtUserId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserId.Location = new System.Drawing.Point(84, 98);
+            this.txtUserId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(315, 26);
             this.txtUserId.TabIndex = 48;
@@ -153,7 +156,7 @@
             // 
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Location = new System.Drawing.Point(88, 274);
-            this.Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(100, 33);
             this.Button1.TabIndex = 52;
@@ -165,6 +168,7 @@
             // 
             this.pictureBox1.Image = global::IMS.App.Properties.Resources.login;
             this.pictureBox1.Location = new System.Drawing.Point(471, 76);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 284);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,6 +192,8 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.Button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

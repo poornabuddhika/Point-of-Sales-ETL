@@ -134,6 +134,17 @@ namespace IMS.App.UserInterface
             closeForm();
             showFrm(new MainCategory());
         }
+
+        private void frmMain_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForm();
+            showFrm(new frmsupplier_detail());
+        }
     }
 }
     

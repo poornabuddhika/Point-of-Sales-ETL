@@ -21,6 +21,6 @@ namespace IMS.Entity.InventoryProducts
         public string ThirdCategoryName{ get; set; }
 
         public virtual ICollection<Brands> Brands       { get; set; }
-        public virtual ThirdCategories     ThirdCategory{ get; set; }
+        
     }
 }

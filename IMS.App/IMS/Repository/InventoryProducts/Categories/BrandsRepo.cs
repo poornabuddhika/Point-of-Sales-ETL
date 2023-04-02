@@ -30,23 +30,12 @@ namespace IMS.Repository
             try
             {
                 if (key == null)
-                    sql = @"SELECT
-                                    Brands.BrandId AS BrandId, Brands.BrandTag AS BrandTag, Brands.BrandName As BrandName,
-                                    Brands.BrandDescription AS BrandDisc, Brands.BrandStatus AS BrandStatus,
-                                    Brands.BrandImage AS BrandImage, Vendors.VendorId AS VendorId, Vendors.VendorName AS VendorName
-                                    FROM Brands
-                                    LEFT JOIN Vendors
-			                        ON Brands.VendorId = Vendors.VendorId;";
+                    sql = @"SELECT item_brand.bra_id AS BrandId, item_brand.bra_TAG   AS BrandTag, item_brand.bra_name As BrandName,
+                                    item_brand.bra_is_deleted AS IsActive FROM item_brand;";
                 else
-                    sql = @"SELECT
-                                    Brands.BrandId AS BrandId, Brands.BrandTag AS BrandTag, Brands.BrandName As BrandName,
-                                    Brands.BrandDescription AS BrandDisc, Brands.BrandStatus AS BrandStatus,
-                                    Brands.BrandImage AS BrandImage, Vendors.VendorId AS VendorId, Vendors.VendorName AS VendorName
-                                    FROM Brands
-                                    LEFT JOIN Vendors
-			                        ON Brands.VendorId = Vendors.VendorId
-                                    where Brands.BrandName like '%" + key + "%' or Brands.BrandStatus like '%" + key + "%' or " + 
-                                    " Vendors.VendorName like '%" + key + "%'; ";
+                    sql = @"SELECT item_brand.bra_id AS BrandId, item_brand.bra_TAG   AS BrandTag, item_brand.bra_name As BrandName,
+                                item_brand.bra_is_deleted AS IsActive FROM item_brand
+                                    where item_brand.bra_name like '%" + key + "%' or item_brand.bra_TAG  like '%" + key + "%' ; ";
 
                 var dt = this.iDB.ExecuteQueryTable(sql);
 
@@ -77,11 +66,9 @@ namespace IMS.Repository
             brand.BrandId = Convert.ToInt32(row["BrandId"].ToString());
             brand.BrandTag = row["BrandTag"].ToString();
             brand.BrandName = row["BrandName"].ToString();
-            brand.BrandDescription = row["BrandDisc"].ToString();
-            brand.BrandStatus = row["BrandStatus"].ToString();
-            //brand.BrandImage = Convert.ToDouble(row["pMSRP"].ToString());
-            brand.VendorId = Convert.ToInt32(row["VendorId"].ToString());
-            brand.VendorName = row["VendorName"].ToString();
+            brand.BrandIsActive =Convert.ToBoolean( row["IsActive"].ToString());
+           
+           
             return brand;
         }
         
@@ -91,7 +78,7 @@ namespace IMS.Repository
             string sql;
             try
             {
-                sql = @"SELECT BrandId , BrandName FROM Brands";
+                sql = @"SELECT bra_name from item_brand WHERE bra_is_ISActive='TRUE'";
                 return this.iDB.ExecuteQueryTable(sql);
             }
             catch (Exception e)
@@ -142,11 +129,11 @@ namespace IMS.Repository
         }
 
         //DataCount - DataExists
-        public bool DataExists(int id)
+        public bool DataExists(string name)
         {
             try
             {
-                DataSet ds = iDB.ExecuteQuery("select BrandId from Brands where BrandId=" + id);
+                DataSet ds = iDB.ExecuteQuery("select bra_name from item_brand where bra_name='" + name+"'");
 
                 Debug.WriteLine(ds.Tables[0].Rows.Count);
 
@@ -170,10 +157,11 @@ namespace IMS.Repository
         //save - Brands
         public bool Save(Brands br)
         {
+            iDB.conOpen();
             try
             {
-                var sql = @"insert into Brands (BrandName, VendorId, BrandDescription, BrandStatus)
-                                values ('" + br.BrandName + "' , '" + br.VendorId + "' , '" + br.BrandDescription + "' ,'" + br.BrandStatus + "');";
+                var sql = @"insert into item_brand (bra_name, bra_TAG,bra_is_ISActive)
+                                values ('" + br.BrandName + "' , '" + br.BrandTag + "','"+ br.BrandIsActive + "' );";
 
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
@@ -194,9 +182,9 @@ namespace IMS.Repository
         {
             try
             {
-                string sql = @"update Brands set BrandName='" + br.BrandName + "' , VendorId='" + br.VendorId + "'," +
-                             "BrandDescription='" + br.BrandDescription + "'," +
-                             "BrandStatus='" + br.BrandStatus + "' where BrandId='" + br.BrandId + "' ";
+                iDB.conOpen();
+                string sql = @"update item_brand set item_brand.bra_name='"+br.BrandName+"' , item_brand.bra_TAG='"+br.BrandTag+
+                    "',item_brand.bra_is_ISActive='" + br.BrandIsActive+ "' where item_brand.bra_name='" + br.BrandName+"' ";
 
                 int count = this.iDB.ExecuteDMLQuery(sql);
 

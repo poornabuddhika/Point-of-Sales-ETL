@@ -54,7 +54,7 @@ namespace IMS.Entity.InventoryProducts
 
         public virtual BarCodes BarCode{ get; set; }
         public virtual Users    User   { get; set; }
-        public virtual Products Product{ get; set; }
+        public virtual Item Product{ get; set; }
         
         public virtual ICollection<OrdersProductsMap> OrdersProductsMaps{ get; set; }
 
