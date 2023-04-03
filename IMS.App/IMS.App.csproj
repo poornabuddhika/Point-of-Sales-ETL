@@ -62,11 +62,8 @@
     <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\OrdersProductsMap.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Products\Item.cs" />
-<<<<<<< HEAD
     <Compile Include="IMS\Entity\InventoryProducts\SupplierCustomer\Cities.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\SupplierCustomer\Supplier.cs" />
-=======
->>>>>>> 38e39a1cae2f3edbc81885586de1726c3d5c3ebd
     <Compile Include="IMS\Entity\InventoryProducts\Users\Users.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\BrandsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Categories\MainCategoriesRepo.cs" />
@@ -78,11 +75,8 @@
     <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Orders\OrdersRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Products\ItemRepo.cs" />
-<<<<<<< HEAD
     <Compile Include="IMS\Repository\InventoryProducts\SupplierCustomer\CitiesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\SupplierCustomer\SupplierRepo.cs" />
-=======
->>>>>>> 38e39a1cae2f3edbc81885586de1726c3d5c3ebd
     <Compile Include="IMS\Repository\InventoryProducts\Users\UsersRepo.cs" />
     <Compile Include="IMS\DataAccess\InventoryProducts\InventoryDBDataAccess.cs" />
     <Compile Include="POS_ETLDataSet.Designer.cs">

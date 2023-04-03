@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using IMS.Entity.InventoryProducts;
 using IMS.Repository;
-using IMS.Repository.InventoryProducts;
+
 
 namespace IMS.App.AppCass.Category
 { 
