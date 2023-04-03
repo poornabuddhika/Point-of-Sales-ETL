@@ -95,6 +95,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            //this.pOS_ETLDataSet = new IMS.App.POS_ETLDataSet();
             this.pOSETLDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pOSETLDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pOS_ETLDataSet)).BeginInit();

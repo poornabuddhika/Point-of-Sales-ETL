@@ -5,7 +5,3 @@ C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Relea
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Release\CurrencyTextBox.csproj.CoreCompileInputs.cache
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Release\CurrencyTextBox.dll
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Release\CurrencyTextBox.pdb
-<<<<<<< HEAD
-=======
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Release\CurrencyTextBox.csprojAssemblyReference.cache
->>>>>>> 38e39a1cae2f3edbc81885586de1726c3d5c3ebd
