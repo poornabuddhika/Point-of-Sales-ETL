@@ -188,5 +188,80 @@ namespace IMS.App.UserInterface
                 ERRID.Hide();
             }
         }
+
+        private void textBoxSupplierName_TextChanged(object sender, EventArgs e)
+        {
+
+            if (textBoxSupplierName.Text == "")
+            {
+                ERRName.Show();
+            }
+            else
+            {
+                ERRName.Hide();
+            }
+
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxAddress.Text == "")
+            {
+                ERRAddress.Show();
+            }
+            else
+            {
+                ERRAddress.Hide();
+            }
+        }
+
+        private void comboBoxCriditLimit_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCriditLimit.SelectedIndex == 0)
+            {
+                ERRCriditPeriod.Show();
+            }
+            else
+            {
+                ERRCriditPeriod.Hide();
+            }
+        }
+
+        private void TextBoxCriditAmount_TextChanged(object sender, EventArgs e)
+        {
+            if (TextBoxCriditAmount.Text == "")
+            {
+                ErrCriditAmount.Show();
+            }
+            else
+            {
+                ErrCriditAmount.Hide();
+            }
+        }
+
+        private void textBoxTPNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxTPNumber.Text == "")
+            {
+                ERRTPNumber.Show();
+            }
+            else
+            {
+                ERRTPNumber.Hide();
+            }
+        }
+
+        private void ComboBoxCity_TextChanged(object sender, EventArgs e)
+        {
+            if (ComboBoxCity.SelectedIndex == 0)
+            {
+                ERRCity.Show();
+            }
+            else
+            {
+                ERRCity.Hide();
+            }
+        }
     }
 }

@@ -139,6 +139,7 @@
             this.textBoxTPNumber.Name = "textBoxTPNumber";
             this.textBoxTPNumber.Size = new System.Drawing.Size(219, 26);
             this.textBoxTPNumber.TabIndex = 47;
+            this.textBoxTPNumber.TextChanged += new System.EventHandler(this.textBoxTPNumber_TextChanged);
             // 
             // textBoxAddress
             // 
@@ -149,6 +150,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(661, 85);
             this.textBoxAddress.TabIndex = 42;
+            this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
             // 
             // textBoxSupplierName
             // 
@@ -158,6 +160,7 @@
             this.textBoxSupplierName.Name = "textBoxSupplierName";
             this.textBoxSupplierName.Size = new System.Drawing.Size(597, 26);
             this.textBoxSupplierName.TabIndex = 40;
+            this.textBoxSupplierName.TextChanged += new System.EventHandler(this.textBoxSupplierName_TextChanged);
             // 
             // label11
             // 
@@ -364,6 +367,7 @@
             this.comboBoxCriditLimit.Size = new System.Drawing.Size(110, 28);
             this.comboBoxCriditLimit.TabIndex = 92;
             this.comboBoxCriditLimit.Text = "--Select--";
+            this.comboBoxCriditLimit.TextChanged += new System.EventHandler(this.comboBoxCriditLimit_TextChanged);
             // 
             // buttonUpdate
             // 
@@ -402,6 +406,8 @@
             // checkBoxIsActive
             // 
             this.checkBoxIsActive.AutoSize = true;
+            this.checkBoxIsActive.Checked = true;
+            this.checkBoxIsActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxIsActive.Location = new System.Drawing.Point(187, 658);
             this.checkBoxIsActive.Name = "checkBoxIsActive";
             this.checkBoxIsActive.Size = new System.Drawing.Size(18, 17);
@@ -454,6 +460,7 @@
             this.TextBoxCriditAmount.Name = "TextBoxCriditAmount";
             this.TextBoxCriditAmount.Size = new System.Drawing.Size(236, 27);
             this.TextBoxCriditAmount.TabIndex = 100;
+            this.TextBoxCriditAmount.TextChanged += new System.EventHandler(this.TextBoxCriditAmount_TextChanged);
             // 
             // ComboBoxCity
             // 
@@ -470,6 +477,7 @@
             this.ComboBoxCity.Size = new System.Drawing.Size(235, 28);
             this.ComboBoxCity.TabIndex = 104;
             this.ComboBoxCity.Text = "--select--";
+            this.ComboBoxCity.TextChanged += new System.EventHandler(this.ComboBoxCity_TextChanged);
             this.ComboBoxCity.Click += new System.EventHandler(this.ComboBoxCity_Click);
             this.ComboBoxCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxCity_KeyPress);
             // 
