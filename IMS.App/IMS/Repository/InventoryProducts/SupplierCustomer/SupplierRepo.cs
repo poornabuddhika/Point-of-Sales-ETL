@@ -143,7 +143,7 @@ namespace IMS.Repository
 
 
 
-        public bool DataExists( string name,string id)
+        public bool DataExists(string name, string id)
         {
             try
             {
@@ -172,10 +172,40 @@ namespace IMS.Repository
             }
         }
 
+        internal bool UpdateSupplier(Supplier suObj)
+        {
+
+            try
+            {
+                iDB.conOpen();
+
+                string sql = @"update  [dbo].[supplier_Detl] set [sup_id] ='" + suObj.ID + "', [sup_Name]='" + suObj.Name + "', [sup_Address]='" + suObj.Address + "', [sup_credit_period]='" + suObj.Credit_Period + "', [sup_credit_Amount]='" + suObj.Credit_Amount + "'," +
+
+                   " [sup_mobile]='" + suObj.Mobile_Number + "', [sup_office_Phone]='" + suObj.Office_Phone_number + "', [sup_Email]='" + suObj.Email + "', [sup_fax_number]='" + suObj.Fax + "', [sup_Contact_Person]='" + suObj.Contact_Person + "', [sup_City]='" + suObj.City +
+                   "', [sup_remark]='" + suObj.Comment + "', [sup_is_Active]='"+ suObj.IsActive   + "'  where  [sup_id] ='" + suObj.ID + "' ;";
 
 
 
 
+
+                int count = this.iDB.ExecuteDMLQuery(sql);
+
+                if (count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+                throw;
+            }
+        }
     }
-       
 }
+       
+

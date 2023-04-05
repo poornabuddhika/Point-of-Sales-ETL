@@ -1,10 +1,3 @@
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\bin\Debug\CurrencyTextBox.dll
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\bin\Debug\CurrencyTextBox.pdb
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Debug\CurrencyTextBox.CurrencyTextBox.resources
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Debug\CurrencyTextBox.csproj.GenerateResource.cache
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Debug\CurrencyTextBox.csproj.CoreCompileInputs.cache
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Debug\CurrencyTextBox.dll
-C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\CurrencyTextBox\obj\Debug\CurrencyTextBox.pdb
 C:\Users\poorn\Downloads\Point-of-Sales-ETL-9e6418d7fed46259bb49dff294a3e30f38e1426a\CurrencyTextBox\bin\Debug\CurrencyTextBox.dll
 C:\Users\poorn\Downloads\Point-of-Sales-ETL-9e6418d7fed46259bb49dff294a3e30f38e1426a\CurrencyTextBox\bin\Debug\CurrencyTextBox.pdb
 C:\Users\poorn\Downloads\Point-of-Sales-ETL-9e6418d7fed46259bb49dff294a3e30f38e1426a\CurrencyTextBox\obj\Debug\CurrencyTextBox.csprojAssemblyReference.cache

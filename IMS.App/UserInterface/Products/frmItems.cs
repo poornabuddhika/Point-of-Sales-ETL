@@ -147,15 +147,15 @@ namespace IMS.App.UserInterface.Products
                 itemNew.SellingPrice = Convert.ToDecimal(textSellingPrice.DollarValue);
                 
             }
-            
 
-            itemNew.Cost = Convert.ToDecimal(textBoxCost.DollarValue.ToString());
+            if (textBoxCost.Text == "") { ErrCost.Show(); errorList.Add("Please fill Cost"); } else { itemNew.Cost = Convert.ToDecimal(textBoxCost.DollarValue.ToString()); }
+           
             itemNew.MRP = textBoxMrp.DollarValue;
             itemNew.Supplier = "";
             itemNew.PacketSize =(textBoxPacketSize.Text=="")? 0: Convert.ToDouble(textBoxPacketSize.Text);
 
 
-            if (comboRackNumber.SelectedIndex == 0) { ERRReck.Show(); errorList.Add("Please Select the Rack Number"); } else { itemNew.RackNumber = comboRackNumber.SelectedItem.ToString(); }
+            if (comboRackNumber.SelectedIndex == 0) { itemNew.RackNumber = "0"; } else { itemNew.RackNumber = comboRackNumber.SelectedItem.ToString(); }
 
 
             if (ComboMainCategory.SelectedIndex == 0) { ERRCategory.Show(); errorList.Add("Please Select Main Category"); } else { itemNew.CategoryName = ComboMainCategory.SelectedItem.ToString(); }
@@ -169,11 +169,11 @@ namespace IMS.App.UserInterface.Products
             itemNew.ProductQty = (TextBoxProductQty.Text=="")?0: Convert.ToDouble(TextBoxProductQty.Text.ToString());
 
 
-            if (TextBoxDiscount.Text == "") { ErrDiscount.Show(); errorList.Add("Please Fill Discount Amount"); } else { itemNew.DisCount = Convert.ToDouble(TextBoxDiscount.Text); }
+            itemNew.DisCount = Convert.ToDouble(TextBoxDiscount.Text); 
 
             itemNew.DiscountAmount = (TextBoxDiscountAmount.Text=="")?0: Convert.ToDouble(TextBoxDiscountAmount.Text);
-            itemNew.WeightItem =(TextBoxWeight.Text=="")?0: Convert.ToDouble(TextBoxWeight.Text);
-            itemNew.ServeItem = (TextBoxServeItem.Text == "") ? 0: Convert.ToDouble(TextBoxServeItem.Text);
+            itemNew.WeightItem = radioButtonWeight.Checked;
+            itemNew.ServeItem = radioButtonService.Checked;
             itemNew.OptionOne = TextBoxOptionOne.Text;
             itemNew.OptionTwo = TextBoxOptionTwo.Text;
             itemNew.IsActive = checkBoxISActive.Checked;
@@ -261,14 +261,7 @@ namespace IMS.App.UserInterface.Products
 
         void comboRackNumber_TextChanged(object sender, EventArgs e)
         {
-            if (comboRackNumber.SelectedIndex == 0)
-            {
-                ERRReck.Show();
-            }
-            else
-            {
-                ERRReck.Hide();
-            }
+           
         }
 
         void ComboMainCategory_TextChanged(object sender, EventArgs e)
@@ -310,14 +303,7 @@ namespace IMS.App.UserInterface.Products
 
         void TextBoxDiscount_TextChanged(object sender, EventArgs e)
         {
-            if (TextBoxDiscount.Text == "")
-            {
-                ErrDiscount.Show();
-            }
-            else
-            {
-                ErrDiscount.Hide();
-            }
+
         }
 
         void textBoxSellingPrice_TextChanged_1(object sender, EventArgs e)
@@ -413,8 +399,7 @@ namespace IMS.App.UserInterface.Products
             TextBoxDiscount.Text = "";
 
             TextBoxDiscountAmount.Text = "";
-            TextBoxWeight.Text = "";
-            TextBoxServeItem.Text = "";
+            
             TextBoxOptionOne.Text = "";
             TextBoxOptionTwo.Text = "";
             checkBoxISActive.Checked = true;
@@ -431,6 +416,19 @@ namespace IMS.App.UserInterface.Products
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             itemFormClass.PopulateGridViewUnit(GridViewItem, itemRepo, txtsearch.Text);
+        }
+
+        private void textBoxCost_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCost.Text == "")
+            {
+                ErrCost.Show();
+            }
+            else
+            {
+                ErrCost.Hide();
+            }
+
         }
     }
 }

@@ -19,3 +19,4 @@ C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\bin\Release\Curre
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.csproj.CopyComplete
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.exe
 C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\IMS.App\obj\Release\IMS.App.UserInterface.Products.frmItemList.resources

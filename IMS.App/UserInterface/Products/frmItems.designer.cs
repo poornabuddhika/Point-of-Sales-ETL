@@ -38,25 +38,12 @@
             this.txtitemid = new System.Windows.Forms.TextBox();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
-            this.Panel2 = new System.Windows.Forms.Panel();
-            this.GridViewItem = new System.Windows.Forms.DataGridView();
             this.Label3 = new System.Windows.Forms.Label();
             this.pnl_stockmaster = new System.Windows.Forms.Panel();
             this.textBoxMrp = new CurrencyTextBox.CurrencyTextBox();
             this.textBoxCost = new CurrencyTextBox.CurrencyTextBox();
             this.textSellingPrice = new CurrencyTextBox.CurrencyTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.ErrDiscount = new System.Windows.Forms.PictureBox();
-            this.ERRBarcode = new System.Windows.Forms.PictureBox();
-            this.ERRSellingPrice = new System.Windows.Forms.PictureBox();
-            this.ERRName = new System.Windows.Forms.PictureBox();
-            this.ERRID = new System.Windows.Forms.PictureBox();
-            this.ERRSellingUnit = new System.Windows.Forms.PictureBox();
-            this.ERRPurchaseUnit = new System.Windows.Forms.PictureBox();
-            this.ERRBrandName = new System.Windows.Forms.PictureBox();
-            this.ERRSubCategory = new System.Windows.Forms.PictureBox();
-            this.ERRCategory = new System.Windows.Forms.PictureBox();
-            this.ERRReck = new System.Windows.Forms.PictureBox();
             this.label37 = new System.Windows.Forms.Label();
             this.comboRackNumber = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -69,15 +56,6 @@
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.lblinc = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.btnlast = new System.Windows.Forms.Button();
-            this.btnnext = new System.Windows.Forms.Button();
-            this.btnprev = new System.Windows.Forms.Button();
-            this.btnfirst = new System.Windows.Forms.Button();
-            this.lblmax = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
             this.checkBoxISActive = new System.Windows.Forms.CheckBox();
             this.label27 = new System.Windows.Forms.Label();
             this.comboPurchaseUnit = new System.Windows.Forms.ComboBox();
@@ -87,9 +65,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.TextBoxOptionOne = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.TextBoxServeItem = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.TextBoxWeight = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.TextBoxDiscountAmount = new System.Windows.Forms.RichTextBox();
@@ -115,10 +91,31 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtdescription = new System.Windows.Forms.RichTextBox();
-            this.Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).BeginInit();
+            this.radioButtonWeight = new System.Windows.Forms.RadioButton();
+            this.radioButtonService = new System.Windows.Forms.RadioButton();
+            this.ErrCost = new System.Windows.Forms.PictureBox();
+            this.ERRBarcode = new System.Windows.Forms.PictureBox();
+            this.ERRSellingPrice = new System.Windows.Forms.PictureBox();
+            this.ERRName = new System.Windows.Forms.PictureBox();
+            this.ERRID = new System.Windows.Forms.PictureBox();
+            this.ERRSellingUnit = new System.Windows.Forms.PictureBox();
+            this.ERRPurchaseUnit = new System.Windows.Forms.PictureBox();
+            this.ERRBrandName = new System.Windows.Forms.PictureBox();
+            this.ERRSubCategory = new System.Windows.Forms.PictureBox();
+            this.ERRCategory = new System.Windows.Forms.PictureBox();
+            this.GridViewItem = new System.Windows.Forms.DataGridView();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.lblmax = new System.Windows.Forms.Label();
+            this.btnfirst = new System.Windows.Forms.Button();
+            this.btnprev = new System.Windows.Forms.Button();
+            this.btnnext = new System.Windows.Forms.Button();
+            this.btnlast = new System.Windows.Forms.Button();
+            this.Label9 = new System.Windows.Forms.Label();
+            this.lblinc = new System.Windows.Forms.Label();
             this.pnl_stockmaster.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRName)).BeginInit();
@@ -128,7 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).BeginInit();
+            this.Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Label2
@@ -241,28 +239,6 @@
             this.btnsave.UseVisualStyleBackColor = false;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
-            // Panel2
-            // 
-            this.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.GridViewItem);
-            this.Panel2.Location = new System.Drawing.Point(1061, 119);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(850, 733);
-            this.Panel2.TabIndex = 48;
-            // 
-            // GridViewItem
-            // 
-            this.GridViewItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.GridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewItem.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.GridViewItem.Location = new System.Drawing.Point(-1, -1);
-            this.GridViewItem.Name = "GridViewItem";
-            this.GridViewItem.RowTemplate.Height = 24;
-            this.GridViewItem.Size = new System.Drawing.Size(851, 734);
-            this.GridViewItem.TabIndex = 3;
-            // 
             // Label3
             // 
             this.Label3.AutoSize = true;
@@ -280,13 +256,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
+            this.pnl_stockmaster.Controls.Add(this.radioButtonService);
+            this.pnl_stockmaster.Controls.Add(this.radioButtonWeight);
+            this.pnl_stockmaster.Controls.Add(this.ErrCost);
             this.pnl_stockmaster.Controls.Add(this.Button1);
             this.pnl_stockmaster.Controls.Add(this.textBoxMrp);
             this.pnl_stockmaster.Controls.Add(this.btnnew);
             this.pnl_stockmaster.Controls.Add(this.textBoxCost);
             this.pnl_stockmaster.Controls.Add(this.textSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.label20);
-            this.pnl_stockmaster.Controls.Add(this.ErrDiscount);
             this.pnl_stockmaster.Controls.Add(this.ERRBarcode);
             this.pnl_stockmaster.Controls.Add(this.ERRSellingPrice);
             this.pnl_stockmaster.Controls.Add(this.ERRName);
@@ -296,7 +274,6 @@
             this.pnl_stockmaster.Controls.Add(this.ERRBrandName);
             this.pnl_stockmaster.Controls.Add(this.ERRSubCategory);
             this.pnl_stockmaster.Controls.Add(this.ERRCategory);
-            this.pnl_stockmaster.Controls.Add(this.ERRReck);
             this.pnl_stockmaster.Controls.Add(this.label37);
             this.pnl_stockmaster.Controls.Add(this.comboRackNumber);
             this.pnl_stockmaster.Controls.Add(this.label36);
@@ -327,9 +304,7 @@
             this.pnl_stockmaster.Controls.Add(this.label26);
             this.pnl_stockmaster.Controls.Add(this.TextBoxOptionOne);
             this.pnl_stockmaster.Controls.Add(this.label25);
-            this.pnl_stockmaster.Controls.Add(this.TextBoxServeItem);
             this.pnl_stockmaster.Controls.Add(this.label7);
-            this.pnl_stockmaster.Controls.Add(this.TextBoxWeight);
             this.pnl_stockmaster.Controls.Add(this.label4);
             this.pnl_stockmaster.Controls.Add(this.Panel2);
             this.pnl_stockmaster.Controls.Add(this.label24);
@@ -385,7 +360,7 @@
             // 
             // textBoxCost
             // 
-            this.textBoxCost.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxCost.BackColor = System.Drawing.Color.LightYellow;
             this.textBoxCost.DollarValue = new decimal(new int[] {
             0,
             0,
@@ -396,6 +371,7 @@
             this.textBoxCost.Name = "textBoxCost";
             this.textBoxCost.Size = new System.Drawing.Size(336, 38);
             this.textBoxCost.TabIndex = 94;
+            this.textBoxCost.TextChanged += new System.EventHandler(this.textBoxCost_TextChanged);
             // 
             // textSellingPrice
             // 
@@ -422,138 +398,6 @@
             this.label20.Size = new System.Drawing.Size(21, 25);
             this.label20.TabIndex = 91;
             this.label20.Text = "*";
-            // 
-            // ErrDiscount
-            // 
-            this.ErrDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.ErrDiscount.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ErrDiscount.Image = global::IMS.App.Properties.Resources.error;
-            this.ErrDiscount.Location = new System.Drawing.Point(920, 313);
-            this.ErrDiscount.Name = "ErrDiscount";
-            this.ErrDiscount.Size = new System.Drawing.Size(35, 27);
-            this.ErrDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ErrDiscount.TabIndex = 90;
-            this.ErrDiscount.TabStop = false;
-            // 
-            // ERRBarcode
-            // 
-            this.ERRBarcode.BackColor = System.Drawing.Color.Transparent;
-            this.ERRBarcode.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRBarcode.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRBarcode.Location = new System.Drawing.Point(487, 123);
-            this.ERRBarcode.Name = "ERRBarcode";
-            this.ERRBarcode.Size = new System.Drawing.Size(35, 27);
-            this.ERRBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRBarcode.TabIndex = 89;
-            this.ERRBarcode.TabStop = false;
-            // 
-            // ERRSellingPrice
-            // 
-            this.ERRSellingPrice.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSellingPrice.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingPrice.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingPrice.Location = new System.Drawing.Point(429, 394);
-            this.ERRSellingPrice.Name = "ERRSellingPrice";
-            this.ERRSellingPrice.Size = new System.Drawing.Size(35, 27);
-            this.ERRSellingPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSellingPrice.TabIndex = 88;
-            this.ERRSellingPrice.TabStop = false;
-            // 
-            // ERRName
-            // 
-            this.ERRName.BackColor = System.Drawing.Color.Transparent;
-            this.ERRName.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRName.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRName.Location = new System.Drawing.Point(489, 80);
-            this.ERRName.Name = "ERRName";
-            this.ERRName.Size = new System.Drawing.Size(35, 27);
-            this.ERRName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRName.TabIndex = 87;
-            this.ERRName.TabStop = false;
-            // 
-            // ERRID
-            // 
-            this.ERRID.BackColor = System.Drawing.Color.Transparent;
-            this.ERRID.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRID.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRID.Location = new System.Drawing.Point(487, 38);
-            this.ERRID.Name = "ERRID";
-            this.ERRID.Size = new System.Drawing.Size(35, 27);
-            this.ERRID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRID.TabIndex = 86;
-            this.ERRID.TabStop = false;
-            // 
-            // ERRSellingUnit
-            // 
-            this.ERRSellingUnit.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSellingUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingUnit.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSellingUnit.Location = new System.Drawing.Point(351, 322);
-            this.ERRSellingUnit.Name = "ERRSellingUnit";
-            this.ERRSellingUnit.Size = new System.Drawing.Size(35, 27);
-            this.ERRSellingUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSellingUnit.TabIndex = 85;
-            this.ERRSellingUnit.TabStop = false;
-            // 
-            // ERRPurchaseUnit
-            // 
-            this.ERRPurchaseUnit.BackColor = System.Drawing.Color.Transparent;
-            this.ERRPurchaseUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRPurchaseUnit.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRPurchaseUnit.Location = new System.Drawing.Point(351, 286);
-            this.ERRPurchaseUnit.Name = "ERRPurchaseUnit";
-            this.ERRPurchaseUnit.Size = new System.Drawing.Size(35, 27);
-            this.ERRPurchaseUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRPurchaseUnit.TabIndex = 84;
-            this.ERRPurchaseUnit.TabStop = false;
-            // 
-            // ERRBrandName
-            // 
-            this.ERRBrandName.BackColor = System.Drawing.Color.Transparent;
-            this.ERRBrandName.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRBrandName.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRBrandName.Location = new System.Drawing.Point(962, 198);
-            this.ERRBrandName.Name = "ERRBrandName";
-            this.ERRBrandName.Size = new System.Drawing.Size(35, 27);
-            this.ERRBrandName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRBrandName.TabIndex = 83;
-            this.ERRBrandName.TabStop = false;
-            // 
-            // ERRSubCategory
-            // 
-            this.ERRSubCategory.BackColor = System.Drawing.Color.Transparent;
-            this.ERRSubCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRSubCategory.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRSubCategory.Location = new System.Drawing.Point(962, 159);
-            this.ERRSubCategory.Name = "ERRSubCategory";
-            this.ERRSubCategory.Size = new System.Drawing.Size(35, 27);
-            this.ERRSubCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRSubCategory.TabIndex = 82;
-            this.ERRSubCategory.TabStop = false;
-            // 
-            // ERRCategory
-            // 
-            this.ERRCategory.BackColor = System.Drawing.Color.Transparent;
-            this.ERRCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRCategory.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRCategory.Location = new System.Drawing.Point(961, 116);
-            this.ERRCategory.Name = "ERRCategory";
-            this.ERRCategory.Size = new System.Drawing.Size(35, 27);
-            this.ERRCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRCategory.TabIndex = 81;
-            this.ERRCategory.TabStop = false;
-            // 
-            // ERRReck
-            // 
-            this.ERRReck.BackColor = System.Drawing.Color.Transparent;
-            this.ERRReck.BackgroundImage = global::IMS.App.Properties.Resources.error;
-            this.ERRReck.Image = global::IMS.App.Properties.Resources.error;
-            this.ERRReck.Location = new System.Drawing.Point(817, 45);
-            this.ERRReck.Name = "ERRReck";
-            this.ERRReck.Size = new System.Drawing.Size(35, 27);
-            this.ERRReck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ERRReck.TabIndex = 80;
-            this.ERRReck.TabStop = false;
             // 
             // label37
             // 
@@ -689,106 +533,6 @@
             this.label28.TabIndex = 67;
             this.label28.Text = "*";
             // 
-            // lblinc
-            // 
-            this.lblinc.AutoSize = true;
-            this.lblinc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinc.Location = new System.Drawing.Point(1297, 85);
-            this.lblinc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblinc.Name = "lblinc";
-            this.lblinc.Size = new System.Drawing.Size(19, 20);
-            this.lblinc.TabIndex = 65;
-            this.lblinc.Text = "1";
-            // 
-            // Label9
-            // 
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(1326, 85);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(25, 20);
-            this.Label9.TabIndex = 60;
-            this.Label9.Text = "of";
-            // 
-            // btnlast
-            // 
-            this.btnlast.BackColor = System.Drawing.Color.Transparent;
-            this.btnlast.ForeColor = System.Drawing.Color.Black;
-            this.btnlast.Location = new System.Drawing.Point(1574, 78);
-            this.btnlast.Margin = new System.Windows.Forms.Padding(4);
-            this.btnlast.Name = "btnlast";
-            this.btnlast.Size = new System.Drawing.Size(52, 37);
-            this.btnlast.TabIndex = 61;
-            this.btnlast.Text = ">>";
-            this.btnlast.UseVisualStyleBackColor = false;
-            // 
-            // btnnext
-            // 
-            this.btnnext.BackColor = System.Drawing.Color.Transparent;
-            this.btnnext.ForeColor = System.Drawing.Color.Black;
-            this.btnnext.Location = new System.Drawing.Point(1510, 78);
-            this.btnnext.Margin = new System.Windows.Forms.Padding(4);
-            this.btnnext.Name = "btnnext";
-            this.btnnext.Size = new System.Drawing.Size(52, 37);
-            this.btnnext.TabIndex = 62;
-            this.btnnext.Text = ">";
-            this.btnnext.UseVisualStyleBackColor = false;
-            // 
-            // btnprev
-            // 
-            this.btnprev.BackColor = System.Drawing.Color.Transparent;
-            this.btnprev.ForeColor = System.Drawing.Color.Black;
-            this.btnprev.Location = new System.Drawing.Point(1449, 78);
-            this.btnprev.Margin = new System.Windows.Forms.Padding(4);
-            this.btnprev.Name = "btnprev";
-            this.btnprev.Size = new System.Drawing.Size(52, 37);
-            this.btnprev.TabIndex = 63;
-            this.btnprev.Text = "<";
-            this.btnprev.UseVisualStyleBackColor = false;
-            // 
-            // btnfirst
-            // 
-            this.btnfirst.BackColor = System.Drawing.Color.Transparent;
-            this.btnfirst.ForeColor = System.Drawing.Color.Black;
-            this.btnfirst.Location = new System.Drawing.Point(1389, 78);
-            this.btnfirst.Margin = new System.Windows.Forms.Padding(4);
-            this.btnfirst.Name = "btnfirst";
-            this.btnfirst.Size = new System.Drawing.Size(52, 37);
-            this.btnfirst.TabIndex = 64;
-            this.btnfirst.Text = "<<";
-            this.btnfirst.UseVisualStyleBackColor = false;
-            // 
-            // lblmax
-            // 
-            this.lblmax.AutoSize = true;
-            this.lblmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmax.Location = new System.Drawing.Point(1362, 85);
-            this.lblmax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblmax.Name = "lblmax";
-            this.lblmax.Size = new System.Drawing.Size(19, 20);
-            this.lblmax.TabIndex = 66;
-            this.lblmax.Text = "1";
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(1182, 47);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(69, 17);
-            this.Label6.TabIndex = 55;
-            this.Label6.Text = "Search :";
-            // 
-            // txtsearch
-            // 
-            this.txtsearch.Location = new System.Drawing.Point(1251, 42);
-            this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(349, 23);
-            this.txtsearch.TabIndex = 54;
-            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
-            // 
             // checkBoxISActive
             // 
             this.checkBoxISActive.AutoSize = true;
@@ -847,7 +591,7 @@
             // TextBoxOptionTwo
             // 
             this.TextBoxOptionTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxOptionTwo.Location = new System.Drawing.Point(660, 623);
+            this.TextBoxOptionTwo.Location = new System.Drawing.Point(660, 592);
             this.TextBoxOptionTwo.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxOptionTwo.Name = "TextBoxOptionTwo";
             this.TextBoxOptionTwo.Size = new System.Drawing.Size(237, 31);
@@ -858,7 +602,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(554, 631);
+            this.label26.Location = new System.Drawing.Point(554, 600);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(104, 20);
@@ -868,7 +612,7 @@
             // TextBoxOptionOne
             // 
             this.TextBoxOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxOptionOne.Location = new System.Drawing.Point(660, 551);
+            this.TextBoxOptionOne.Location = new System.Drawing.Point(660, 506);
             this.TextBoxOptionOne.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxOptionOne.Name = "TextBoxOptionOne";
             this.TextBoxOptionOne.Size = new System.Drawing.Size(237, 31);
@@ -879,43 +623,23 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(554, 559);
+            this.label25.Location = new System.Drawing.Point(554, 514);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(94, 20);
             this.label25.TabIndex = 44;
             this.label25.Text = "Option   ::";
             // 
-            // TextBoxServeItem
-            // 
-            this.TextBoxServeItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxServeItem.Location = new System.Drawing.Point(660, 487);
-            this.TextBoxServeItem.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxServeItem.Name = "TextBoxServeItem";
-            this.TextBoxServeItem.Size = new System.Drawing.Size(237, 31);
-            this.TextBoxServeItem.TabIndex = 43;
-            this.TextBoxServeItem.Text = "";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(527, 498);
+            this.label7.Location = new System.Drawing.Point(720, 435);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 20);
+            this.label7.Size = new System.Drawing.Size(138, 20);
             this.label7.TabIndex = 42;
-            this.label7.Text = "Serve Item  ::";
-            // 
-            // TextBoxWeight
-            // 
-            this.TextBoxWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxWeight.Location = new System.Drawing.Point(660, 424);
-            this.TextBoxWeight.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxWeight.Name = "TextBoxWeight";
-            this.TextBoxWeight.Size = new System.Drawing.Size(237, 31);
-            this.TextBoxWeight.TabIndex = 41;
-            this.TextBoxWeight.Text = "";
+            this.label7.Text = "Service Item  ::";
             // 
             // label4
             // 
@@ -969,7 +693,7 @@
             this.TextBoxDiscount.Name = "TextBoxDiscount";
             this.TextBoxDiscount.Size = new System.Drawing.Size(237, 31);
             this.TextBoxDiscount.TabIndex = 35;
-            this.TextBoxDiscount.Text = "";
+            this.TextBoxDiscount.Text = "0";
             this.TextBoxDiscount.TextChanged += new System.EventHandler(this.TextBoxDiscount_TextChanged);
             // 
             // label22
@@ -1189,6 +913,270 @@
             this.txtdescription.TabIndex = 3;
             this.txtdescription.Text = "";
             // 
+            // radioButtonWeight
+            // 
+            this.radioButtonWeight.AutoSize = true;
+            this.radioButtonWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonWeight.Location = new System.Drawing.Point(675, 435);
+            this.radioButtonWeight.Name = "radioButtonWeight";
+            this.radioButtonWeight.Size = new System.Drawing.Size(17, 16);
+            this.radioButtonWeight.TabIndex = 97;
+            this.radioButtonWeight.TabStop = true;
+            this.radioButtonWeight.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonService
+            // 
+            this.radioButtonService.AutoSize = true;
+            this.radioButtonService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonService.Location = new System.Drawing.Point(880, 437);
+            this.radioButtonService.Name = "radioButtonService";
+            this.radioButtonService.Size = new System.Drawing.Size(17, 16);
+            this.radioButtonService.TabIndex = 98;
+            this.radioButtonService.TabStop = true;
+            this.radioButtonService.UseVisualStyleBackColor = true;
+            // 
+            // ErrCost
+            // 
+            this.ErrCost.BackColor = System.Drawing.Color.Transparent;
+            this.ErrCost.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ErrCost.Image = global::IMS.App.Properties.Resources.error;
+            this.ErrCost.Location = new System.Drawing.Point(486, 465);
+            this.ErrCost.Name = "ErrCost";
+            this.ErrCost.Size = new System.Drawing.Size(35, 27);
+            this.ErrCost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ErrCost.TabIndex = 96;
+            this.ErrCost.TabStop = false;
+            // 
+            // ERRBarcode
+            // 
+            this.ERRBarcode.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBarcode.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBarcode.Location = new System.Drawing.Point(487, 123);
+            this.ERRBarcode.Name = "ERRBarcode";
+            this.ERRBarcode.Size = new System.Drawing.Size(35, 27);
+            this.ERRBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBarcode.TabIndex = 89;
+            this.ERRBarcode.TabStop = false;
+            // 
+            // ERRSellingPrice
+            // 
+            this.ERRSellingPrice.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingPrice.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingPrice.Location = new System.Drawing.Point(429, 394);
+            this.ERRSellingPrice.Name = "ERRSellingPrice";
+            this.ERRSellingPrice.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingPrice.TabIndex = 88;
+            this.ERRSellingPrice.TabStop = false;
+            // 
+            // ERRName
+            // 
+            this.ERRName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRName.Location = new System.Drawing.Point(489, 80);
+            this.ERRName.Name = "ERRName";
+            this.ERRName.Size = new System.Drawing.Size(35, 27);
+            this.ERRName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRName.TabIndex = 87;
+            this.ERRName.TabStop = false;
+            // 
+            // ERRID
+            // 
+            this.ERRID.BackColor = System.Drawing.Color.Transparent;
+            this.ERRID.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRID.Location = new System.Drawing.Point(487, 38);
+            this.ERRID.Name = "ERRID";
+            this.ERRID.Size = new System.Drawing.Size(35, 27);
+            this.ERRID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRID.TabIndex = 86;
+            this.ERRID.TabStop = false;
+            // 
+            // ERRSellingUnit
+            // 
+            this.ERRSellingUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSellingUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSellingUnit.Location = new System.Drawing.Point(351, 322);
+            this.ERRSellingUnit.Name = "ERRSellingUnit";
+            this.ERRSellingUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRSellingUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSellingUnit.TabIndex = 85;
+            this.ERRSellingUnit.TabStop = false;
+            // 
+            // ERRPurchaseUnit
+            // 
+            this.ERRPurchaseUnit.BackColor = System.Drawing.Color.Transparent;
+            this.ERRPurchaseUnit.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRPurchaseUnit.Location = new System.Drawing.Point(351, 286);
+            this.ERRPurchaseUnit.Name = "ERRPurchaseUnit";
+            this.ERRPurchaseUnit.Size = new System.Drawing.Size(35, 27);
+            this.ERRPurchaseUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRPurchaseUnit.TabIndex = 84;
+            this.ERRPurchaseUnit.TabStop = false;
+            // 
+            // ERRBrandName
+            // 
+            this.ERRBrandName.BackColor = System.Drawing.Color.Transparent;
+            this.ERRBrandName.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRBrandName.Location = new System.Drawing.Point(962, 198);
+            this.ERRBrandName.Name = "ERRBrandName";
+            this.ERRBrandName.Size = new System.Drawing.Size(35, 27);
+            this.ERRBrandName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRBrandName.TabIndex = 83;
+            this.ERRBrandName.TabStop = false;
+            // 
+            // ERRSubCategory
+            // 
+            this.ERRSubCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRSubCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRSubCategory.Location = new System.Drawing.Point(962, 159);
+            this.ERRSubCategory.Name = "ERRSubCategory";
+            this.ERRSubCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRSubCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRSubCategory.TabIndex = 82;
+            this.ERRSubCategory.TabStop = false;
+            // 
+            // ERRCategory
+            // 
+            this.ERRCategory.BackColor = System.Drawing.Color.Transparent;
+            this.ERRCategory.BackgroundImage = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Image = global::IMS.App.Properties.Resources.error;
+            this.ERRCategory.Location = new System.Drawing.Point(961, 116);
+            this.ERRCategory.Name = "ERRCategory";
+            this.ERRCategory.Size = new System.Drawing.Size(35, 27);
+            this.ERRCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ERRCategory.TabIndex = 81;
+            this.ERRCategory.TabStop = false;
+            // 
+            // GridViewItem
+            // 
+            this.GridViewItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewItem.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewItem.Location = new System.Drawing.Point(-1, -1);
+            this.GridViewItem.Name = "GridViewItem";
+            this.GridViewItem.RowTemplate.Height = 24;
+            this.GridViewItem.Size = new System.Drawing.Size(851, 734);
+            this.GridViewItem.TabIndex = 3;
+            // 
+            // Panel2
+            // 
+            this.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.GridViewItem);
+            this.Panel2.Location = new System.Drawing.Point(1061, 119);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(850, 733);
+            this.Panel2.TabIndex = 48;
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.Location = new System.Drawing.Point(1251, 42);
+            this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(349, 23);
+            this.txtsearch.TabIndex = 54;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(1182, 47);
+            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(69, 17);
+            this.Label6.TabIndex = 55;
+            this.Label6.Text = "Search :";
+            // 
+            // lblmax
+            // 
+            this.lblmax.AutoSize = true;
+            this.lblmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmax.Location = new System.Drawing.Point(1362, 85);
+            this.lblmax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmax.Name = "lblmax";
+            this.lblmax.Size = new System.Drawing.Size(19, 20);
+            this.lblmax.TabIndex = 66;
+            this.lblmax.Text = "1";
+            // 
+            // btnfirst
+            // 
+            this.btnfirst.BackColor = System.Drawing.Color.Transparent;
+            this.btnfirst.ForeColor = System.Drawing.Color.Black;
+            this.btnfirst.Location = new System.Drawing.Point(1389, 78);
+            this.btnfirst.Margin = new System.Windows.Forms.Padding(4);
+            this.btnfirst.Name = "btnfirst";
+            this.btnfirst.Size = new System.Drawing.Size(52, 37);
+            this.btnfirst.TabIndex = 64;
+            this.btnfirst.Text = "<<";
+            this.btnfirst.UseVisualStyleBackColor = false;
+            // 
+            // btnprev
+            // 
+            this.btnprev.BackColor = System.Drawing.Color.Transparent;
+            this.btnprev.ForeColor = System.Drawing.Color.Black;
+            this.btnprev.Location = new System.Drawing.Point(1449, 78);
+            this.btnprev.Margin = new System.Windows.Forms.Padding(4);
+            this.btnprev.Name = "btnprev";
+            this.btnprev.Size = new System.Drawing.Size(52, 37);
+            this.btnprev.TabIndex = 63;
+            this.btnprev.Text = "<";
+            this.btnprev.UseVisualStyleBackColor = false;
+            // 
+            // btnnext
+            // 
+            this.btnnext.BackColor = System.Drawing.Color.Transparent;
+            this.btnnext.ForeColor = System.Drawing.Color.Black;
+            this.btnnext.Location = new System.Drawing.Point(1510, 78);
+            this.btnnext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnnext.Name = "btnnext";
+            this.btnnext.Size = new System.Drawing.Size(52, 37);
+            this.btnnext.TabIndex = 62;
+            this.btnnext.Text = ">";
+            this.btnnext.UseVisualStyleBackColor = false;
+            // 
+            // btnlast
+            // 
+            this.btnlast.BackColor = System.Drawing.Color.Transparent;
+            this.btnlast.ForeColor = System.Drawing.Color.Black;
+            this.btnlast.Location = new System.Drawing.Point(1574, 78);
+            this.btnlast.Margin = new System.Windows.Forms.Padding(4);
+            this.btnlast.Name = "btnlast";
+            this.btnlast.Size = new System.Drawing.Size(52, 37);
+            this.btnlast.TabIndex = 61;
+            this.btnlast.Text = ">>";
+            this.btnlast.UseVisualStyleBackColor = false;
+            // 
+            // Label9
+            // 
+            this.Label9.AutoSize = true;
+            this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label9.Location = new System.Drawing.Point(1326, 85);
+            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Name = "Label9";
+            this.Label9.Size = new System.Drawing.Size(25, 20);
+            this.Label9.TabIndex = 60;
+            this.Label9.Text = "of";
+            // 
+            // lblinc
+            // 
+            this.lblinc.AutoSize = true;
+            this.lblinc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinc.Location = new System.Drawing.Point(1297, 85);
+            this.lblinc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblinc.Name = "lblinc";
+            this.lblinc.Size = new System.Drawing.Size(19, 20);
+            this.lblinc.TabIndex = 65;
+            this.lblinc.Text = "1";
+            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1204,11 +1192,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Master";
             this.Load += new System.EventHandler(this.frmItems_Load);
-            this.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).EndInit();
             this.pnl_stockmaster.ResumeLayout(false);
             this.pnl_stockmaster.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRBarcode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRSellingPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRName)).EndInit();
@@ -1218,7 +1204,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ERRBrandName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRSubCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ERRCategory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ERRReck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewItem)).EndInit();
+            this.Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1241,7 +1228,6 @@
         internal System.Windows.Forms.RichTextBox txtdescription;
         internal System.Windows.Forms.ComboBox ComboMainCategory;
         internal System.Windows.Forms.TextBox txtname;
-        internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.Label label13;
         internal System.Windows.Forms.RichTextBox textDescriptionTwo;
@@ -1261,9 +1247,7 @@
         internal System.Windows.Forms.RichTextBox TextBoxDiscountAmount;
         internal System.Windows.Forms.Label label23;
         internal System.Windows.Forms.Label label24;
-        internal System.Windows.Forms.RichTextBox TextBoxWeight;
         internal System.Windows.Forms.Label label4;
-        internal System.Windows.Forms.RichTextBox TextBoxServeItem;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.RichTextBox TextBoxOptionOne;
         internal System.Windows.Forms.Label label25;
@@ -1274,15 +1258,6 @@
         internal System.Windows.Forms.ComboBox comboSellingUnit;
         internal System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.CheckBox checkBoxISActive;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.TextBox txtsearch;
-        internal System.Windows.Forms.Label lblinc;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Button btnlast;
-        internal System.Windows.Forms.Button btnnext;
-        internal System.Windows.Forms.Button btnprev;
-        internal System.Windows.Forms.Button btnfirst;
-        internal System.Windows.Forms.Label lblmax;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
@@ -1303,13 +1278,24 @@
         private System.Windows.Forms.PictureBox ERRBrandName;
         private System.Windows.Forms.PictureBox ERRSubCategory;
         private System.Windows.Forms.PictureBox ERRCategory;
-        private System.Windows.Forms.PictureBox ERRReck;
         private System.Windows.Forms.PictureBox ERRBarcode;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.PictureBox ErrDiscount;
         private CurrencyTextBox.CurrencyTextBox textSellingPrice;
         private CurrencyTextBox.CurrencyTextBox textBoxMrp;
         private CurrencyTextBox.CurrencyTextBox textBoxCost;
+        private System.Windows.Forms.PictureBox ErrCost;
+        private System.Windows.Forms.RadioButton radioButtonService;
+        private System.Windows.Forms.RadioButton radioButtonWeight;
+        internal System.Windows.Forms.Label lblinc;
+        internal System.Windows.Forms.Label Label9;
+        internal System.Windows.Forms.Button btnlast;
+        internal System.Windows.Forms.Button btnnext;
+        internal System.Windows.Forms.Button btnprev;
+        internal System.Windows.Forms.Button btnfirst;
+        internal System.Windows.Forms.Label lblmax;
+        internal System.Windows.Forms.Label Label6;
+        internal System.Windows.Forms.TextBox txtsearch;
+        internal System.Windows.Forms.Panel Panel2;
         private System.Windows.Forms.DataGridView GridViewItem;
     }
 }

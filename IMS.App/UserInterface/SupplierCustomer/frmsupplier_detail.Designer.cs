@@ -379,6 +379,7 @@
             this.buttonUpdate.TabIndex = 93;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // ERRAddress
             // 

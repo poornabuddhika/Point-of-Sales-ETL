@@ -32,8 +32,8 @@
             this.Item = new System.Windows.Forms.ToolStrip();
             this.ts_Item = new System.Windows.Forms.ToolStripDropDownButton();
             this.addItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,18 +89,19 @@
             this.addItemsToolStripMenuItem.Text = "Add Items";
             this.addItemsToolStripMenuItem.Click += new System.EventHandler(this.addItemsToolStripMenuItem_Click);
             // 
+            // listItemToolStripMenuItem
+            // 
+            this.listItemToolStripMenuItem.Name = "listItemToolStripMenuItem";
+            this.listItemToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.listItemToolStripMenuItem.Text = "List Item";
+            this.listItemToolStripMenuItem.Click += new System.EventHandler(this.listItemToolStripMenuItem_Click);
+            // 
             // itemMasterToolStripMenuItem
             // 
             this.itemMasterToolStripMenuItem.Name = "itemMasterToolStripMenuItem";
             this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.itemMasterToolStripMenuItem.Text = "Main Category";
             this.itemMasterToolStripMenuItem.Click += new System.EventHandler(this.itemMasterToolStripMenuItem_Click);
-            // 
-            // listItemToolStripMenuItem
-            // 
-            this.listItemToolStripMenuItem.Name = "listItemToolStripMenuItem";
-            this.listItemToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.listItemToolStripMenuItem.Text = "List Item";
             // 
             // toolStripLabel1
             // 
@@ -125,7 +126,7 @@
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.addCustomerToolStripMenuItem.Text = "Add Supplier";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 

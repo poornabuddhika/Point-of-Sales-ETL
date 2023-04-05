@@ -47,9 +47,9 @@ namespace IMS.Entity.InventoryProducts
 
         public double DiscountAmount { get; set; }
 
-        public double WeightItem { get; set; }
+        public bool WeightItem { get; set; }
 
-        public double ServeItem { get; set; }
+        public bool ServeItem { get; set; }
 
 
         public string OptionOne { get; set; }

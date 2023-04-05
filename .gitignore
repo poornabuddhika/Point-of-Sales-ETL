@@ -1,3 +1,5 @@
 
 IMS.DataAccess/.vs/IMS.DataAccess/v15/Server/sqlite3/db.lock
 *.ide
+.vs/POS_ETL/v15/Server/sqlite3/db.lock
+.vs/POS_ETL/v15/Server/sqlite3/db.lock

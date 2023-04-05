@@ -62,6 +62,7 @@
     <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\OrdersProductsMap.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Products\Item.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Products\Wherehouse.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\SupplierCustomer\Cities.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\SupplierCustomer\Supplier.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Users\Users.cs" />
@@ -100,16 +101,22 @@
     </Compile>
     <Compile Include="AppCass\Category\RackNumberFormClass.cs" />
     <Compile Include="AppCass\Category\UnitFormClass.cs" />
+    <Compile Include="UserInterface\Products\frmItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Products\frmItemList.Designer.cs">
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\SupplierCustomer\frmCustomer_ditails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserInterface\SupplierCustomer\frmCustomer_ditails.Designer.cs">
       <DependentUpon>frmCustomer_ditails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\frmgrn.cs">
+    <Compile Include="UserInterface\Products\frmgrn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\frmgrn.Designer.cs">
+    <Compile Include="UserInterface\Products\frmgrn.Designer.cs">
       <DependentUpon>frmgrn.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\frmlocationtransfers.cs">
@@ -161,10 +168,13 @@
     <EmbeddedResource Include="UserInterface\Category\MainCategory.resx">
       <DependentUpon>MainCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Products\frmItemList.resx">
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SupplierCustomer\frmCustomer_ditails.resx">
       <DependentUpon>frmCustomer_ditails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\frmgrn.resx">
+    <EmbeddedResource Include="UserInterface\Products\frmgrn.resx">
       <DependentUpon>frmgrn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\frmlocationtransfers.resx">
