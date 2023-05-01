@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AppCass\Category\MainCategoryFormClass.cs" />
     <Compile Include="AppCass\Category\SubCategoryFormClass.cs" />
+    <Compile Include="AppCass\Products\GRNFormClass.cs" />
     <Compile Include="AppCass\Products\ItemFormClass.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\BarCodes\BarCodes.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Categories\Brands.cs" />
@@ -61,6 +62,8 @@
     <Compile Include="IMS\Entity\InventoryProducts\Expense\Expenses.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\Orders.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Orders\OrdersProductsMap.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Products\GRN.cs" />
+    <Compile Include="IMS\Entity\InventoryProducts\Products\GRNItemClass.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Products\Item.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\Products\Wherehouse.cs" />
     <Compile Include="IMS\Entity\InventoryProducts\SupplierCustomer\Cities.cs" />
@@ -75,7 +78,10 @@
     <Compile Include="IMS\Repository\InventoryProducts\Categories\VendorsRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Expense\ExpenseRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Orders\OrdersRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Products\GRNItemRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Products\GRNRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Products\ItemRepo.cs" />
+    <Compile Include="IMS\Repository\InventoryProducts\Products\WherehouseRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\SupplierCustomer\CitiesRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\SupplierCustomer\SupplierRepo.cs" />
     <Compile Include="IMS\Repository\InventoryProducts\Users\UsersRepo.cs" />
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="AppCass\Category\RackNumberFormClass.cs" />
     <Compile Include="AppCass\Category\UnitFormClass.cs" />
+    <Compile Include="UserInterface\Products\GRNPopUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Products\GRNPopUP.Designer.cs">
+      <DependentUpon>GRNPopUP.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\Products\frmItemList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Products\frmItemList.resx">
       <DependentUpon>frmItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Products\GRNPopUP.resx">
+      <DependentUpon>GRNPopUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SupplierCustomer\frmCustomer_ditails.resx">
       <DependentUpon>frmCustomer_ditails.cs</DependentUpon>

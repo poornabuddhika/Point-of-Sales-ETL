@@ -61,21 +61,137 @@ namespace IMS.Repository
             }
         }
 
+
+
+        public DataTable GetAllGINItems(string key)
+        {
+            List<Item> productList = new List<Item>();
+
+            string sql;
+            try
+            {
+                if (key == null)
+                {
+                    sql = @"SELECT [Item_ID], [ItemName],[Discount], [Status],[ItemCost],[MRP]  FROM     [dbo].[Item_ItemMaster] 
+                    where   [Status] = 'True';";
+                }
+                else
+                {
+                    sql = @"SELECT [Item_ID], [ItemName],[Discount], [Status],[ItemCost],[MRP]  FROM     [dbo].[Item_ItemMaster]
+                    where ([Item_ID]  like '%" + key + "%' or [ItemName] like '%" + key + "%' ) AND   [Status] = 'True'; ";
+                }
+                var dt = this.iDB.ExecuteQueryTable(sql);
+
+
+
+                return dt;
+            }
+            catch (Exception e)
+            {
+                return null;
+                throw;
+            }
+        }
+
+
+        public DataTable GetAllGINItemsSearchNameID(string ID,String Name)
+        {
+            List<Item> productList = new List<Item>();
+
+            string sql;
+            try
+            {
+                
+                
+                
+                    sql = @"SELECT [Item_ID], [ItemName],[Discount], [Status]  FROM     [dbo].[Item_ItemMaster]
+                    where ([Item_ID]  ='"+ ID.Trim() + "' And [ItemName] ='" + Name.Trim() + "' ); ";
+                
+                var dt = this.iDB.ExecuteQueryTable(sql);
+
+
+
+                return dt;
+            }
+            catch (Exception e)
+            {
+                return null;
+                throw;
+            }
+        }
+
+
+
         private Item ConvertToEntity(DataRow row)
         {
             if (row == null)
             {
                 return null;
             }
-            
-           var product = new Item();
+
+            Item itemNew = new Item();
 
 
 
-            
 
-            return product;
+            itemNew.ItemtId = row["Item_ID"].ToString();
+
+            itemNew.ItemName = row["ItemName"].ToString();
+
+          /*  itemNew.Barcode = row["Barcode"].ToString();
+
+
+            itemNew.DescriptionOne = row["Description1"].ToString();
+
+            itemNew.DescriptionTwo = row["Description2"].ToString();
+
+            itemNew.PurchaseUnit = row["Purchase_Unit"].ToString();
+
+
+            itemNew.SellingUnit = row["Selling_Unit"].ToString();
+
+            try { itemNew.SellingPrice = Convert.ToDecimal(row["Selling_Price"].ToString()); } catch (Exception ex) { itemNew.SellingPrice = Convert.ToDecimal("0.0"); };
+
+
+            try { itemNew.Cost = Convert.ToDecimal(row["ItemCost"].ToString()); } catch (Exception ex) { itemNew.Cost = Convert.ToDecimal("0.0"); };
+
+            try { itemNew.MRP = Convert.ToDecimal(row["MRP"].ToString()); } catch (Exception ex) { itemNew.MRP = Convert.ToDecimal("0.0"); };
+
+            itemNew.Supplier = row["Supplier"].ToString();
+            try { itemNew.PacketSize = Convert.ToInt32(row["Packet_Size"].ToString()); } catch (Exception ex) { itemNew.PacketSize = 0; }
+
+
+            itemNew.RackNumber = row["Rack_No"].ToString();
+
+
+            itemNew.CategoryName = row["Category"].ToString();
+
+
+            itemNew.subCategory = row["Sub_Category"].ToString();
+
+
+            itemNew.brands = row["Brand_Name"].ToString();
+
+            try { itemNew.ProductQty = Convert.ToDouble(row["Product_Qty"].ToString()); } catch (Exception e) { itemNew.ProductQty = 0.0; }
+
+    */
+            try { itemNew.DisCount = Convert.ToDouble(row["Discount"].ToString()); } catch (Exception e) { itemNew.DisCount = 0.0; }
+            /*
+            try { itemNew.DiscountAmount = Convert.ToDouble(row["DiscountAmount"].ToString()); } catch (Exception e) { itemNew.DiscountAmount = 0.0; }
+            try { itemNew.WeightItem = Convert.ToBoolean(row["Weight"].ToString()); } catch (Exception e) { itemNew.WeightItem = false; }
+            try { itemNew.ServeItem = Convert.ToBoolean(row["Save_Item"].ToString()); } catch (Exception e) { itemNew.ServeItem = false; }
+            itemNew.OptionOne = row["OptionOne"].ToString();
+            itemNew.OptionTwo = row["optionTwo"].ToString();
+            try { itemNew.IsActive = Convert.ToBoolean(row["Status"].ToString()); } catch (Exception e) { itemNew.IsActive = false; }
+            */
+
+
+
+
+            return itemNew;
         }
+
+
 
         //DataCount - DataExists
         public bool DataExists(string id,string name)
@@ -192,5 +308,25 @@ namespace IMS.Repository
                 throw;
             }
         }
+
+        public List<Item> GetItemList(string key)
+        {
+            DataTable dt = GetAll(key);
+
+            List<Item> list = new List<Item>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(ConvertToEntity(row));
+            }
+            return list;
+        }
+
+
+
+
+       
+
+
     }
 }

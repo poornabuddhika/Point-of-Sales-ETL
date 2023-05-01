@@ -11,7 +11,5 @@ namespace IMS.App.IMS.Entity.InventoryProducts.Products
 
         public string wherehouse_Name { get; set; }
 
-
-
     }
 }

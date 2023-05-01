@@ -41,6 +41,7 @@
             this.addCustomerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.gRNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Item.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,8 @@
             this.ts_Item.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addItemsToolStripMenuItem,
             this.listItemToolStripMenuItem,
-            this.itemMasterToolStripMenuItem});
+            this.itemMasterToolStripMenuItem,
+            this.gRNToolStripMenuItem});
             this.ts_Item.Image = global::IMS.App.Properties.Resources.icons8_product_50px;
             this.ts_Item.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ts_Item.Name = "ts_Item";
@@ -154,6 +156,13 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(133, 20);
             this.toolStripLabel2.Text = "Supplier & Customer";
             // 
+            // gRNToolStripMenuItem
+            // 
+            this.gRNToolStripMenuItem.Name = "gRNToolStripMenuItem";
+            this.gRNToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.gRNToolStripMenuItem.Text = "GRN";
+            this.gRNToolStripMenuItem.Click += new System.EventHandler(this.gRNToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,5 +202,6 @@
         private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripMenuItem gRNToolStripMenuItem;
     }
 }

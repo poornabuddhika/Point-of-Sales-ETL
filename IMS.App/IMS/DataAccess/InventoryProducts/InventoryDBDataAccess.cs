@@ -121,5 +121,16 @@ namespace IMS.DataAccess
             }
             return columnData;
         }
+
+
+        public Int32 SqlCount(string query)
+        {
+            this.QueryText(query);
+            Int32 RecordCount= Convert.ToInt32(Sqlcom.ExecuteScalar());
+
+            return RecordCount;
+        }
+
+
     }
 }

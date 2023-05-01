@@ -151,6 +151,12 @@ namespace IMS.App.UserInterface
             closeForm();
             showFrm(new frmItemList());
         }
+
+        private void gRNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForm();
+            showFrm(new frmgrn());
+        }
     }
 }
     

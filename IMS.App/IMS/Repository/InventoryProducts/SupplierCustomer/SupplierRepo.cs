@@ -205,6 +205,26 @@ namespace IMS.Repository
                 throw;
             }
         }
+
+
+
+        public DataTable LoadSupplier()
+        {
+            string sql;
+            try
+            {
+                sql = @"SELECT sup_Name, sup_id FROM supplier_Detl ORDER BY sup_id ASC";
+                return this.iDB.ExecuteQueryTable(sql);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+
+
+
     }
 }
        
