@@ -36,16 +36,27 @@ namespace IMS.App
 
 
 
-        public void SaveItemByItem(List<GRNItemClass> gRNItemList,GRNItemRepo gRNItemRepo)
+        public bool SaveItemByItem(List<GRNItemClass> gRNItemList,GRNItemRepo gRNItemRepo)
         {
-            foreach(GRNItemClass gRNItemClass in  gRNItemList)
+            bool boolGINItem = false;
+            foreach (GRNItemClass gRNItemClass in  gRNItemList)
             {
+                
                  Int32 itemCount=gRNItemRepo.GRNItemDataCount();
                 gRNItemClass.GRN_Detail_ID = itemCount.ToString();
-                gRNItemRepo.Save(gRNItemClass);
-
+               boolGINItem=gRNItemRepo.Save(gRNItemClass);
+                if(boolGINItem==false)
+                {
+                    return false;
+                }
+                else
+                {
+                    boolGINItem = true;
+                }
 
             }
+
+            return boolGINItem;
         }
 
 

@@ -30,8 +30,6 @@ namespace IMS.Repository
                 var sql = @"INSERT INTO [dbo].[ST_GRN_Item_Detail] (
                                 [GRN_Detail_ID]  ,
                                 [Ref_GRN_Master_ID]  ,
-                                [Type] ,
-                                [Sub_Type],
                                 [Item_ID],
                                 [Ref_Master_DisCount_Rate] ,
                                 [Item_DisCount_Rate],
@@ -43,8 +41,8 @@ namespace IMS.Repository
                                 [Status],
                                 [MRP]
                                 )
-                           VALUES ('" + pro.GRN_Detail_ID + "', '"+pro.Ref_GRN_Master_ID+"','"+pro.Type+"' ,'"+pro.Sub_Type+"', '"+pro.Item_ID+"','"+pro.Ref_Master_DisCount_Rate+"' ,"+
-                                "'"+ pro.DisCount_Rate + "','"+pro.Tax_Rate+"','"+pro.Ref_Qty1 +"','"+pro.Eff_date+"','"+ pro.Ref_Desc+"','"+pro.AvgCost+"', '"+pro.Status+"','"+pro.MRP+"'); ";
+                           VALUES ('" + (GRNItemDataCount()+1).ToString() + "', '"+pro.Ref_GRN_Master_ID+"', '"+pro.Item_ID+"','"+pro.Ref_Master_DisCount_Rate+"' ,"+
+                                "'"+ pro.DisCount_Rate + "','"+pro.Tax_Rate+"','"+pro.Ref_Qty1 + "',CURRENT_TIMESTAMP,'" + pro.Ref_Desc+"','"+pro.AvgCost+"', '"+pro.Status+"','"+pro.MRP+"'); ";
 
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
@@ -62,12 +60,12 @@ namespace IMS.Repository
 
 
         //DataCount - DataExists
-        public bool GINItemDataExists(string yourRefNum)
+        public bool GINItemDataExists(string GRN_Master_ID)
         {
             try
             {
 
-                DataSet ds = iDB.ExecuteQuery("SELECT * from ST_GRN_Item_Detail WHERE [GRN_Master_ID] = '" + yourRefNum + "' ");
+                DataSet ds = iDB.ExecuteQuery("SELECT * from ST_GRN_Item_Detail WHERE [GRN_Master_ID] = '" + GRN_Master_ID + "' ");
 
                 //System.Windows.MessageBox.Show(ds.Tables[0].Rows.Count);
                 Debug.WriteLine(ds.Tables[0].Rows.Count);
@@ -122,7 +120,34 @@ namespace IMS.Repository
             }
         }
 
+        public bool UpdateDesableGINItems(GRN pro)
+        {
+            try
+            {
 
+                string sql = @"update  [dbo].[ST_GRN_Item_Detail] set  [Status] ='false'  where  [Ref_GRN_Master_ID] ='" + pro.GRNNumber + "' ;";
+
+
+
+
+
+                int count = this.iDB.ExecuteDMLQuery(sql);
+
+                if (count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+                throw;
+            }
+        }
 
 
 

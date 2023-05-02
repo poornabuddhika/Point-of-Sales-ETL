@@ -46,7 +46,9 @@ namespace IMS.Entity
 
         public decimal DiscountAmount { get; set; }
 
-       
+        public bool Status { get; set; }
+
+
 
         public List<string> ErrorList { get; set; }
 

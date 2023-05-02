@@ -133,15 +133,25 @@ namespace IMS.App
                 }
                 else
                 {
-                    if (fillItemsToList() != null)
-                    {
-                        List<GRNItemClass> gRNItemClasses2 = fillItemsToList();
+                   
+                       
 
                         //Save
                         if (this.gRNRepo.Save(grnObj))
                         {
+                        List<GRNItemClass> gRNItemClasses2 = fillItemsToList(grnObj);
+                        if(gRNItemClasses2.Count !=0)
+                        {
+                            bool boolginItem= gRNFormClass.SaveItemByItem(gRNItemClasses2, gRNItemRepo);
+                            if (boolginItem == false)
+                            {
+                                this.gRNRepo.UpdateDesableGIN(grnObj);
+                                this.gRNItemRepo.UpdateDesableGINItems(grnObj);
+                            }
+                            
+                        }
 
-                            MessageBox.Show("Save Successfully");
+                        MessageBox.Show("Save Successfully");
                         }
                         else
                         {
@@ -149,7 +159,7 @@ namespace IMS.App
                         }
                     }
                    
-                }
+                
                 Refresh();
                
 
@@ -162,13 +172,15 @@ namespace IMS.App
         }
 
 
-        private List<GRNItemClass> fillItemsToList()
+        private List<GRNItemClass> fillItemsToList(GRN gRN)
         {
             List<GRNItemClass> grnItemList = new List<GRNItemClass>();
             for(int i=0;i<(dataGridViewGRN.RowCount-1);i++)
             {
                 grnItmclass.Item_ID = dataGridViewGRN.Rows[i].Cells[0].Value.ToString();
                 grnItmclass.Ref_Desc= dataGridViewGRN.Rows[i].Cells[1].Value.ToString();
+                grnItmclass.Ref_GRN_Master_ID = (gRN.GRNNumber+1).ToString();
+                
                if (dataGridViewGRN.Rows[i].Cells[2].Value == null)
                 {
                     MessageBox.Show("Please fill the " + grnItmclass.Ref_Desc.ToString() + "Qty");

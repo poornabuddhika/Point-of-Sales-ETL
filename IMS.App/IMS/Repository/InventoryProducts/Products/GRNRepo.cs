@@ -33,13 +33,13 @@ namespace IMS.Repository
                                 [Disc_Rate], [Disc_Value], [Tax_Rate],
                                     [Tax_Value], [Remarks], [Log_ID1] , 
                             [GRN_Date], [Due_Date], [Log_Date],
-                            [Payables], [Your_Ref_Num])
+                            [Payables], [Your_Ref_Num],[Status])
                            VALUES ('" + (pro.GRNNumber + 1) + "', '" + "ABC" + "', '" + pro.Supplier + "', " +
                                     "'" + pro.Location + "', '1', '" + pro.GrossValue + "', '" + pro.NetValue + "'," +
                                     "'" + (pro.DiscountRate / 100) + "', '" + pro.DiscountAmount + "', '" + pro.TaxesRate + "'," +
                                     " '" + pro.TaxesValue + "', '" + pro.Remarks + "', '" + "BOSS" + "'," +
                                     " '" + pro.GRNDate + "', '" + pro.DueDate + "', CURRENT_TIMESTAMP, " +
-                                    "'" + pro.Payables + "', '" + pro.YourRefNumber + "'); ";
+                                    "'" + pro.Payables + "', '" + pro.YourRefNumber + "','"+pro.Status.ToString()+"'); ";
 
                 var rowCount = this.iDB.ExecuteDMLQuery(sql);
 
@@ -119,7 +119,30 @@ namespace IMS.Repository
 
 
 
+        public bool UpdateDesableGIN(GRN pro)
+        {
+            try
+            {
 
+                string sql = @"update  [dbo].[ST_GRN_Master] SET pro.Status='false'  where  [Ref_GRN_Doc_No] ='" + pro.GRNNumber + "' ;";
+
+                int count = this.iDB.ExecuteDMLQuery(sql);
+
+                if (count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+                throw;
+            }
+        }
 
 
 
