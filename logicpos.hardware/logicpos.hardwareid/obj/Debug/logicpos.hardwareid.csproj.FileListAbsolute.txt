@@ -1,0 +1,10 @@
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\bin\Debug\logicpos.hardwareid.exe.config
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\bin\Debug\logicpos.hardwareid.exe
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\bin\Debug\logicpos.hardwareid.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.Form1.resources
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.Properties.Resources.resources
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.csproj.GenerateResource.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.csproj.CoreCompileInputs.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.exe
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.hardwareid\obj\Debug\logicpos.hardwareid.pdb

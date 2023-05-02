@@ -1,0 +1,9 @@
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\bin\Debug\LogicposPrinterGenericSocket.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\bin\Debug\LogicposPrinterGenericSocket.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\bin\Debug\log4net.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\bin\Debug\log4net.xml
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\obj\Debug\logicpos.printer.genericsocket.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\obj\Debug\logicpos.printer.genericsocket.csproj.CoreCompileInputs.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\obj\Debug\logicpos.printer.genericsocket.csproj.CopyComplete
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\obj\Debug\LogicposPrinterGenericSocket.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericsocket\obj\Debug\LogicposPrinterGenericSocket.pdb

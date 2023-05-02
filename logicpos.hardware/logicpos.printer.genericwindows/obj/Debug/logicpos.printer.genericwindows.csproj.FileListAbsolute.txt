@@ -1,0 +1,9 @@
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\bin\Debug\LogicposPrinterGenericWindows.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\bin\Debug\LogicposPrinterGenericWindows.pdb
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\bin\Debug\log4net.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\bin\Debug\log4net.xml
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\obj\Debug\logicpos.printer.genericwindows.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\obj\Debug\logicpos.printer.genericwindows.csproj.CoreCompileInputs.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\obj\Debug\logicpos.printer.genericwindows.csproj.CopyComplete
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\obj\Debug\LogicposPrinterGenericWindows.dll
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.genericwindows\obj\Debug\LogicposPrinterGenericWindows.pdb

@@ -1,0 +1,2 @@
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.generic\obj\Debug\logicpos.printer.generic.csprojAssemblyReference.cache
+C:\Users\poorn\source\repos\POS_ETL\Point-of-Sales-ETL\logicpos.hardware\logicpos.printer.generic\obj\Debug\logicpos.printer.generic.csproj.CoreCompileInputs.cache
